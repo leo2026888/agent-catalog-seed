@@ -1,14 +1,18 @@
 # Agent Catalog Seed
 
-**跨平台、按任务和版本提供可复核证据的插件目录。** 这是早期公开目录与付费试点入口，中文优先，英文摘要见下方。工作名 `agent-catalog-seed` 尚未确定为品牌或注册商标。
+**给你的智能体，找对插件。按要完成的任务查找和比较 Skill 与 MCP 插件，看用途、版本、权限和核查记录，再决定是否尝试。** 这是早期公开目录与付费试点入口，中文优先，英文摘要见下方。工作名 `agent-catalog-seed` 尚未确定为品牌或注册商标。
 
-这里探索一个可追溯的公共入口：让使用者找到适合任务的能力，看清来源、权限、已知局限和可复核证据；让创作者展示自己有权公开的产品、文章与研发经验。
+网站帮助使用者按任务发现插件；GitHub 公开目录、核查记录、评测方法和后续实际评测结果，并保存许可允许再分发的 Skill。第三方按各自许可处理，受限材料只保留原创介绍与来源。只有实际评测完成后，才给出适用于相应任务、版本和平台的推荐依据。
 
-**当前版本：v0.1.1-seed 公开目录与试点入口。** 公开仓库：[leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed)。 本次新写的代码、Schema、合成示例与公开适配版 Skill 指令已声明 MIT 许可；文章与方法文档采用 CC BY 4.0，署名为 Leo and contributors，披露 AI 辅助创作与整理，具体范围见 [许可与署名](LICENSING.md)。GitHub 仓库已创建并核验为 public。私密漏洞报告已启用，入口及尚未完成的报告/通知测试见 [安全政策](SECURITY.md)。没有交易结算或自动评测平台，没有经过独立安全认证，没有确认的平台接入伙伴，也没有真实用户评分。当前 `entries/` 条目是本项目新写的合成示例，真实工作流 Skill 单列于成果区。第三方公开来源观察单独记录在 `evidence/`，不改写为已运行或已通过独立评测的条目。
+当前可用：**1 个公开 Skill、3 条第三方资料初查**。任务入口为口播视频审阅、GitHub 仓库操作、文件处理、PDF 处理。完整运行评测、自动安装与团队持续服务仍在验证，目标是逐步建设可信插件市场。
 
-**[申请付费试点 · 按范围报价](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=paid-pilot.yml)** · [试点交付与流程](docs/PILOT.md) · [提交纠错](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=correction.yml) · [贡献证据](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=evidence.yml)
+**当前版本：v0.1.2-seed 按任务发现插件与来源说明。** 公开仓库：[leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed)。 本次新写的代码、Schema、合成示例与公开适配版 Skill 指令已声明 MIT 许可；文章与方法文档采用 CC BY 4.0，署名为 Leo and contributors，披露 AI 辅助创作与整理，具体范围见 [许可与署名](LICENSING.md)。GitHub 仓库已创建并核验为 public。私密漏洞报告已启用，入口及尚未完成的报告/通知测试见 [安全政策](SECURITY.md)。没有交易结算或自动评测平台，没有经过独立安全认证，没有确认的平台接入伙伴，也没有真实用户评分。当前 `entries/` 条目是本项目新写的合成示例，真实工作流 Skill 单列于成果区。第三方公开来源观察单独记录在 `evidence/`，不改写为已运行或已通过独立评测的条目。
+
+**[查看现有插件](https://agent-catalog.sxbliuyi.chatgpt.site/#directory)** · **[提交插件需求](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=plugin-request.yml)** · **[申请付费试点 · 按范围报价](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=paid-pilot.yml)** · [试点交付与流程](docs/PILOT.md) · [提交纠错](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=correction.yml) · [贡献证据](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=evidence.yml)
 
 公开网站已上线：[Agent Catalog](https://agent-catalog.sxbliuyi.chatgpt.site)。当前可通过 GitHub 浏览公开目录、阅读方法和提交申请。Issue 的标题、正文和附件均公开；只写可公开的任务摘要，不填凭证、客户数据、私有日志、内部链接、联系方式或敏感商业信息。安全漏洞请使用 [私密报告入口](SECURITY.md)。
+
+**PDF 条目说明：** Anthropic PDF Skill 的作者是 Anthropic，不是 Leo。“专有许可”是作者的许可类别，不代表本站取得专项授权。未取得再分发授权，本项目不提供该 Skill 副本；查看与使用请遵循作者条款。
 
 ## 从这里开始
 
@@ -66,10 +70,12 @@ python3 -m unittest discover -s tests -v
 
 ## English summary
 
-Agent Catalog Seed is an early, Chinese-first public catalog and paid-pilot entry point for traceable cross-platform AI skills and plugins. It separates provenance, requested permissions, host compatibility, task evidence and community feedback. The seed includes a versioned entry schema, a synthetic example, an original AI-assisted article, and contribution, evaluation and governance proposals. It also includes narrated-video-review v0.1.0, a newly written MIT-licensed public adaptation of Leo's custom editing workflow; no private voice models, customer material or original personal files are distributed. This public skill has not been independently tested in an actual edit or verified across hosts.
+Agent Catalog Seed helps people discover and compare Skills and MCP plugins by the task they want to complete. The website shows uses, versions, permissions and review records; GitHub hosts the catalog, review methods and results, and Skills whose licenses permit redistribution. Current scope: one public Skill and three preliminary third-party source reviews. Full runtime evaluation, automatic installation and ongoing team service remain under validation. It separates provenance, requested permissions, host compatibility, task evidence and community feedback. The seed includes a versioned entry schema, a synthetic example, an original AI-assisted article, and contribution, evaluation and governance proposals. It also includes narrated-video-review v0.1.0, a newly written MIT-licensed public adaptation of Leo's custom editing workflow; no private voice models, customer material or original personal files are distributed. This public skill has not been independently tested in an actual edit or verified across hosts.
 
 There is no transaction platform, automated evaluation platform, verified integration, independent certification or real user rating. New code, schemas and synthetic examples are licensed under MIT; documentation and articles are under CC BY 4.0, attributed to Leo and contributors with AI assistance disclosed. Exact scope is defined in LICENSING.md. The public repository is [leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed). Repository creation and public visibility are verified. Private vulnerability reporting is enabled and the maintainer opened its draft form; external report submission, notification delivery and response times have not been tested. Existing private work and third-party plugin copies are excluded.
 
 The maintainer's active Codex workspace schedule records business priorities and a plan at 07:00 Asia/Shanghai, then advances authorized product, content and evidence work at 07:30 and records budget use and outcomes. Checked content may be published to authorized, owner-controlled GitHub and public-platform destinations with target-side readback. Unknown plugins are not run and internal material is not published. The new schedule has not yet passed its first complete-run acceptance; activation is not proof of execution.
 
 Paid pilots are open for scope-based quotes covering version monitoring, task regression evidence and team-reviewed allowlists. Apply through the [public pilot form](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=paid-pilot.yml) with a non-sensitive summary only; GitHub issue titles, bodies and attachments are public. Scope, price, third-party costs, permissions and acceptance criteria are agreed before work begins. There is no established certification, automatic sandbox, customer track record or service SLA. The [public website](https://agent-catalog.sxbliuyi.chatgpt.site) is live. Corrections and evidence submissions do not require paid participation.
+
+Anthropic PDF Skill is authored by Anthropic, not Leo. Proprietary describes the author’s terms; it does not mean this project has received special permission. No redistribution authorization has been obtained, and this repository does not provide a copy of that Skill. Refer to the author’s terms when viewing or using it.

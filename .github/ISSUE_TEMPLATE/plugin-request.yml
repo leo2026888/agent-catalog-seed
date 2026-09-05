@@ -1,0 +1,43 @@
+name: 提交插件需求
+description: 告诉我们你想让智能体完成的任务，或推荐一个值得核查的公开插件。
+title: "[request] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这里帮助完善按任务查找的插件目录。你可以提出需求或推荐公开来源，不必先懂 Skill、MCP 的技术细节。
+        GitHub Issue 的标题、正文和附件公开。请勿提交凭证、客户数据、私有代码、内部链接或联系方式。
+        提交不代表已有插件可以满足需求，也不是已接单、通过评测或自动安装的承诺。团队专项试点请使用“申请付费试点”表单。
+  - type: textarea
+    id: task
+    attributes:
+      label: 想完成什么任务？
+      description: 用可公开的例子描述输入、期望输出，以及现在卡在哪里。
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: 打算在哪个智能体或平台使用？
+      description: 知道名称和版本就填写，不清楚可写“待确定”。
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_source
+    attributes:
+      label: 已见过的插件或公开来源（可选）
+      description: 可提供作者官网、公开仓库或版本；没有候选可以留空。不要填写私有地址。
+  - type: textarea
+    id: relationship
+    attributes:
+      label: 与推荐插件作者或供应商的关系
+      description: 例如无关联、本人作品、受雇或赞助推荐。没有推荐对象可以写“不适用”。
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_scope
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我理解这条需求公开，内容有权公开且不含凭证、客户数据或私有材料。
+          required: true

@@ -27,7 +27,8 @@
       "只提供阅读或来源链接，不把第三方条目包装为本站可安装或可分发的软件包。",
       "保留版本依据与日期对象；清单/文件的最近提交日期不是整个组件发布日期。",
       "固定提交链接用于证据，latest 链接为可变入口，不代表已再次在线核验。"
-    ]
+    ],
+    "observations_unchanged_by_presentation_revision": true
   },
   "records": [
     {
@@ -237,13 +238,14 @@
       "upstream_id": "github:anthropics/skills:skills/pdf",
       "name": "Anthropic PDF Skill",
       "type": "agent_skill",
-      "relationship": "第三方来源参考",
+      "relationship": "第三方来源参考；不是 Leo 作品",
       "summary": "作者公开材料描述了 PDF 内容提取、合并拆分、表单和 OCR 等任务。本条仅整理已读声明和出处；该 Skill 使用单独专有许可，不提供其正文、脚本、素材或下载副本。",
-      "evidence_label": "元数据/声明初查 · 仅来源参考",
+      "evidence_label": "第三方来源参考 · 未取得再分发授权",
       "badges": [
-        "专有许可",
-        "版本未知",
-        "不提供本站副本"
+        "作者：Anthropic",
+        "第三方来源参考",
+        "未取得再分发授权",
+        "未实测"
       ],
       "version": {
         "value": null,
@@ -265,7 +267,8 @@
         "status": "proprietary_source_reference_only",
         "basis": "首轮查看的 SKILL.md 前言与该 Skill 单独 LICENSE.txt",
         "source_url": "https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/pdf/LICENSE.txt",
-        "redistribution_note": "首轮记录说明专有条款限制复制、衍生与第三方分发。本条只含新写简介和来源链接；如未来需要复制或分发，应先确认适用授权。"
+        "redistribution_note": "未取得再分发授权，本页不提供该 Skill 副本；查看与使用请遵循作者条款。Proprietary 描述作者的专有条款，不代表本站获得专项授权；本条只含原创简介和来源链接。",
+        "redistribution_authorization": "not_obtained"
       },
       "source_urls": {
         "skill": "https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/pdf/SKILL.md",
@@ -296,7 +299,9 @@
         "label": "查看作者来源与许可",
         "kind": "source_reference_only",
         "url": "https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/pdf/SKILL.md"
-      }
+      },
+      "author": "Anthropic"
     }
-  ]
+  ],
+  "presentation_revision": "0.1.2-seed"
 }
