@@ -1,0 +1,302 @@
+{
+  "schema_version": "public-directory-evidence/0.1",
+  "prepared_on": "2026-09-05",
+  "timezone": "Asia/Shanghai",
+  "purpose": "公开产品首页的四条证据记录；独立于 seed entries 的合成示例 Schema",
+  "record_count": 4,
+  "record_order": [
+    "narrated-video-review",
+    "github-mcp-server",
+    "filesystem-mcp-server",
+    "anthropic-pdf-skill"
+  ],
+  "evidence_boundary": {
+    "method": "读取指定已保存首轮基线 JSON/Markdown 与公开 Skill/成果页，提取元数据并新写简介",
+    "upstream_reverified_in_this_subtask": false,
+    "skill_public_repository_basis": "父任务确认公开仓库、main 默认分支及固定提交",
+    "third_party_baseline_kind": "首轮基线收录，不是今日新增插件",
+    "third_party_baseline_observed_at": "2026-09-05T02:44:18.813981+00:00",
+    "third_party_baseline_observed_local": "2026-09-05 10:44:18 Asia/Shanghai",
+    "code_scan_performed_for_third_party_candidates": false,
+    "third_party_package_download_or_execution_performed": false,
+    "copied_proprietary_implementation": false,
+    "descriptions": "本次重新撰写的简短介绍；不包含第三方 Skill 正文、代码或素材",
+    "frontend_rules": [
+      "把公开适配 Skill 与三条元数据/声明初查区分展示。",
+      "未验证值保留 null 或明确显示未知，不用零分、已通过或安全徽章代替。",
+      "只提供阅读或来源链接，不把第三方条目包装为本站可安装或可分发的软件包。",
+      "保留版本依据与日期对象；清单/文件的最近提交日期不是整个组件发布日期。",
+      "固定提交链接用于证据，latest 链接为可变入口，不代表已再次在线核验。"
+    ]
+  },
+  "records": [
+    {
+      "id": "narrated-video-review",
+      "name": "口播视频剪辑与复核",
+      "type": "agent_skill",
+      "relationship": "关联作者成果",
+      "author": "Leo and contributors",
+      "summary": "将口播逐段对应到画面，检查镜头切点、字幕覆盖、声音平衡和保存文件的实际状态。由 Leo 的定制剪辑方法重新编写，适用于已有视频的审阅与修改。",
+      "evidence_label": "公开适配 Skill · 静态校验通过",
+      "badges": [
+        "MIT",
+        "关联作者",
+        "未独立实测"
+      ],
+      "version": {
+        "value": "0.1.0",
+        "kind": "skill_metadata_version",
+        "basis": "SKILL.md 的 metadata.version 与成果页一致",
+        "repository_commit": "7fe5630a203538581847bee49f03fc1a445b85d2",
+        "repository_tag": "v0.1.0-seed",
+        "tag_scope": "仓库历史 tag；不等于 Skill 独立版本号"
+      },
+      "dates": {
+        "static_validation_date": "2026-09-05",
+        "publication_date": null,
+        "publication_date_basis": "本次指定材料未给出可用于独立标注的公开时间",
+        "displayed_date": "2026-09-05",
+        "displayed_date_label": "静态校验日期"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "declared_for_public_adaptation",
+        "applies_to": "公开适配版 Skill 指令",
+        "showcase_document_license": "CC BY 4.0",
+        "source_url": "https://github.com/leo2026888/agent-catalog-seed/blob/7fe5630a203538581847bee49f03fc1a445b85d2/skills/narrated-video-review/LICENSE",
+        "redistribution_note": "分发公开版指令时保留其 MIT 许可与署名；许可不覆盖原个人版本、媒体、声音或第三方工具。"
+      },
+      "source_urls": {
+        "repository": "https://github.com/leo2026888/agent-catalog-seed",
+        "skill": "https://github.com/leo2026888/agent-catalog-seed/blob/7fe5630a203538581847bee49f03fc1a445b85d2/skills/narrated-video-review/SKILL.md",
+        "showcase": "https://github.com/leo2026888/agent-catalog-seed/blob/7fe5630a203538581847bee49f03fc1a445b85d2/showcase/narrated-video-review.md",
+        "license": "https://github.com/leo2026888/agent-catalog-seed/blob/7fe5630a203538581847bee49f03fc1a445b85d2/skills/narrated-video-review/LICENSE"
+      },
+      "checks_completed": [
+        "SKILL.md 与成果说明全文读取并对照版本、许可和来源边界。",
+        "已保存成果页记录 2026-09-05 skill-creator quick_validate.py 通过，结果为 Skill is valid!。",
+        "既有静态检查范围为 frontmatter、必填项、命名、描述、占位内容，以及版本、许可、引用链接和常见敏感模式。",
+        "父任务确认公开仓库、默认 main 分支及本记录固定提交。"
+      ],
+      "checks_not_completed": [
+        "公开适配版的独立实际剪辑或导出测试。",
+        "逐宿主导入、媒体读取、编辑和导出兼容性验证。",
+        "独立安全审计或任务效果评价。",
+        "本子任务没有再次在线打开固定提交链接。"
+      ],
+      "permissions_note": "Skill 自身没有脚本、服务、模型、媒体、密钥或固定上传目的地；实际读写、生成和输出受宿主能力及具体任务授权约束。",
+      "disclosure": "Leo 同时参与目录建设；本条为相关作者的成果展示，AI 辅助重新编写，不能作为独立评价。",
+      "evaluation": {
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "score": null
+      },
+      "action": {
+        "label": "阅读公开 Skill",
+        "kind": "read_source",
+        "url": "https://github.com/leo2026888/agent-catalog-seed/blob/7fe5630a203538581847bee49f03fc1a445b85d2/skills/narrated-video-review/SKILL.md"
+      }
+    },
+    {
+      "id": "github-mcp-server",
+      "upstream_id": "io.github.github/github-mcp-server",
+      "name": "GitHub MCP Server",
+      "type": "mcp_server",
+      "relationship": "第三方来源条目",
+      "summary": "作者清单描述了仓库、Issue、Pull Request 和工作流操作入口。首轮已对照官方 Registry、发布标签和许可证；接入需要认证，实际权限与任务效果尚未测试。",
+      "evidence_label": "元数据/声明初查",
+      "badges": [
+        "MIT 声明",
+        "需认证",
+        "未运行测试"
+      ],
+      "version": {
+        "value": "1.12.0",
+        "kind": "registry_and_release",
+        "basis": "首轮记录中官方 MCP Registry 版本与 GitHub 发布标签 v1.12.0 一致",
+        "repository_commit": "9205304fedf10540c33ae41fcf6352fa97dcc9be"
+      },
+      "dates": {
+        "observed_at": "2026-09-05T02:44:18.813981+00:00",
+        "release_published_at": "2026-09-03T14:05:12Z",
+        "release_published_local": "2026-09-03 22:05:12 Asia/Shanghai",
+        "registry_published_at": "2026-09-03T14:01:15.61088Z",
+        "registry_updated_at": "2026-09-03T14:01:15.61088Z",
+        "displayed_date": "2026-09-03",
+        "displayed_date_label": "该版本 GitHub Release 发布日期"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "declared_at_fixed_commit",
+        "basis": "首轮读取的固定提交根 LICENSE",
+        "source_url": "https://github.com/github/github-mcp-server/blob/9205304fedf10540c33ae41fcf6352fa97dcc9be/LICENSE",
+        "redistribution_note": "本次不分发软件包；依赖、远程服务条款与具体分发形式尚未完整核对。"
+      },
+      "source_urls": {
+        "registry_mutable_latest": "https://registry.modelcontextprotocol.io/v0.1/servers/io.github.github%2Fgithub-mcp-server/versions/latest",
+        "release": "https://github.com/github/github-mcp-server/releases/tag/v1.12.0",
+        "manifest": "https://github.com/github/github-mcp-server/blob/9205304fedf10540c33ae41fcf6352fa97dcc9be/server.json",
+        "license": "https://github.com/github/github-mcp-server/blob/9205304fedf10540c33ae41fcf6352fa97dcc9be/LICENSE"
+      },
+      "checks_completed": [
+        "首轮已读取官方 Registry 元数据。",
+        "首轮已对照 GitHub 发布标签与对应提交。",
+        "首轮已读取固定提交根许可证。",
+        "首轮已核对清单中的认证声明。"
+      ],
+      "checks_not_completed": [
+        "软件包下载与完整软件包摘要。",
+        "代码与依赖安全扫描。",
+        "连接远程 MCP、认证或只读权限实际范围。",
+        "安装、目标平台兼容性、任务成功率与实际成本。"
+      ],
+      "permissions_note": "远程入口声明需要认证令牌；本地清单声明 OAuth 或可选个人访问令牌。声明不等于本次观察到的有效权限。",
+      "evaluation": {
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "score": null
+      },
+      "action": {
+        "label": "查看作者发布页",
+        "kind": "upstream_source",
+        "url": "https://github.com/github/github-mcp-server/releases/tag/v1.12.0"
+      }
+    },
+    {
+      "id": "filesystem-mcp-server",
+      "upstream_id": "io.github.modelcontextprotocol/server-filesystem",
+      "name": "Filesystem MCP Server",
+      "type": "mcp_server",
+      "relationship": "第三方来源条目",
+      "summary": "README 声明支持在允许目录内读取、写入和覆盖文件，并允许客户端 Roots 更新目录范围。首轮读到了源码版本和权限说明，但目录边界未实测，许可文本差异仍待核对。",
+      "evidence_label": "元数据/声明初查 · 许可待核对",
+      "badges": [
+        "源码版本",
+        "文件读写",
+        "许可待核对"
+      ],
+      "version": {
+        "value": "0.6.3",
+        "kind": "source_manifest",
+        "basis": "固定源码提交的 package.json 声明；不是已核验的 npm 最新发行版",
+        "repository_commit": "d73f99efbfd40c3aa1b61e88728b3d49fb52608f"
+      },
+      "dates": {
+        "observed_at": "2026-09-05T02:44:18.813981+00:00",
+        "package_published_at": null,
+        "manifest_path_last_commit_at": "2026-09-03T01:15:26Z",
+        "manifest_path_last_commit_local": "2026-09-03 09:15:26 Asia/Shanghai",
+        "displayed_date": "2026-09-03",
+        "displayed_date_label": "package.json 路径最近提交日期",
+        "caveat": "不代表 npm 发行日期或整个组件最后更新时间。"
+      },
+      "license": {
+        "label": "许可声明待核对",
+        "status": "file_scope_review_required",
+        "basis": "同一固定提交：package.json 要求查看 LICENSE；README 仍称 MIT；根 LICENSE 声明 MIT 向 Apache-2.0 过渡且文档采用 CC BY 4.0",
+        "source_url": "https://github.com/modelcontextprotocol/servers/blob/d73f99efbfd40c3aa1b61e88728b3d49fb52608f/LICENSE",
+        "redistribution_note": "不标为整个组件统一 MIT；本次仅简介和来源链接，分发前需核对文件及贡献时期对应许可。"
+      },
+      "source_urls": {
+        "repository": "https://github.com/modelcontextprotocol/servers",
+        "manifest": "https://github.com/modelcontextprotocol/servers/blob/d73f99efbfd40c3aa1b61e88728b3d49fb52608f/src/filesystem/package.json",
+        "readme": "https://github.com/modelcontextprotocol/servers/blob/d73f99efbfd40c3aa1b61e88728b3d49fb52608f/src/filesystem/README.md",
+        "license": "https://github.com/modelcontextprotocol/servers/blob/d73f99efbfd40c3aa1b61e88728b3d49fb52608f/LICENSE",
+        "manifest_last_commit": "https://github.com/modelcontextprotocol/servers/commit/ba167cef5bcc1244f95b4fe9a6fbe6d488b10e52"
+      },
+      "checks_completed": [
+        "首轮已完整读取并解析固定提交 package.json。",
+        "首轮已完整读取固定提交 README 并提取功能/权限声明。",
+        "首轮已核对根许可证的过渡声明。",
+        "首轮查询该精确名称的 Registry latest 端点得到 404。"
+      ],
+      "checks_not_completed": [
+        "npm 发行版本与软件包发布日期。",
+        "完整源码及依赖锁定核对。",
+        "单文件最终适用许可。",
+        "目录限制、符号链接边界、安装或文件读写测试。"
+      ],
+      "registry_lookup_caveat": "一次精确 latest 查询的 404 不证明整个 Registry 缺少其他名称或版本，也不表明组件恶意。",
+      "permissions_note": "读取、写入、覆盖和客户端更新允许目录均来自 README 声明；本次未观察执行行为或宿主隔离效果。",
+      "evaluation": {
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "score": null
+      },
+      "action": {
+        "label": "查看固定源码说明",
+        "kind": "upstream_source",
+        "url": "https://github.com/modelcontextprotocol/servers/blob/d73f99efbfd40c3aa1b61e88728b3d49fb52608f/src/filesystem/README.md"
+      }
+    },
+    {
+      "id": "anthropic-pdf-skill",
+      "upstream_id": "github:anthropics/skills:skills/pdf",
+      "name": "Anthropic PDF Skill",
+      "type": "agent_skill",
+      "relationship": "第三方来源参考",
+      "summary": "作者公开材料描述了 PDF 内容提取、合并拆分、表单和 OCR 等任务。本条仅整理已读声明和出处；该 Skill 使用单独专有许可，不提供其正文、脚本、素材或下载副本。",
+      "evidence_label": "元数据/声明初查 · 仅来源参考",
+      "badges": [
+        "专有许可",
+        "版本未知",
+        "不提供本站副本"
+      ],
+      "version": {
+        "value": null,
+        "kind": "unknown_independent_version",
+        "basis": "本轮未取得独立版本号；精确仓库提交仅用于来源快照，不作为发行版本",
+        "repository_commit": "41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f"
+      },
+      "dates": {
+        "observed_at": "2026-09-05T02:44:18.813981+00:00",
+        "release_published_at": null,
+        "skill_md_path_last_commit_at": "2026-02-04T02:09:36Z",
+        "skill_md_path_last_commit_local": "2026-02-04 10:09:36 Asia/Shanghai",
+        "displayed_date": "2026-02-04",
+        "displayed_date_label": "SKILL.md 路径最近提交日期",
+        "caveat": "不代表整个 Skill、许可证、脚本或全部引用资源的最后更新时间。"
+      },
+      "license": {
+        "label": "Proprietary",
+        "status": "proprietary_source_reference_only",
+        "basis": "首轮查看的 SKILL.md 前言与该 Skill 单独 LICENSE.txt",
+        "source_url": "https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/pdf/LICENSE.txt",
+        "redistribution_note": "首轮记录说明专有条款限制复制、衍生与第三方分发。本条只含新写简介和来源链接；如未来需要复制或分发，应先确认适用授权。"
+      },
+      "source_urls": {
+        "skill": "https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/pdf/SKILL.md",
+        "license": "https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/pdf/LICENSE.txt",
+        "skill_last_commit": "https://github.com/anthropics/skills/commit/4e6907a33c3c0c9ce7c1836980546aaba78a34b5"
+      },
+      "checks_completed": [
+        "首轮已核对作者公开仓库来源。",
+        "首轮已查看 Skill 前言与部分正文声明，未声称全文审计。",
+        "首轮已查看该 Skill 的单独许可证。",
+        "首轮已核对 SKILL.md 路径最近提交时间。"
+      ],
+      "checks_not_completed": [
+        "独立发行版与发布日期。",
+        "全部正文、引用资源、依赖与脚本的完整审计。",
+        "宿主实际强制权限范围。",
+        "任何 PDF 任务执行、效果评测或平台兼容性测试。",
+        "平台拟复制、改写或分发方式的授权。"
+      ],
+      "permissions_note": "已查看示例涉及本地文档读写与 Python/命令行工具；这不是已验证的宿主权限清单。",
+      "evaluation": {
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "score": null
+      },
+      "action": {
+        "label": "查看作者来源与许可",
+        "kind": "source_reference_only",
+        "url": "https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/pdf/SKILL.md"
+      }
+    }
+  ]
+}

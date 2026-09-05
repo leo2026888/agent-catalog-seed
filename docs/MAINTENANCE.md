@@ -1,6 +1,6 @@
 # 人工维护与发布流程（提案 v0.1）
 
-本流程适用于少量条目和文档的早期维护。维护者的 Codex 工作区已启用每日 09:00（Asia/Shanghai）的任务唤醒，仅对公开元数据与公开文本作初步检查并形成本地审阅草稿。仓库本身不包含独立采集器、评测服务、自动安装或自动发布工作流。对外发布由人工审阅。公开仓库 [leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed) 已创建并核验 public 状态；每次发布须记录提交与公开读回证据。
+本流程适用于少量条目和文档的早期维护。维护者的 Codex 工作区已启用每日双时段安排：07:00（Asia/Shanghai）记录经营判断与计划，07:30 推进已授权产品、内容与证据任务，记录预算和结果。检查通过的常规内容可在自有 GitHub 与已授权公开平台发布并读回；未知插件不运行，内部材料不公开。仓库本身不包含独立自动沙箱或生产评测服务。公开仓库 [leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed) 已创建并核验 public 状态；每次发布须记录提交与公开读回证据。
 
 ## 1. 从线索到可发布变更
 
@@ -10,7 +10,7 @@
 4. **选择证据范围。** 根据实际工作记录作者声明、静态检查、运行观察或社区观察。没有执行的环节标“未执行”；引用的报告必须与条目版本匹配。
 5. **准备可审阅变更。** 用单独分支或本地变更包提交最小差异，说明问题、结果、来源、证据和风险。模板字段全部填写或说明不适用，不用空白暗示通过。
 6. **人工审阅。** 指定实际审阅者，检查内容、权利、敏感信息、证据范围、利益关系、链接和 schema。存在作者自审时遵守[治理规则](GOVERNANCE.md)，保留作者自测标识。
-7. **决定是否发布。** 只有归属明确、发布范围获得确认且人工审阅通过后，才能创建或更新公开仓库。验证或打包成功本身不代表已获得公开发布决定。
+7. **决定是否发布。** 在已确认的归属和发布范围内，完成内容、权利及质量检查的常规变更可按既定授权公开。外部贡献、新评测结论和争议内容依治理规则人工审阅；超出既定权限或范围的动作另行确认。验证或打包成功本身不扩大发布权限。
 8. **发布后读回。** 从公开目标重新读取本次提交、文件与链接，核对可读状态、版本和敏感信息，记录 URL 与提交号。只有实际读回通过才标记为公开可用。
 
 ## 2. 每次发布的检查清单
@@ -44,7 +44,9 @@
 | 新失败、安全问题或权利投诉 | 依照[治理](GOVERNANCE.md)与[安全政策](../SECURITY.md)处理；必要时暂停推荐或移除敏感内容。 |
 | 方法或计量错误 | 更正方法与报告版本，解释哪些结果受影响，保留可公开的修订记录。 |
 
-当前每日 09:00（Asia/Shanghai）的工作区任务只生成公开元数据/文本初步检查结果与本地审阅草稿，不执行插件、生产回归或自动发布。启用计划不能自动更新条目核验日期；只有实际检查记录支持的字段才可提出更新。扩大来源、权限、测试预算或外部行为前应明确边界，发布仍由人工审阅。详细安排见 [商业与运营路线](ROADMAP.md)。
+当前双时段为每日 07:00 计划、07:30 执行（Asia/Shanghai）。迟触发时先检查台账，合并尚未完成的计划与动作，避免重复发布或重复支出。启用计划不能自动更新条目核验日期；只有实际检查记录支持的字段才可更新。扩大来源、权限、测试预算或外部行为前应明确边界。
+
+截至 2026-09-05，日程已保存并启用，但首个新日程尚未完成验收。电脑关机时不能执行；开机补跑尚未实证。不要将计划时间写成已运行或服务时效。详细安排见 [商业与运营路线](ROADMAP.md)。
 
 ## 4. 撤回与恢复
 
@@ -65,4 +67,4 @@
 
 ## English summary
 
-Maintenance is manual and review-based. Verify source rights, minimize scope, pin versions, validate metadata, review evidence and sensitive content, and approve a concrete release before publication. Keep local preparation, repository creation, push, and public readback as separate states. Upstream changes and stale reports trigger review; they never silently refresh conclusions. A daily 09:00 Asia/Shanghai wakeup is active in the maintainer's Codex workspace for preliminary public metadata/text checks and local drafts only. The repository has no independent collector or evaluation service. Plugin execution, production testing and unattended publication are outside this schedule.
+Maintenance is manual and review-based. Verify source rights, minimize scope, pin versions, validate metadata, review evidence and sensitive content, and approve a concrete release before publication. Keep local preparation, repository creation, push, and public readback as separate states. Upstream changes and stale reports trigger review; they never silently refresh conclusions. The active workspace schedule plans at 07:00 Asia/Shanghai and advances authorized work with budget and outcome records at 07:30. Checked routine content may be published to authorized owner-controlled destinations with readback; unknown plugins and internal data remain excluded. Late triggers reconcile the ledger to avoid duplication. As of 2026-09-05, the first new scheduled cycle has not been accepted as complete. A powered-off computer cannot execute it, and catch-up after restart is unverified.

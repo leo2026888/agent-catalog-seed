@@ -10,6 +10,7 @@
 | `skills/narrated-video-review/SKILL.md`：本次依据 Leo 自定义通用方法重新编写的公开适配版指令，v0.1.0 | [MIT](skills/narrated-video-review/LICENSE) | 保留同目录完整许可证与版权声明；不覆盖原个人 Skill、声音模型、媒体或第三方工具 |
 | `.gitignore`、`VERSION`、`SHA256SUMS.txt` 及本次新写的机器配置文件，如 `.github/` 下的 YAML/JSON 配置 | [MIT](LICENSE) | 保留完整许可证与版权声明；机器配置不包含运行凭证 |
 | 根目录的 Markdown 文件，包括 `README.md`、`CONTRIBUTING.md`、`SECURITY.md`、`SOURCES_AND_RIGHTS.md`、本文件；`docs/`、`templates/`、`showcase/`、`articles/` 中本次新写的文档；`.github/` 下的 Markdown Issue/PR 模板 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 适当署名、保留许可链接并说明修改；上述 `examples/` 文件依前行采用 MIT |
+| `evidence/` 中本项目重新撰写的摘要、字段编排与说明文档 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 仅覆盖本项目新增表达；事实、来源链接及第三方原材料依各自权利，不因收录重新授权 |
 | 历史个人/企业文章、产品材料、已有 Skill 原文件 | 本次许可不覆盖 | 原文件未复制进首包；上述新写 Skill 仅对其公开适配版指令授予 MIT；其他材料逐项核对个人、单位、客户与共同作者权利 |
 | 第三方代码、插件、文字、图标和照片 | 本次许可不重新授权 | 第三方原许可与权利声明保持有效；无复制许可不加入正文、素材或安装包 |
 

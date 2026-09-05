@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 私密报告安全漏洞
+    url: https://github.com/leo2026888/agent-catalog-seed/security/advisories/new
+    about: 漏洞细节仅通过 GitHub 私密入口提交；不要在公开 Issue 放凭证或客户数据。
+  - name: 阅读付费试点范围
+    url: https://github.com/leo2026888/agent-catalog-seed/blob/main/docs/PILOT.md
+    about: 按任务、版本与平台范围报价；先阅读交付、公开信息边界和验收流程。

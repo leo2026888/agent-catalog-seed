@@ -1,0 +1,82 @@
+name: 申请付费试点
+description: 按任务、插件版本与平台范围讨论版本监测、任务回归或团队允许清单的报价。
+title: "[pilot] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 这是公开申请
+        本 Issue 的标题、正文和附件均公开。请只写有权公开的摘要，不填凭证、客户数据、私有日志、内部链接、联系方式、采购底价或合同附件。
+        需要保密的信息写“需另行确认私密渠道”，不要上传到这里。后续公开讨论沿此 Issue 进行，无需留下邮箱或电话。
+        试点按范围报价；提交不构成下单、扣款或接单确认。当前没有现成安全认证、自动沙箱、既有客户案例或响应 SLA。
+        请先阅读 [试点说明](https://github.com/leo2026888/agent-catalog-seed/blob/main/docs/PILOT.md)。漏洞细节请使用 [私密安全报告入口](https://github.com/leo2026888/agent-catalog-seed/security/advisories/new)，不要填写本表。
+  - type: dropdown
+    id: team_type
+    attributes:
+      label: 团队类型
+      description: 选择最接近的类型，无需公开公司或客户名称。
+      options:
+        - 企业内部 AI 或研发团队
+        - 智能体平台或集成团队
+        - 软件或服务交付团队
+        - 个人或其他类型
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: 实际任务与验收目标
+      description: 用可公开的例子说明输入、期望输出、成功标准及负责验收的角色。可使用合成案例。
+      placeholder: 希望哪个任务在什么条件下稳定完成？怎样判断这次试点有帮助？
+    validations:
+      required: true
+  - type: textarea
+    id: plugins
+    attributes:
+      label: 插件名称、来源与版本
+      description: 列出公开来源、版本或提交号；未知写“未知”。不要提供私有仓库地址或带会话参数的链接。
+    validations:
+      required: true
+  - type: textarea
+    id: platforms
+    attributes:
+      label: 平台、宿主与模型条件
+      description: 写可公开的宿主名称/版本和模型标识；敏感或未确定条件写“待确认”。
+    validations:
+      required: true
+  - type: textarea
+    id: pain
+    attributes:
+      label: 失败或维护痛点
+      description: 描述一次具体问题、出现频率、目前如何人工处理。没有实际失败记录时请说明，不要上传原始客户日志。
+    validations:
+      required: true
+  - type: dropdown
+    id: paid_scope
+    attributes:
+      label: 愿意付费覆盖的范围
+      description: 可多选；这里只表示讨论意向，实际费用与验收另行确认。
+      multiple: true
+      options:
+        - 版本变化与权限声明监测
+        - 固定任务回归及证据报告
+        - 团队允许清单与复核规则
+        - 需要先共同确定范围
+    validations:
+      required: true
+  - type: textarea
+    id: commercial_scope
+    attributes:
+      label: 期望规模、周期与报价意向
+      description: 写可公开的插件/任务数量、期望周期、愿付费工作的边界。预算可写“按范围报价”或“需私下讨论”，不要公开采购底价或合同条款。
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_scope
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我理解这个 Issue 公开，提交内容有权公开且不含凭证、客户数据、私有日志或敏感商业信息。
+          required: true
+        - label: 我理解这是按范围报价的申请；费用、权限、验收与接单需要另行明确，不代表已有认证、自动沙箱或 SLA。
+          required: true

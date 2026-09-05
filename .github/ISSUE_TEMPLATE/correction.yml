@@ -1,0 +1,58 @@
+name: 提交事实纠错
+description: 更正公开目录或文档中的来源、版本、权限、状态或其他可核验陈述。
+title: "[correction] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这里的标题、正文和附件均公开。请提供最小可公开依据，不放凭证、客户数据、联系方式、私有日志或内部链接。
+        漏洞利用细节使用 [私密安全报告入口](https://github.com/leo2026888/agent-catalog-seed/security/advisories/new)。权利或隐私问题如需非公开证据，先写“需确认私密渠道”，不要在本表粘贴原件。
+        纠错不需要购买试点。新增目录线索仍可使用原有“条目补充与事实更正”模板。
+  - type: input
+    id: target
+    attributes:
+      label: 受影响条目或文件
+      description: 提供仓库相对路径、公开链接、条目 ID 或版本；不要填私有地址。
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 纠错类型
+      options:
+        - 来源或公开权利声明
+        - 版本或公开链接
+        - 平台兼容或功能状态
+        - 权限声明或数据范围
+        - 评测结果或计量口径
+        - 其他可核验事实
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 原陈述与建议更正
+      description: 指明原句或字段、建议内容，以及该更正会影响什么。只摘录有权公开的必要短句。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 可公开依据与观察时间
+      description: 提供公开来源、版本、日期、平台条件及局限。未知项写“未知”；无法公开证据时说明需要什么核验，不上传私有材料。
+    validations:
+      required: true
+  - type: textarea
+    id: relationship
+    attributes:
+      label: 与条目作者或供应商的关系
+      description: 说明作者本人、雇佣、赞助、付费合作或竞争关系；没有写“无”，不确定写“未知”。无需披露无关个人信息。
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_scope
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我理解这个 Issue 公开，提交内容有权公开且不含凭证、客户数据、私有日志或未披露漏洞利用细节。
+          required: true

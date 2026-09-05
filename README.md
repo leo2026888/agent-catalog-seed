@@ -1,15 +1,21 @@
 # Agent Catalog Seed
 
-**跨平台、按任务和版本提供可复核证据的插件目录。** 这是早期提案，中文优先，英文摘要见下方。工作名 `agent-catalog-seed` 尚未确定为品牌或注册商标。
+**跨平台、按任务和版本提供可复核证据的插件目录。** 这是早期公开目录与付费试点入口，中文优先，英文摘要见下方。工作名 `agent-catalog-seed` 尚未确定为品牌或注册商标。
 
 这里探索一个可追溯的公共入口：让使用者找到适合任务的能力，看清来源、权限、已知局限和可复核证据；让创作者展示自己有权公开的产品、文章与研发经验。
 
-**当前版本：v0.1.0-seed 开源首版内容。** 公开仓库：[leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed)。 本次新写的代码、Schema、合成示例与公开适配版 Skill 指令已声明 MIT 许可；文章与方法文档采用 CC BY 4.0，署名为 Leo and contributors，披露 AI 辅助创作与整理，具体范围见 [许可与署名](LICENSING.md)。GitHub 仓库已创建并核验为 public。私密漏洞报告已启用，入口及尚未完成的报告/通知测试见 [安全政策](SECURITY.md)。没有上线市场，没有经过独立安全认证，没有确认的平台接入伙伴，也没有真实用户评分。当前 `entries/` 条目是本项目新写的合成示例，真实工作流 Skill 单列于成果区。
+**当前版本：v0.1.1-seed 公开目录与试点入口。** 公开仓库：[leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed)。 本次新写的代码、Schema、合成示例与公开适配版 Skill 指令已声明 MIT 许可；文章与方法文档采用 CC BY 4.0，署名为 Leo and contributors，披露 AI 辅助创作与整理，具体范围见 [许可与署名](LICENSING.md)。GitHub 仓库已创建并核验为 public。私密漏洞报告已启用，入口及尚未完成的报告/通知测试见 [安全政策](SECURITY.md)。没有交易结算或自动评测平台，没有经过独立安全认证，没有确认的平台接入伙伴，也没有真实用户评分。当前 `entries/` 条目是本项目新写的合成示例，真实工作流 Skill 单列于成果区。第三方公开来源观察单独记录在 `evidence/`，不改写为已运行或已通过独立评测的条目。
+
+**[申请付费试点 · 按范围报价](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=paid-pilot.yml)** · [试点交付与流程](docs/PILOT.md) · [提交纠错](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=correction.yml) · [贡献证据](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=evidence.yml)
+
+公开网站已上线：[Agent Catalog](https://agent-catalog.sxbliuyi.chatgpt.site)。当前可通过 GitHub 浏览公开目录、阅读方法和提交申请。Issue 的标题、正文和附件均公开；只写可公开的任务摘要，不填凭证、客户数据、私有日志、内部链接、联系方式或敏感商业信息。安全漏洞请使用 [私密报告入口](SECURITY.md)。
 
 ## 从这里开始
 
 | 想了解什么 | 入口 |
 | --- | --- |
+| 团队需要监测、回归或允许清单 | [付费试点说明](docs/PILOT.md)、[按范围申请报价](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=paid-pilot.yml) |
+| 查看第三方公开来源观察 | [来源观察与边界](evidence/README.md) |
 | 目录如何表达来源和边界 | [版本化条目 Schema](schema/entry.v0.1.0.schema.json)、[字段说明](docs/ENTRY_FORMAT.md) |
 | 一个完整但尚未评测的条目 | [发布说明转检查清单：示例条目](entries/release-note-checklist-demo.json)、[合成材料](examples/release-note-checklist/README.md) |
 | 安全与效果如何分别评测 | [评测方法](docs/EVALUATION.md)、[评测报告模板](templates/evaluation-report.md) |
@@ -39,11 +45,13 @@
 
 个人成果展示与中立评价分开标识。关联作者作品可陈列，自测必须注明关系；没有独立复核时，不发放独立认证徽章。
 
-## 小团队商业化方向
+## 申请付费试点
 
-本项目以商业化为方向，开源用于公开规则、建立信任和吸引贡献。优先验证企业与智能体落地团队是否愿为**常用插件版本变化监控、任务回归证据和团队允许清单**持续付费；公开目录与基础证据可免费，订阅、平台数据 API 与明确披露的赞助作为收入假设。当前没有已收费产品、客户或收入。
+公开目录与基础方法可以直接阅读、纠错和贡献。团队可申请**版本变化监测、固定任务回归证据或团队允许清单**的付费试点，围绕具体任务、插件版本、平台/宿主与模型条件确认范围，再给出报价。价格、第三方成本、预算上限、执行权限、交付物和验收标准在开始前明确；提交申请不构成下单或接单确认。
 
-维护者的 Codex 工作区已启用每日 **09:00（Asia/Shanghai）** 的任务唤醒，范围仅为公开元数据与公开文本的初步检查，以及本地审阅草稿。该安排不执行插件、运行生产回归或自动发布；启用计划也不表示某次检查已经完成。仓库本身没有独立采集器、评测服务或 GitHub Actions 自动发布工作流。实际测试与对外发布仍须按范围人工审阅，参见 [商业与运营路线](docs/ROADMAP.md)。
+这是早期按范围承接的试点申请入口。目前没有现成安全认证、自动沙箱、生产评测平台、既有客户案例或可承诺的 SLA，也没有已验证成交收入。付费不购买安全结论、排名或删除失败记录；是否付费不影响纠错和证据审阅标准。参见 [试点说明](docs/PILOT.md)。
+
+维护者的 Codex 工作区已保存并启用每日双时段安排：**07:00（Asia/Shanghai）** 记录经营判断、优先级与计划，**07:30** 推进已授权的产品、内容、证据任务，并记录预算消耗和结果。在已确认的自有 GitHub 与公开平台范围内，可以完成内容检查、发布与目标端读回；不运行未知插件，不公开内部材料。仓库没有现成自动沙箱或生产评测服务。新安排尚未完成首轮执行验收，计划启用不代表任务已经完成，详见 [商业与运营路线](docs/ROADMAP.md)。
 
 ## 本地核对
 
@@ -58,8 +66,10 @@ python3 -m unittest discover -s tests -v
 
 ## English summary
 
-Agent Catalog Seed is an early, Chinese-first proposal for a traceable cross-platform catalog of AI skills and plugins. It separates provenance, requested permissions, host compatibility, task evidence and community feedback. The seed includes a versioned entry schema, a synthetic example, an original AI-assisted article, and contribution, evaluation and governance proposals. It also includes narrated-video-review v0.1.0, a newly written MIT-licensed public adaptation of Leo's custom editing workflow; no private voice models, customer material or original personal files are distributed. This public skill has not been independently tested in an actual edit or verified across hosts.
+Agent Catalog Seed is an early, Chinese-first public catalog and paid-pilot entry point for traceable cross-platform AI skills and plugins. It separates provenance, requested permissions, host compatibility, task evidence and community feedback. The seed includes a versioned entry schema, a synthetic example, an original AI-assisted article, and contribution, evaluation and governance proposals. It also includes narrated-video-review v0.1.0, a newly written MIT-licensed public adaptation of Leo's custom editing workflow; no private voice models, customer material or original personal files are distributed. This public skill has not been independently tested in an actual edit or verified across hosts.
 
-There is no live marketplace, verified integration, independent certification or real user rating. New code, schemas and synthetic examples are licensed under MIT; documentation and articles are under CC BY 4.0, attributed to Leo and contributors with AI assistance disclosed. Exact scope is defined in LICENSING.md. The public repository is [leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed). Repository creation and public visibility are verified. Private vulnerability reporting is enabled and the maintainer opened its draft form; external report submission, notification delivery and response times have not been tested. Existing private work and third-party plugin copies are excluded.
+There is no transaction platform, automated evaluation platform, verified integration, independent certification or real user rating. New code, schemas and synthetic examples are licensed under MIT; documentation and articles are under CC BY 4.0, attributed to Leo and contributors with AI assistance disclosed. Exact scope is defined in LICENSING.md. The public repository is [leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed). Repository creation and public visibility are verified. Private vulnerability reporting is enabled and the maintainer opened its draft form; external report submission, notification delivery and response times have not been tested. Existing private work and third-party plugin copies are excluded.
 
-A daily 09:00 Asia/Shanghai wakeup is active in the maintainer's Codex workspace for preliminary checks of public metadata/text and local review drafts only. It does not authorize plugin execution, production testing or publication. This repository contains no independent collection or evaluation service and no automated outbound publishing workflow; release decisions require human review.
+The maintainer's active Codex workspace schedule records business priorities and a plan at 07:00 Asia/Shanghai, then advances authorized product, content and evidence work at 07:30 and records budget use and outcomes. Checked content may be published to authorized, owner-controlled GitHub and public-platform destinations with target-side readback. Unknown plugins are not run and internal material is not published. The new schedule has not yet passed its first complete-run acceptance; activation is not proof of execution.
+
+Paid pilots are open for scope-based quotes covering version monitoring, task regression evidence and team-reviewed allowlists. Apply through the [public pilot form](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=paid-pilot.yml) with a non-sensitive summary only; GitHub issue titles, bodies and attachments are public. Scope, price, third-party costs, permissions and acceptance criteria are agreed before work begins. There is no established certification, automatic sandbox, customer track record or service SLA. The [public website](https://agent-catalog.sxbliuyi.chatgpt.site) is live. Corrections and evidence submissions do not require paid participation.

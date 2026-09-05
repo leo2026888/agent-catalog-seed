@@ -10,6 +10,7 @@
 | `skills/narrated-video-review/SKILL.md`，v0.1.0 | 在本次请求授权下，依据 Leo 本地自定义剪辑工作流的通用方法重新编写，AI 辅助整理 | 未复制原个人 Skill 正文、第三方插件技能文本、专用音色、媒体、客户信息或工具实现 | MIT；Leo and contributors，2026；仅覆盖本次公开适配版指令 |
 | `skills/narrated-video-review/LICENSE` | 根目录 MIT 标准许可文本的同内容副本，便于单独分发 Skill 时保留声明 | 标准许可文本 | 与根目录 LICENSE 一致；不授予实际处理素材或工具的权利 |
 | `.gitignore`、`VERSION`、`SHA256SUMS.txt` 与机器配置文件 | 本次编排的仓库配置与自动生成摘要 | 没有外部服务密钥或实际账号 | MIT；Leo and contributors，2026 |
+| `evidence/` 的四条记录和说明 | 本次依据已保存首轮公开基线与公开 Skill 重新撰写，AI 辅助整理；精确来源 URL 和提交见各记录 | 没有复制第三方 Skill 正文、脚本、图片或安装包；PDF 仅作专有许可来源参考 | 本项目新增摘要与编排采用 CC BY 4.0；GitHub MCP 根 MIT、Filesystem 许可声明待复核、PDF Proprietary 均仅按各记录范围说明，不重新授权第三方内容 |
 | `LICENSE` | MIT 标准许可文本，仅填入本次版权署名 | 标准许可文本 | 保留正式文本；范围见 [许可与署名](LICENSING.md) |
 
 ## 可追溯的外部参考

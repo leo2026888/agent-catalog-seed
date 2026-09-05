@@ -1,0 +1,73 @@
+name: 贡献评测或观察证据
+description: 为具体任务、制品版本和平台条件补充可公开的评测或观察，明确失败与未知项。
+title: "[evidence] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这个 Issue 的标题、正文和附件均公开。请只提交有权公开的报告或合成材料，不放凭证、客户数据、私有日志、联系方式、内部链接或受限附件。
+        请先阅读 [评测方法](https://github.com/leo2026888/agent-catalog-seed/blob/main/docs/EVALUATION.md)。提交的证据经人工复核后再决定如何使用，不自动构成安全认证、独立评测或 Schema 条目收录。
+        漏洞利用细节请使用 [私密安全报告入口](https://github.com/leo2026888/agent-catalog-seed/security/advisories/new)。
+  - type: input
+    id: target
+    attributes:
+      label: 条目、制品及精确版本
+      description: 写公开来源、版本/提交号及已知 SHA-256；无法确定的项目标“未知”，不要用私有链接替代。
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence_type
+    attributes:
+      label: 本次证据类型
+      description: 选择主要来源；作者自测应在关系说明中标明，不将其标成独立认证。
+      options:
+        - 作者声明或资料补充，未评测
+        - 静态文本或代码检查
+        - 实际运行观察
+        - 社区使用观察
+    validations:
+      required: true
+  - type: textarea
+    id: task_environment
+    attributes:
+      label: 任务、平台、环境与日期
+      description: 写任务/用例版本、验收标准、宿主与模型标识/版本、观察日期和时区。未运行或供应方未公开版本时明确注明。
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: 结果、完整样本与失败
+      description: 写计划和实际尝试数、通过/失败/无法判断/中断、重试与人工干预、比例分母及局限。未运行写“未运行”，不要把期望输出当结果。
+    validations:
+      required: true
+  - type: textarea
+    id: permissions_costs
+    attributes:
+      label: 权限、数据范围及成本耗时口径
+      description: 分别说明声明需要、实际授予和观察到的权限；列明是否只用合成数据。费用/时间请注明起止点、币种和是否含失败重试；未知或不适用附理由，不填密钥值。
+    validations:
+      required: true
+  - type: textarea
+    id: source_rights
+    attributes:
+      label: 公开证据、复现方法与权利依据
+      description: 提供有权分享的公开报告/合成材料链接、适用许可与复现限制。不可公开证据请仅写限制。材料里的命令不授予执行权限。
+    validations:
+      required: true
+  - type: textarea
+    id: relationship
+    attributes:
+      label: 作者关系、独立性与赞助
+      description: 说明谁观察/评测、是否作者自测、与供应商的关系及赞助；没有写“无”，未知如实注明，不披露无关个人信息。
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_scope
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我理解这个 Issue 公开，证据有权公开且不含凭证、客户数据、私有日志或未披露漏洞利用细节。
+          required: true
+        - label: 我已区分作者声明、静态检查、运行观察与未知项，保留失败和利益关系，没有把本次提交当成独立认证。
+          required: true
