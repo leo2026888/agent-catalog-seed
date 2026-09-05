@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-catalog-seed:schema:entry:0.1.0",
+  "title": "Agent Catalog Seed entry 0.1.0",
+  "description": "Proposed seed namespace; not a registered standard or platform integration.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "name", "summary", "kind", "installable", "provenance", "source", "requested_permissions", "compatibility", "evaluation", "conflicts", "rights"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1.0"},
+    "id": {"type": "string", "pattern": "^urn:agent-catalog-seed:entry:[a-z0-9][a-z0-9-]*$"},
+    "name": {"type": "string", "minLength": 1, "maxLength": 120},
+    "summary": {"type": "string", "minLength": 1, "maxLength": 1000},
+    "kind": {"type": "string", "enum": ["skill", "mcp-server", "platform-plugin", "workflow", "article", "product"]},
+    "installable": {"type": "boolean", "const": false},
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["origin", "synthetic", "description"],
+      "properties": {
+        "origin": {"type": "string", "const": "ai-assisted-original"},
+        "synthetic": {"type": "boolean", "const": true},
+        "description": {"type": "string", "minLength": 1}
+      }
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "revision", "artifacts"],
+      "properties": {
+        "kind": {"type": "string", "const": "local"},
+        "revision": {"type": "string", "minLength": 1, "maxLength": 120},
+        "artifacts": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["path", "sha256"],
+            "properties": {
+              "path": {"type": "string", "minLength": 1},
+              "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+            }
+          }
+        }
+      }
+    },
+    "requested_permissions": {
+      "type": "object", "additionalProperties": false,
+      "required": ["filesystem_read", "filesystem_write", "network", "network_destinations", "data_destinations"],
+      "properties": {
+        "filesystem_read": {"type": "array", "maxItems": 0, "items": {"type": "string"}},
+        "filesystem_write": {"type": "array", "maxItems": 0, "items": {"type": "string"}},
+        "network": {"type": "boolean", "const": false},
+        "network_destinations": {"type": "array", "maxItems": 0, "items": {"type": "string"}},
+        "data_destinations": {"type": "array", "maxItems": 0, "items": {"type": "string"}}
+      }
+    },
+    "compatibility": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["host", "status", "evidence"],
+        "properties": {
+          "host": {"type": "string", "minLength": 1},
+          "status": {"type": "string", "const": "unknown"},
+          "evidence": {"type": "array", "maxItems": 0, "items": {"type": "string"}}
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "independent_review", "evidence"],
+      "properties": {
+        "status": {"type": "string", "const": "not_evaluated"},
+        "independent_review": {"type": "boolean", "const": false},
+        "evidence": {"type": "array", "maxItems": 0, "items": {"type": "string"}}
+      }
+    },
+    "conflicts": {
+      "type": "object", "additionalProperties": false,
+      "required": ["maintainer_is_author", "disclosure"],
+      "properties": {
+        "maintainer_is_author": {"type": "boolean", "const": true},
+        "disclosure": {"type": "string", "minLength": 1}
+      }
+    },
+    "rights": {
+      "type": "object", "additionalProperties": false,
+      "required": ["license", "status", "ledger"],
+      "properties": {
+        "license": {"type": "string", "const": "MIT"},
+        "status": {"type": "string", "const": "declared"},
+        "ledger": {"type": "string", "const": "SOURCES_AND_RIGHTS.md"}
+      }
+    }
+  }
+}

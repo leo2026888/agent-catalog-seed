@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1.0",
+  "id": "urn:agent-catalog-seed:entry:release-note-checklist-demo",
+  "name": "发布说明转检查清单：合成示例",
+  "summary": "用虚构发布说明展示来源、预期输出和未评测边界；非可安装插件。",
+  "kind": "workflow",
+  "installable": false,
+  "provenance": {
+    "origin": "ai-assisted-original",
+    "synthetic": true,
+    "description": "当前任务新写的 AI 辅助合成材料；Quiet Notes 为虚构名称，不使用客户或既有产品材料。"
+  },
+  "source": {
+    "kind": "local",
+    "revision": "seed-v0.1.0",
+    "artifacts": [
+      {"path": "examples/release-note-checklist/README.md", "sha256": "faf3fa8e1f79f54d78e0295ad8a2a53f405e24ac46e71bde75164226f70591be"},
+      {"path": "examples/release-note-checklist/input.md", "sha256": "0649937b8a7e32520824beea9aad5eb658275f13af86bcb2a8ce3189b5d6914f"},
+      {"path": "examples/release-note-checklist/expected-output.md", "sha256": "7e83cce2a91255ba9741094ede3ef8cc3e5dfafe89aa87a643c456f568d2e362"}
+    ]
+  },
+  "requested_permissions": {
+    "filesystem_read": [],
+    "filesystem_write": [],
+    "network": false,
+    "network_destinations": [],
+    "data_destinations": []
+  },
+  "compatibility": [
+    {"host": "unspecified", "status": "unknown", "evidence": []}
+  ],
+  "evaluation": {
+    "status": "not_evaluated",
+    "independent_review": false,
+    "evidence": []
+  },
+  "conflicts": {
+    "maintainer_is_author": true,
+    "disclosure": "维护者参与本示例创作，属于利益相关展示；预期输出是编写的验收样例，不是独立评测结果。"
+  },
+  "rights": {
+    "license": "MIT",
+    "status": "declared",
+    "ledger": "SOURCES_AND_RIGHTS.md"
+  }
+}
