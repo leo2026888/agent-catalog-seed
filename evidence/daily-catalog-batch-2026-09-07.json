@@ -4,7 +4,7 @@
   "timezone": "Asia/Shanghai",
   "batch_status": "accepted_for_publication",
   "evaluation_level": "official source metadata, official service documentation and fixed-commit README/LICENSE review; no runtime test",
-  "business_reads_so_far": 4,
+  "business_reads_so_far": 6,
   "business_read_limit": 20,
   "root_reserved_reads": 8,
   "underlying_http_requests": null,
@@ -363,9 +363,44 @@
     "observation": "Repository issue list returned no public issues; this bounded observation is not proof of market-wide demand."
   },
   "publication": {
-    "status": "pending",
-    "github": null,
-    "site": null
+    "status": "published_and_target_read_back",
+    "github": {
+      "generated": true,
+      "commit": "cab838cc37cdbc9c27f82012356c29d227426de6",
+      "push_status": "origin_main_updated",
+      "release_tag": "v0.4.0-seed",
+      "release_url": "https://github.com/leo2026888/agent-catalog-seed/releases/tag/v0.4.0-seed",
+      "target_readback": {
+        "status": "verified",
+        "observed_at": "2026-09-06T23:48:58Z",
+        "observed_title": "Agent Catalog Seed v0.4.0",
+        "observed_tag": "v0.4.0-seed",
+        "observed_commit_abbrev": "cab838c"
+      }
+    },
+    "site": {
+      "generated": true,
+      "commit": "41176b72ab7b4a2e5e21b5065e98651997abc32a",
+      "source_push_status": "sites_main_updated",
+      "version_number": 6,
+      "version_id": "appgprj_6a9b952023448191a4d698aa6afc3ff7~appgver_88298776f9108191aeceb283c26baa68",
+      "deployment_id": "appgdep_6a9dfb0992b081918fb4b103a28e7e63",
+      "deployment_status": "succeeded",
+      "url": "https://agent-catalog.sxbliuyi.chatgpt.site",
+      "target_readback": {
+        "status": "verified",
+        "observed_at": "2026-09-06T23:48:58Z",
+        "catalog_count": 22,
+        "task_count": 15,
+        "bounded_document_evidence_count": 8,
+        "metadata_shortlist_count": 14,
+        "runtime_evaluation_count": 0,
+        "notion_listing_visible": true,
+        "context7_recheck_visible": true,
+        "chrome_devtools_recheck_visible": true,
+        "community_rating_count": 0
+      }
+    }
   },
   "read_accounting": [
     {
@@ -387,6 +422,16 @@
       "read": 4,
       "source": "Agent Catalog public GitHub issue list",
       "status": "read; zero issues"
+    },
+    {
+      "read": 5,
+      "source": "Agent Catalog v0.4.0-seed GitHub Release target-side page",
+      "status": "target readback verified"
+    },
+    {
+      "read": 6,
+      "source": "Agent Catalog Sites version 6 production page",
+      "status": "target readback verified"
     }
   ],
   "read_failures": []
