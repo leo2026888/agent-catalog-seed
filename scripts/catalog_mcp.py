@@ -13,7 +13,7 @@ MAX_MESSAGE_BYTES = 64 * 1024
 TOOLS = [
     {
         "name": "search",
-        "description": "按中文或英文任务关键词搜索5条本地公开目录记录；保留版本、许可和未实测状态。只读，不联网。",
+        "description": "按中文或英文任务关键词搜索21条本地公开目录记录；保留版本、许可、评分含义和未实测状态。只读，不联网。",
         "inputSchema": {
             "type": "object", "required": ["query"], "additionalProperties": False,
             "properties": {
@@ -87,7 +87,7 @@ class Server:
                 "protocolVersion": PROTOCOL_VERSION,
                 "capabilities": {"tools": {"listChanged": False}},
                 "serverInfo": {"name": "agent-catalog-readonly", "version": SERVER_VERSION},
-                "instructions": "只读本地5条公开记录；目录协议验证不代表候选插件已运行或宿主已接通。",
+                "instructions": "只读本地21条公开记录；公开资料评分不代表任务效果或安全，目录协议验证不代表候选插件已运行或宿主已接通。",
             }
         elif method == "ping" and self.state != "new":
             result = {}

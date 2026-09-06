@@ -1,0 +1,1317 @@
+{
+  "schema_version": "catalog-expansion/0.1",
+  "observed_at": "2026-09-06T01:16:00Z",
+  "timezone": "Asia/Shanghai",
+  "batch_status": "published_metadata_shortlist",
+  "source_method": "GitHub topic:mcp-server sorted by stars plus one batched community-metadata query",
+  "selection_rule": "Concrete MCP server, MCP toolkit or Agent Skill tool; at least 5,000 stars; public repository; recognized license metadata; not archived; task value is understandable from public metadata.",
+  "scoring_method": "Transparent public-evidence score only; task-effect and community-rating scores remain null until evidence is reviewed.",
+  "third_party_code_executed": false,
+  "third_party_packages_copied": false,
+  "record_count": 16,
+  "records": [
+    {
+      "id": "context7-mcp",
+      "name": "context7",
+      "author": "upstash",
+      "repository": "upstash/context7",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "代码文档检索",
+      "summary": "为编码智能体提供与当前版本匹配的库文档上下文，适合在生成代码前查阅API资料。",
+      "task_tags": [
+        "代码",
+        "文档",
+        "API",
+        "context7",
+        "library documentation"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "@upstash/context7-mcp@4.0.5",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-09-04T19:06:10Z",
+        "release_published_at": "2026-09-04T10:12:47Z"
+      },
+      "popularity": {
+        "stargazers_count": 61678,
+        "fork_count": 2973,
+        "watchers_count": 162,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 31,
+        "merged_pull_requests": 508,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：远程内容来源与请求范围；返回资料的版本对应关系。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 100,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 20,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/upstash/context7",
+        "release": "https://github.com/upstash/context7/releases/tag/@upstash/context7-mcp@4.0.5"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/upstash/context7"
+      }
+    },
+    {
+      "id": "chrome-devtools-mcp",
+      "name": "chrome-devtools-mcp",
+      "author": "ChromeDevTools",
+      "repository": "ChromeDevTools/chrome-devtools-mcp",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "浏览器调试",
+      "summary": "把Chrome DevTools能力接入编码智能体，用于检查网页、控制浏览器并分析调试信息。",
+      "task_tags": [
+        "浏览器",
+        "调试",
+        "Chrome",
+        "DevTools",
+        "网页性能"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "chrome-devtools-mcp-v1.8.0",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-09-06T00:06:40Z",
+        "release_published_at": "2026-08-25T11:35:48Z"
+      },
+      "popularity": {
+        "stargazers_count": 51088,
+        "fork_count": 3585,
+        "watchers_count": 256,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 71,
+        "merged_pull_requests": 1183,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "Apache-2.0",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：浏览器控制权限；页面与调试数据可见范围。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 100,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 20,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "release": "https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.8.0"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+      }
+    },
+    {
+      "id": "codebase-memory-mcp",
+      "name": "codebase-memory-mcp",
+      "author": "DeusData",
+      "repository": "DeusData/codebase-memory-mcp",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "代码库记忆",
+      "summary": "为代码库建立可持续检索的结构化记忆，帮助智能体理解大型项目和跨文件关系。",
+      "task_tags": [
+        "代码库",
+        "检索",
+        "记忆",
+        "索引",
+        "codebase"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v0.10.8",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-09-06T01:21:34Z",
+        "release_published_at": "2026-08-19T02:42:10Z"
+      },
+      "popularity": {
+        "stargazers_count": 42375,
+        "fork_count": 3459,
+        "watchers_count": 175,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 453,
+        "merged_pull_requests": 631,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：本地源码读取范围；持久索引的存储与清理。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 98,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 18,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/DeusData/codebase-memory-mcp",
+        "release": "https://github.com/DeusData/codebase-memory-mcp/releases/tag/v0.10.8"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/DeusData/codebase-memory-mcp"
+      }
+    },
+    {
+      "id": "gpt-researcher",
+      "name": "gpt-researcher",
+      "author": "assafelovic",
+      "repository": "assafelovic/gpt-researcher",
+      "type": "MCP-ENABLED TOOL",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "自动研究",
+      "summary": "面向资料搜集和报告生成的研究工具，可用于多来源检索与整理。",
+      "task_tags": [
+        "研究",
+        "检索",
+        "报告",
+        "research"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v3.6.1",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-08-27T19:34:56Z",
+        "release_published_at": "2026-08-24T06:58:47Z"
+      },
+      "popularity": {
+        "stargazers_count": 29307,
+        "fork_count": 3983,
+        "watchers_count": 178,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 34,
+        "merged_pull_requests": 576,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "Apache-2.0",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：外部网络访问；来源质量与引用完整性。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 93,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 20,
+          "popularity_signal": 18,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/assafelovic/gpt-researcher",
+        "release": "https://github.com/assafelovic/gpt-researcher/releases/tag/v3.6.1"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/assafelovic/gpt-researcher"
+      }
+    },
+    {
+      "id": "serena-mcp",
+      "name": "serena",
+      "author": "oraios",
+      "repository": "oraios/serena",
+      "type": "MCP TOOLKIT",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "语义代码编辑",
+      "summary": "为编码智能体提供语义级代码检索和编辑能力，适合大型代码库导航与修改。",
+      "task_tags": [
+        "代码",
+        "语义检索",
+        "编辑",
+        "IDE",
+        "serena"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v1.7.0",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-09-05T18:42:15Z",
+        "release_published_at": "2026-08-09T18:38:06Z"
+      },
+      "popularity": {
+        "stargazers_count": 28883,
+        "fork_count": 1961,
+        "watchers_count": 91,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 82,
+        "merged_pull_requests": 606,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：代码读写范围；语言服务器与项目索引。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 98,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 18,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/oraios/serena",
+        "release": "https://github.com/oraios/serena/releases/tag/v1.7.0"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/oraios/serena"
+      }
+    },
+    {
+      "id": "n8n-mcp",
+      "name": "n8n-mcp",
+      "author": "czlonkowski",
+      "repository": "czlonkowski/n8n-mcp",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "工作流配置",
+      "summary": "帮助智能体理解并配置n8n工作流节点，面向自动化流程搭建和维护。",
+      "task_tags": [
+        "工作流",
+        "自动化",
+        "n8n",
+        "节点"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v2.82.1",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-09-03T17:15:09Z",
+        "release_published_at": "2026-09-03T17:15:11Z"
+      },
+      "popularity": {
+        "stargazers_count": 22842,
+        "fork_count": 3638,
+        "watchers_count": 163,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 27,
+        "merged_pull_requests": 391,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：工作流写入权限；连接器凭据与外部系统访问。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 98,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 18,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/czlonkowski/n8n-mcp",
+        "release": "https://github.com/czlonkowski/n8n-mcp/releases/tag/v2.82.1"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/czlonkowski/n8n-mcp"
+      }
+    },
+    {
+      "id": "xiaohongshu-mcp",
+      "name": "xiaohongshu-mcp",
+      "author": "xpzouying",
+      "repository": "xpzouying/xiaohongshu-mcp",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "小红书操作",
+      "summary": "为小红书相关浏览和内容操作提供MCP接口，属于账号与内容写入风险较高的候选。",
+      "task_tags": [
+        "小红书",
+        "内容",
+        "社交平台",
+        "xiaohongshu"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v2.5.0",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-08-31T04:41:56Z",
+        "release_published_at": "2026-08-13T06:18:23Z"
+      },
+      "popularity": {
+        "stargazers_count": 15656,
+        "fork_count": 2302,
+        "watchers_count": 40,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 43,
+        "merged_pull_requests": 252,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "Apache-2.0",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：账号登录与会话；发文互动等外部写入。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 96,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 16,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/xpzouying/xiaohongshu-mcp",
+        "release": "https://github.com/xpzouying/xiaohongshu-mcp/releases/tag/v2.5.0"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/xpzouying/xiaohongshu-mcp"
+      }
+    },
+    {
+      "id": "skill-seekers",
+      "name": "Skill_Seekers",
+      "author": "yusufkaraaslan",
+      "repository": "yusufkaraaslan/Skill_Seekers",
+      "type": "AGENT SKILL TOOL",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "生成Agent Skill",
+      "summary": "把公开文档、仓库或PDF整理为可供智能体使用的Skill素材和结构。",
+      "task_tags": [
+        "Skill",
+        "文档",
+        "仓库",
+        "PDF",
+        "生成"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v3.9.1",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-08-30T14:52:19Z",
+        "release_published_at": "2026-08-03T00:52:12Z"
+      },
+      "popularity": {
+        "stargazers_count": 14923,
+        "fork_count": 1516,
+        "watchers_count": 72,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 47,
+        "merged_pull_requests": 112,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：输入材料权利；生成内容准确性与再分发范围。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 96,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 16,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/yusufkaraaslan/Skill_Seekers",
+        "release": "https://github.com/yusufkaraaslan/Skill_Seekers/releases/tag/v3.9.1"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/yusufkaraaslan/Skill_Seekers"
+      }
+    },
+    {
+      "id": "fastapi-mcp",
+      "name": "fastapi_mcp",
+      "author": "tadata-org",
+      "repository": "tadata-org/fastapi_mcp",
+      "type": "MCP TOOLKIT",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "API转MCP",
+      "summary": "把FastAPI端点暴露为MCP工具，适合将现有API接入智能体工作流。",
+      "task_tags": [
+        "FastAPI",
+        "API",
+        "开发",
+        "服务集成"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v0.4.0",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2025-11-24T14:51:54Z",
+        "release_published_at": "2025-07-28T12:10:44Z"
+      },
+      "popularity": {
+        "stargazers_count": 12001,
+        "fork_count": 961,
+        "watchers_count": 95,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 94,
+        "merged_pull_requests": 48,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：现有API权限继承；认证与写操作暴露范围。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 81,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 10,
+          "popularity_signal": 16,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/tadata-org/fastapi_mcp",
+        "release": "https://github.com/tadata-org/fastapi_mcp/releases/tag/v0.4.0"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/tadata-org/fastapi_mcp"
+      }
+    },
+    {
+      "id": "aws-mcp-servers",
+      "name": "mcp",
+      "author": "awslabs",
+      "repository": "awslabs/mcp",
+      "type": "MCP SERVER COLLECTION",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "AWS云服务",
+      "summary": "AWS Labs维护的一组MCP服务器，覆盖多种AWS开发与云服务任务。",
+      "task_tags": [
+        "AWS",
+        "云服务",
+        "基础设施",
+        "开发"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "2026.09.20260901224839",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-09-05T00:09:11Z",
+        "release_published_at": "2026-09-02T00:42:44Z"
+      },
+      "popularity": {
+        "stargazers_count": 9665,
+        "fork_count": 1743,
+        "watchers_count": 82,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 170,
+        "merged_pull_requests": 1729,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "Apache-2.0",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：云账号权限；资源创建修改与费用风险。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 94,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 14,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/awslabs/mcp",
+        "release": "https://github.com/awslabs/mcp/releases/tag/2026.09.20260901224839"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/awslabs/mcp"
+      }
+    },
+    {
+      "id": "drawio-skill",
+      "name": "drawio-skill",
+      "author": "Agents365-ai",
+      "repository": "Agents365-ai/drawio-skill",
+      "type": "AGENT SKILL",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "架构图生成",
+      "summary": "把文字和真实来源整理为可维护的draw.io架构图，强调结构化图形输出。",
+      "task_tags": [
+        "绘图",
+        "架构图",
+        "draw.io",
+        "diagram"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v3.2.1",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-09-03T05:14:48Z",
+        "release_published_at": "2026-09-03T05:10:09Z"
+      },
+      "popularity": {
+        "stargazers_count": 9066,
+        "fork_count": 637,
+        "watchers_count": 28,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 0,
+        "merged_pull_requests": 89,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：引用来源完整性；生成文件写入范围。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 94,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 14,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/Agents365-ai/drawio-skill",
+        "release": "https://github.com/Agents365-ai/drawio-skill/releases/tag/v3.2.1"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/Agents365-ai/drawio-skill"
+      }
+    },
+    {
+      "id": "firecrawl-mcp",
+      "name": "firecrawl-mcp-server",
+      "author": "firecrawl",
+      "repository": "firecrawl/firecrawl-mcp-server",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "网页抓取与搜索",
+      "summary": "把网页抓取和搜索能力提供给智能体，用于获取网页内容和研究资料。",
+      "task_tags": [
+        "网页",
+        "抓取",
+        "搜索",
+        "Firecrawl"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v3.2.1",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-09-05T00:05:42Z",
+        "release_published_at": "2025-09-26T07:31:17Z"
+      },
+      "popularity": {
+        "stargazers_count": 7406,
+        "fork_count": 873,
+        "watchers_count": 43,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 81,
+        "merged_pull_requests": 130,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：外部网络访问；抓取范围、配额与站点条款。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 94,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 14,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/firecrawl/firecrawl-mcp-server",
+        "release": "https://github.com/firecrawl/firecrawl-mcp-server/releases/tag/v3.2.1"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/firecrawl/firecrawl-mcp-server"
+      }
+    },
+    {
+      "id": "browser-tools-mcp",
+      "name": "browser-tools-mcp",
+      "author": "AgentDeskAI",
+      "repository": "AgentDeskAI/browser-tools-mcp",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "浏览器日志检查",
+      "summary": "让开发智能体读取浏览器日志和相关调试信息，帮助定位前端问题。",
+      "task_tags": [
+        "浏览器",
+        "日志",
+        "调试",
+        "前端"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v2.0.2",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-08-12T16:48:04Z",
+        "release_published_at": "2026-08-12T16:48:05Z"
+      },
+      "popularity": {
+        "stargazers_count": 7311,
+        "fork_count": 530,
+        "watchers_count": 31,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 1,
+        "merged_pull_requests": 15,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：浏览器调试数据；本地服务和页面内容可见范围。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 89,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 20,
+          "popularity_signal": 14,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/AgentDeskAI/browser-tools-mcp",
+        "release": "https://github.com/AgentDeskAI/browser-tools-mcp/releases/tag/v2.0.2"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/AgentDeskAI/browser-tools-mcp"
+      }
+    },
+    {
+      "id": "xcodebuild-mcp",
+      "name": "XcodeBuildMCP",
+      "author": "getsentry",
+      "repository": "getsentry/XcodeBuildMCP",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "Apple应用构建",
+      "summary": "为智能体提供Xcode项目构建、测试和相关开发工具能力。",
+      "task_tags": [
+        "Xcode",
+        "iOS",
+        "macOS",
+        "构建",
+        "测试"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v2.7.0",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-09-03T07:42:23Z",
+        "release_published_at": "2026-07-23T14:07:50Z"
+      },
+      "popularity": {
+        "stargazers_count": 6344,
+        "fork_count": 313,
+        "watchers_count": 19,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 15,
+        "merged_pull_requests": 235,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：本地工程读写；构建脚本、模拟器与签名环境。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 94,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 14,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/getsentry/XcodeBuildMCP",
+        "release": "https://github.com/getsentry/XcodeBuildMCP/releases/tag/v2.7.0"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/getsentry/XcodeBuildMCP"
+      }
+    },
+    {
+      "id": "apify-mcp",
+      "name": "apify-mcp-server",
+      "author": "apify",
+      "repository": "apify/apify-mcp-server",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "网页与数据提取",
+      "summary": "把Apify的数据提取和自动化能力接入智能体，面向网站、搜索和社交数据任务。",
+      "task_tags": [
+        "网页",
+        "数据提取",
+        "自动化",
+        "Apify"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "v0.15.4",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-09-06T06:24:01Z",
+        "release_published_at": "2026-09-02T14:47:12Z"
+      },
+      "popularity": {
+        "stargazers_count": 6099,
+        "fork_count": 251,
+        "watchers_count": 25,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 127,
+        "merged_pull_requests": 683,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：远程任务费用；抓取范围、账号与数据处理。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 94,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 14,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/apify/apify-mcp-server",
+        "release": "https://github.com/apify/apify-mcp-server/releases/tag/v0.15.4"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/apify/apify-mcp-server"
+      }
+    },
+    {
+      "id": "mcp-use-toolkit",
+      "name": "mcp-use",
+      "author": "mcp-use",
+      "repository": "mcp-use/mcp-use",
+      "type": "MCP TOOLKIT",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "MCP应用开发",
+      "summary": "用于开发和运行MCP应用及服务器的工具框架，适合连接、调试和交付MCP能力。",
+      "task_tags": [
+        "MCP",
+        "应用开发",
+        "调试",
+        "框架"
+      ],
+      "evidence_label": "GitHub公开元数据与社区活跃度初筛 · 未运行",
+      "version": {
+        "value": "mcp-use@2.4.3",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": null
+      },
+      "dates": {
+        "observed_at": "2026-09-06T01:16:00Z",
+        "repository_pushed_at": "2026-09-05T01:11:59Z",
+        "release_published_at": "2026-09-04T14:15:42Z"
+      },
+      "popularity": {
+        "stargazers_count": 10582,
+        "fork_count": 1440,
+        "watchers_count": 91,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 15,
+        "merged_pull_requests": 1422,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "github_repository_metadata_declared",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。"
+      },
+      "permissions_note": "本轮未读取完整权限、认证和数据流文档；进入安装或运行评测前必须单独核对。重点关注：连接目标权限；开发框架依赖与运行环境。",
+      "compatibility": "仓库MCP主题与项目说明只作为发现依据；具体宿主兼容性未验证。",
+      "public_evidence_score": {
+        "value": 96,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 16,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "metadata_shortlist",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/mcp-use/mcp-use",
+        "release": "https://github.com/mcp-use/mcp-use/releases/tag/mcp-use@2.4.3"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/mcp-use/mcp-use"
+      }
+    }
+  ],
+  "excluded_scope": "The top-50 discovery pool also contained clients, SDKs, lists, broad platforms and high-risk security or trading tools; they were not automatically relabeled as catalog plugins."
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only queries over this project's four public evidence records (MIT)."""
+"""Read-only queries over this project's public Agent Catalog records (MIT)."""
 
 import argparse
 from copy import deepcopy
@@ -13,7 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 BASELINE = "evidence/public-directory-2026-09-05.json"
 CHECKPOINT = "evidence/source-checks-2026-09-06.json"
 BATCH = "evidence/daily-catalog-batch-2026-09-06.json"
-ALIASES = {
+EXPANSION = "evidence/catalog-expansion-2026-09-06.json"
+BASE_ALIASES = {
     "narrated-video-review": ("口播", "视频", "剪辑", "字幕", "镜头", "声音", "video", "narration", "caption"),
     "github-mcp-server": ("github", "仓库", "代码审查", "议题", "拉取请求", "工作流", "issue", "issues", "pr", "pull request", "repository"),
     "filesystem-mcp-server": ("文件", "文件夹", "目录", "读写", "filesystem", "file", "files", "directory"),
@@ -45,15 +46,28 @@ class Catalog:
         baseline = json.loads((ROOT / BASELINE).read_text(encoding="utf-8"))
         checkpoint = json.loads((ROOT / CHECKPOINT).read_text(encoding="utf-8"))
         batch = json.loads((ROOT / BATCH).read_text(encoding="utf-8"))
+        expansion = json.loads((ROOT / EXPANSION).read_text(encoding="utf-8"))
         new_records = [record for record in batch["records"] if record["listing_action"] == "new_accepted_listing"]
-        records = baseline["records"] + new_records
+        expanded_records = expansion["records"]
+        records = baseline["records"] + new_records + expanded_records
         checks = checkpoint["records"]
         self.records = {record["id"]: record for record in records}
         self.checks = {record["id"]: record for record in checks}
         self.batch_checks = {record["id"]: record for record in batch["records"]}
-        if len(self.records) != len(records) or set(self.records) != set(ALIASES):
+        self.expansion_ids = {record["id"] for record in expanded_records}
+        self.aliases = dict(BASE_ALIASES)
+        for record in expanded_records:
+            terms = [record["task"], record["name"], record["author"], *record["task_tags"]]
+            terms.extend(record["repository"].replace("/", " ").split())
+            self.aliases[record["id"]] = tuple(dict.fromkeys(normalize(term) for term in terms))
+        self.record_origins = {
+            **{record["id"]: BASELINE for record in baseline["records"]},
+            **{record["id"]: BATCH for record in new_records},
+            **{record["id"]: EXPANSION for record in expanded_records},
+        }
+        if len(self.records) != len(records) or set(self.records) != set(self.aliases):
             raise ValueError("Unexpected public catalog membership")
-        if len(self.checks) != len(checks) or set(self.checks) != set(ALIASES) - {"narrated-video-review", "playwright-mcp"}:
+        if len(self.checks) != len(checks) or set(self.checks) != set(BASE_ALIASES) - {"narrated-video-review", "playwright-mcp"}:
             raise ValueError("Unexpected checkpoint membership")
         for entry_id, check in self.checks.items():
             version = self.records[entry_id]["version"]
@@ -66,13 +80,15 @@ class Catalog:
         if not isinstance(entry_id, str) or entry_id not in self.records:
             raise QueryError("unknown_entry", "未找到该目录标识；请先检索并使用返回的 id。")
         record = deepcopy(self.records[entry_id])
-        record["record_origin"] = BASELINE
+        record["record_origin"] = self.record_origins[entry_id]
         record["source_check"] = deepcopy(self.checks.get(entry_id) or self.batch_checks.get(entry_id))
         record["daily_recheck"] = deepcopy(self.batch_checks.get(entry_id))
-        record["source_check_note"] = (
-            "9月6日新增或复核所列官方元数据与文档节选；没有运行候选。"
-            if entry_id in self.batch_checks else "本条没有9月6日补充复核；保留原证据日期。"
-        )
+        if entry_id in self.expansion_ids:
+            record["source_check_note"] = "9月6日GitHub公开元数据与社区字段初筛；没有读取完整权限文档或运行候选。"
+        elif entry_id in self.batch_checks:
+            record["source_check_note"] = "9月6日新增或复核所列官方元数据与文档节选；没有运行候选。"
+        else:
+            record["source_check_note"] = "本条没有9月6日补充复核；保留原证据日期。"
         record["query_boundary"] = {
             "local_public_records_only": True,
             "network_access_performed": False,
@@ -90,7 +106,7 @@ class Catalog:
             raise QueryError("invalid_limit", "limit 必须是1至10的整数。")
         normalized = normalize(query)
         hits = []
-        for entry_id, terms in ALIASES.items():
+        for entry_id, terms in self.aliases.items():
             matched = [term for term in terms if matches(normalized, term)]
             if normalized == entry_id:
                 matched.append(entry_id)
@@ -102,8 +118,9 @@ class Catalog:
                     "license", "evidence_label", "permissions_note", "evaluation", "source_urls",
                     "source_check", "source_check_note", "query_boundary",
                     "daily_recheck",
-                )}
-                for key in ("author", "upstream_id_status"):
+                ) if key in record}
+                for key in ("author", "task", "task_tags", "repository", "public_evidence_score",
+                            "community_rating", "community_signals", "upstream_id_status"):
                     if key in record:
                         hit[key] = record[key]
                 hit["matched_terms"] = matched
@@ -117,7 +134,7 @@ class Catalog:
             "returned_count": min(limit, len(hits)),
             "results": hits[:limit],
             "status": "matched" if hits else "no_match_in_local_catalog",
-            "scope_note": "仅搜索5条本地公开记录；无匹配不代表外部市场没有相应工具。匹配不是效果推荐或安全认证。",
+            "scope_note": f"仅搜索{len(self.records)}条本地公开记录；无匹配不代表外部市场没有相应工具。匹配和公开资料评分不是效果推荐或安全认证。",
         }
 
     def installation_guide(self, entry_id):
@@ -149,6 +166,12 @@ class Catalog:
                 "本站未安装或运行该组件；Node、依赖、浏览器二进制、宿主兼容和任务效果均需另行验证。",
             ],
         }
+        if entry_id not in steps:
+            steps[entry_id] = [
+                "打开作者公开仓库，确认当前版本、许可、文档和维护状态；本目录不提供第三方安装包。",
+                "在安装或连接前单独核对认证、数据流和写入权限；公开资料评分不包含运行安全或任务效果。",
+                "如需评测，应在隔离环境使用合成数据并记录成功、失败、费用和人工干预；本站尚未执行。",
+            ]
         return {
             "entry": record,
             "guide_status": "source_reference_only" if entry_id == "anthropic-pdf-skill" else "manual_source_guidance",

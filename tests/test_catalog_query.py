@@ -40,6 +40,23 @@ class CatalogTests(unittest.TestCase):
         self.assertFalse(record["evaluation"]["runtime_tested"])
         self.assertEqual(record["daily_recheck"]["listing_action"], "new_accepted_listing")
 
+    def test_expanded_catalog_exposes_public_score_without_claiming_effect(self):
+        result = self.catalog.search("查最新的代码文档和 API", limit=10)
+        record = next(item for item in result["results"] if item["id"] == "context7-mcp")
+        self.assertEqual(result["catalog_size"], 21)
+        self.assertEqual(record["public_evidence_score"]["value"], 100)
+        self.assertEqual(record["community_rating"]["count"], 0)
+        self.assertIsNone(record["evaluation"]["task_effect_score"])
+        self.assertFalse(record["evaluation"]["runtime_tested"])
+        self.assertIn("没有读取完整权限文档", record["source_check_note"])
+
+    def test_expanded_entry_guidance_remains_manual_and_package_free(self):
+        guide = self.catalog.installation_guide("aws-mcp-servers")
+        self.assertEqual(guide["commands"], [])
+        self.assertFalse(guide["installation_performed"])
+        self.assertFalse(guide["third_party_package_provided"])
+        self.assertIn("隔离环境", guide["steps"][2])
+
     def test_normalization_and_english_word_boundaries(self):
         self.assertEqual(self.catalog.search("ＧＩＴＨＵＢ issues")["results"][0]["id"], "github-mcp-server")
         self.assertEqual(self.catalog.search("proprietary improved platform")["results"], [])
@@ -106,9 +123,11 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(self.catalog.evidence_detail("anthropic-pdf-skill"), expected)
 
     def test_limit_preserves_total_count(self):
-        result = self.catalog.search("视频 仓库 文件 PDF", limit=2)
-        self.assertEqual(result["total_matches"], 4)
-        self.assertEqual(result["returned_count"], 2)
+        full = self.catalog.search("视频 仓库 文件 PDF", limit=10)
+        limited = self.catalog.search("视频 仓库 文件 PDF", limit=2)
+        self.assertGreaterEqual(full["total_matches"], 4)
+        self.assertEqual(limited["total_matches"], full["total_matches"])
+        self.assertEqual(limited["returned_count"], 2)
 
 
 if __name__ == "__main__":

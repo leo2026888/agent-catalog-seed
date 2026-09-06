@@ -1,8 +1,8 @@
 {
   "schema_version": "catalog-index/0.1",
-  "catalog_version": "0.2.0-seed",
-  "updated_at": "2026-09-06T00:51:00Z",
-  "record_count": 5,
+  "catalog_version": "0.3.0-seed",
+  "updated_at": "2026-09-06T01:16:00Z",
+  "record_count": 21,
   "records": [
     {
       "id": "narrated-video-review",
@@ -35,9 +35,154 @@
       "source_record": "daily-catalog-batch-2026-09-06.json",
       "status": "listed",
       "evaluation_level": "官方元数据与文档节选初查；未运行"
+    },
+    {
+      "id": "context7-mcp",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 100,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "chrome-devtools-mcp",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 100,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "codebase-memory-mcp",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 98,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "gpt-researcher",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 93,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "serena-mcp",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 98,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "n8n-mcp",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 98,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "xiaohongshu-mcp",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 96,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "skill-seekers",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 96,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "fastapi-mcp",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 81,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "aws-mcp-servers",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 94,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "drawio-skill",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 94,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "firecrawl-mcp",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 94,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "browser-tools-mcp",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 89,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "xcodebuild-mcp",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 94,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "apify-mcp",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 94,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "mcp-use-toolkit",
+      "source_record": "catalog-expansion-2026-09-06.json",
+      "status": "listed_metadata_shortlist",
+      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "public_evidence_score": 96,
+      "task_effect_score": null,
+      "community_rating_count": 0
     }
   ],
   "synthetic_entry_excluded": "entries/release-note-checklist-demo.json",
   "runtime_evaluated_count": 0,
-  "independently_security_certified_count": 0
+  "independently_security_certified_count": 0,
+  "community_rated_count": 0
 }

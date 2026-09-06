@@ -1,0 +1,68 @@
+name: 提交插件使用评分
+description: 分享某个精确版本在真实或合成任务中的使用观察；人工核验后才计入社区评分。
+title: "[rating] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这是一份公开的使用评分。Issue标题、正文和附件均公开，请勿提交凭证、客户数据、私有日志、联系方式、内部链接或未披露漏洞细节。
+        评分必须绑定具体版本、任务和宿主环境。作者自测、受雇、赞助或竞争关系需要披露。提交不会自动改变目录分数或排名；维护者人工核验、去重并确认可公开后才决定是否计入聚合。
+        安全漏洞请使用私密安全报告入口，不要在这里披露利用细节。
+  - type: input
+    id: plugin
+    attributes:
+      label: 插件名称、目录ID和精确版本
+      description: 填写目录中的名称或ID、版本／提交号和公开来源。版本未知时明确写未知。
+    validations:
+      required: true
+  - type: textarea
+    id: task_environment
+    attributes:
+      label: 实际任务、宿主环境与观察日期
+      description: 写输入、期望结果、宿主／客户端、模型、系统和日期。只用合成数据时请说明。
+    validations:
+      required: true
+  - type: dropdown
+    id: overall_rating
+    attributes:
+      label: 本次任务总体评分
+      description: 评分只针对上面写明的任务、版本和环境。
+      options:
+        - 5分：达到目标且无需明显人工修正
+        - 4分：达到目标但需要少量人工修正
+        - 3分：部分达到目标或稳定性一般
+        - 2分：多数目标未达到但得到可用部分结果
+        - 1分：未达到主要目标
+        - 无法评分：环境或基础设施导致无法判断
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: 尝试次数、成功、失败和人工干预
+      description: 写总尝试数、通过数、失败数、无法判断数、重试、耗时与主要结果。不要只写结论。
+    validations:
+      required: true
+  - type: textarea
+    id: permissions_cost
+    attributes:
+      label: 权限、数据范围和成本
+      description: 写实际授予的文件、网络、账号和写入权限，以及费用或免费条件；不要填写密钥值。
+    validations:
+      required: true
+  - type: textarea
+    id: relationship
+    attributes:
+      label: 与作者或供应商的关系
+      description: 写独立用户、作者本人、雇佣、赞助、付费合作或竞争关系；没有写无。
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_scope
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我理解内容公开，并确认有权公开且不含凭证、客户数据、私有日志或未披露漏洞细节。
+          required: true
+        - label: 我理解这次评分只适用于所写版本、任务和环境，提交后不会自动变成安全认证或全平台推荐。
+          required: true
