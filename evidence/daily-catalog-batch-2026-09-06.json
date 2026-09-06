@@ -1,0 +1,195 @@
+{
+  "schema_version": "daily-catalog-batch/0.1",
+  "observed_at": "2026-09-06T00:51:00Z",
+  "timezone": "Asia/Shanghai",
+  "batch_status": "accepted_for_publication",
+  "evaluation_level": "official source metadata and bounded documentation excerpts; no runtime test",
+  "business_reads_this_supplement": 14,
+  "product_source_reads": 10,
+  "feedback_page_reads": 4,
+  "underlying_http_requests": null,
+  "new_listing_count": 1,
+  "established_recheck_count": 2,
+  "third_party_code_executed": false,
+  "third_party_packages_copied": false,
+  "records": [
+    {
+      "id": "playwright-mcp",
+      "listing_action": "new_accepted_listing",
+      "name": "Playwright MCP",
+      "author": "Microsoft",
+      "type": "mcp_server",
+      "relationship": "第三方来源条目",
+      "summary": "Microsoft 维护的浏览器自动化 MCP Server，通过结构化可访问性快照让智能体导航和操作网页。适合探索式自动化与持续浏览器上下文；会访问网页、浏览器状态及可配置的本地文件或浏览器权限，使用前应限定来源、文件范围和授权。",
+      "evidence_label": "官方元数据与文档节选初查 · 未运行测试",
+      "stable_source": "github:microsoft/playwright-mcp",
+      "version": {
+        "value": "0.0.80",
+        "kind": "github_release",
+        "basis": "GitHub latest release v0.0.80",
+        "release_published_at": "2026-09-01T03:24:23Z",
+        "repository_commit": null,
+        "commit_caveat": "release API target_commitish 为 main；本次未取得发布标签对应的不可变提交"
+      },
+      "dates": {
+        "observed_at": "2026-09-06T00:51:00Z",
+        "release_published_at": "2026-09-01T03:24:23Z",
+        "displayed_date": "2026-09-01",
+        "displayed_date_label": "GitHub Release发布时间"
+      },
+      "popularity": {
+        "github_repository": "microsoft/playwright-mcp",
+        "stargazers_count": 36834,
+        "observed_at": "2026-09-06T00:51:00Z",
+        "meaning": "发现与广泛使用信号；不是质量、安全或兼容性评分"
+      },
+      "maintenance": {
+        "archived": false,
+        "disabled": false,
+        "repository_pushed_at": "2026-09-04T22:45:53Z",
+        "latest_release_published_at": "2026-09-01T03:24:23Z",
+        "status": "active_in_observed_metadata"
+      },
+      "license": {
+        "label": "Apache-2.0",
+        "status": "github_repository_metadata_declared",
+        "source_url": "https://github.com/microsoft/playwright-mcp/blob/main/LICENSE",
+        "redistribution_note": "本站只发布原创简介、证据和官方链接，不复制或分发第三方源码或软件包。仓库许可元数据不替代依赖、浏览器及具体分发方式核对。"
+      },
+      "permissions_note": "README 声明会启动或连接浏览器并访问网页；默认文件访问限制在workspace roots或当前目录，可用参数扩大到不受限文件访问；可配置网络来源允许/阻止规则、浏览器类型、CDP连接、浏览器扩展及地理位置/剪贴板等浏览器权限。作者明确说明来源允许/阻止列表不构成安全边界且不约束重定向。",
+      "authentication": "基础本地stdio示例未声明第三方账户认证；访问的具体网站仍按该网站登录与权限控制。可选CDP headers等配置可能携带敏感数据，本目录不收集。",
+      "dependencies": "README要求Node.js 18或以上并以@playwright/mcp包接入；完整依赖树、安装脚本及浏览器二进制未检查。",
+      "compatibility": "README列举多种MCP客户端并给出Codex配置示例，属于作者声明；本站未在任何宿主安装或调用，兼容性仍为未验证。",
+      "checks_completed": [
+        "读取官方GitHub仓库元数据，记录星数、许可标识、归档状态与最近推送时间。",
+        "读取官方latest release元数据，记录v0.0.80与发布时间。",
+        "读取README的产品定位、Node要求、基础配置及权限参数节选；未把作者声明当成运行结果。"
+      ],
+      "checks_not_completed": [
+        "未完整读取或审计全部源码、依赖、安装脚本和浏览器二进制。",
+        "未执行安装、MCP握手、网页访问、文件访问或权限隔离测试。",
+        "未取得发布标签对应的不可变提交，也未核验npm包摘要和下载量。",
+        "未做独立安全审计、任务效果评价或跨宿主兼容性验证。"
+      ],
+      "evaluation": {
+        "source_metadata_checked": true,
+        "bounded_documentation_checked": true,
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/microsoft/playwright-mcp",
+        "release": "https://github.com/microsoft/playwright-mcp/releases/tag/v0.0.80",
+        "readme": "https://github.com/microsoft/playwright-mcp/blob/main/README.md",
+        "license": "https://github.com/microsoft/playwright-mcp/blob/main/LICENSE"
+      },
+      "action": {
+        "label": "查看作者仓库与发布页",
+        "kind": "upstream_source",
+        "url": "https://github.com/microsoft/playwright-mcp/releases/tag/v0.0.80"
+      },
+      "metadata_fingerprint_sha256": "37f5ce56af839d853808960e39b0d5d3daaf508a9cbcdb8a4504f088a7306f9d"
+    },
+    {
+      "id": "github-mcp-server",
+      "listing_action": "established_entry_recheck",
+      "repository": "github/github-mcp-server",
+      "stargazers_count": 32738,
+      "stars_observed_at": "2026-09-06T00:51:00Z",
+      "star_scope": "该单独仓库；仅为发现和广泛使用信号",
+      "version": "1.12.0",
+      "repository_commit": "9205304fedf10540c33ae41fcf6352fa97dcc9be",
+      "license": "MIT",
+      "permissions": "README与Registry声明需GitHub认证，可用OAuth或个人访问令牌，并按toolsets开放仓库、议题、拉取请求、工作流等能力；具体令牌范围和目标仓库权限未实测。",
+      "maintenance": {
+        "archived": false,
+        "disabled": false,
+        "repository_pushed_at": "2026-09-05T05:18:11Z",
+        "status": "active_in_observed_metadata"
+      },
+      "compatibility": "本地和远程接入方式为官方声明；本站未安装、认证或连接任一宿主。",
+      "change_status": "no_version_or_declared_scope_change_in_checked_material",
+      "evaluation_level": "官方元数据、Registry/发布固定版本及README声明复核；未运行测试",
+      "metadata_fingerprint_sha256": "7d474932e522ae683e1809e733419787793e6fbd98325bb3dbc5f200b4f2a301"
+    },
+    {
+      "id": "filesystem-mcp-server",
+      "listing_action": "established_entry_recheck",
+      "repository": "modelcontextprotocol/servers",
+      "component": "src/filesystem",
+      "stargazers_count": 90100,
+      "stars_observed_at": "2026-09-06T00:51:00Z",
+      "star_scope": "modelcontextprotocol/servers共仓库；不是Filesystem单组件星数、安装量或质量评分",
+      "version": "0.6.3",
+      "repository_commit": "d73f99efbfd40c3aa1b61e88728b3d49fb52608f",
+      "license": "仓库API为NOASSERTION；package要求查看LICENSE，README仍称MIT，根LICENSE声明MIT向Apache-2.0过渡且文档CC BY 4.0；继续逐文件许可待核对",
+      "permissions": "README声明允许目录内读取、写入、覆盖和搜索文件，并可在初始化或roots/list_changed时以客户端Roots替换全部允许目录；运行与隔离边界未实测。",
+      "maintenance": {
+        "archived": false,
+        "disabled": false,
+        "repository_pushed_at": "2026-09-03T01:42:26Z",
+        "status": "active_shared_repository_in_observed_metadata"
+      },
+      "compatibility": "MCP Roots支持和客户端配置为作者声明；未安装或在宿主中验证。",
+      "change_status": "no_component_version_or_checked_permission_change",
+      "evaluation_level": "官方共仓库元数据、固定清单及README声明复核；未运行测试",
+      "metadata_fingerprint_sha256": "93c5d05cb870b2a23b68733629a96e4317a8c40a51239a557f2c73657ca698fe"
+    }
+  ],
+  "feedback_checks": [
+    {
+      "channel": "Medium",
+      "url": "https://medium.com/@liuyileo0036/everything-becomes-a-plugin-why-agent-skills-need-evidence-not-just-stars-57bdc67ad9fb",
+      "observed_at": "2026-09-06T00:40:00Z",
+      "status": "readable_no_verified_requirement",
+      "visible_signals": "11 claps; responses按钮未显示数量；没有可见具体需求",
+      "action_taken": "read_only"
+    },
+    {
+      "channel": "DEV",
+      "url": "https://dev.to/leoautomotiveai/a-versioned-evidence-schema-for-agent-skills-provenance-permissions-task%2Dfit-and-test-status-3o04",
+      "observed_at": "2026-09-06T00:42:00Z",
+      "status": "readable_no_verified_requirement",
+      "visible_signals": "0 reactions, 0 comments, 0 saves",
+      "action_taken": "read_only"
+    },
+    {
+      "channel": "Substack",
+      "url": "https://leoliuzcar.substack.com/p/beyond-stars-four-questions-to-ask",
+      "observed_at": "2026-09-06T00:43:00Z",
+      "status": "readable_no_verified_requirement",
+      "visible_signals": "0 likes, 0 comments",
+      "action_taken": "read_only"
+    },
+    {
+      "channel": "Quora",
+      "url": "https://www.quora.com/What-are-some-difficulties-in-implementing-Model-Context-Protocol-MCP-integration/answer/Leo-Liu-954",
+      "observed_at": "2026-09-06T00:45:00Z",
+      "status": "readable_no_verified_requirement",
+      "visible_signals": "1 answer view; no visible comment; the view may include the author",
+      "action_taken": "read_only"
+    }
+  ],
+  "read_failures": [
+    {
+      "source": "GitHub API latest release for microsoft/playwright-mcp",
+      "attempt": 1,
+      "result": "browser safety adapter returned non-retryable URL-open error",
+      "bounded_retry": "official GitHub API through existing authenticated CLI succeeded once"
+    },
+    {
+      "source": "GitHub repository API for github/github-mcp-server",
+      "attempt": 1,
+      "result": "browser adapter returned an internal read error",
+      "bounded_retry": "official GitHub API through existing authenticated CLI succeeded once"
+    },
+    {
+      "source": "Computer Use tab creation option",
+      "attempt": 1,
+      "result": "unsupported visibility option; no target page read occurred",
+      "bounded_retry": "created the same tab without unsupported option; all four pages became readable"
+    }
+  ]
+}

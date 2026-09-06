@@ -1,0 +1,89 @@
+{
+  "schema_version": "source-checkpoint/0.1",
+  "checked_on": "2026-09-06",
+  "scope": "Three selected previously cataloged entries; original metadata observations only",
+  "business_reads": 5,
+  "new_entries": 0,
+  "changed_entries": 0,
+  "global_incremental_watermark": null,
+  "third_party_execution_performed": false,
+  "records": [
+    {
+      "id": "github-mcp-server",
+      "version": "1.12.0",
+      "version_basis": "官方MCP Registry版本，与GitHub发布标签v1.12.0一致",
+      "repository_commit": "9205304fedf10540c33ae41fcf6352fa97dcc9be",
+      "checked_at": "2026-09-05T23:44:42Z",
+      "baseline_observed_at": "2026-09-05T02:44:18.813981+00:00",
+      "change_status": "no_change_in_checked_scope",
+      "baseline_evidence_reused": true,
+      "evidence_level": "元数据/声明初查",
+      "runtime_tested": false,
+      "security_certified": false,
+      "source_urls": [
+        "https://registry.modelcontextprotocol.io/v0.1/servers/io.github.github%2Fgithub-mcp-server/versions/latest",
+        "https://api.github.com/repos/github/github-mcp-server/git/ref/tags/v1.12.0",
+        "https://api.github.com/repos/github/github-mcp-server/git/tags/9b0c1394337b1862bfc245adf7edcb36edffb693"
+      ],
+      "canonical_registry_sha256": "92011bce1ce40bb2578c641ef954623f2c4494ab829bd5c7d6e299a4883d276b",
+      "registry_status": "active",
+      "read_today": [
+        "Registry JSON and release ref/tag metadata"
+      ],
+      "not_read_today": [
+        "Fixed-commit license and declaration texts reused from 2026-09-05 baseline; not newly read today",
+        "Complete source, scripts, dependencies and runtime behavior remain unchecked"
+      ]
+    },
+    {
+      "id": "filesystem-mcp-server",
+      "version": "0.6.3",
+      "version_basis": "固定源码提交中的package.json声明；不是已核验的npm最新发行版",
+      "repository_commit": "d73f99efbfd40c3aa1b61e88728b3d49fb52608f",
+      "checked_at": "2026-09-05T23:41:40Z",
+      "baseline_observed_at": "2026-09-05T02:44:18.813981+00:00",
+      "change_status": "no_change_in_checked_scope",
+      "baseline_evidence_reused": true,
+      "evidence_level": "元数据/声明初查",
+      "runtime_tested": false,
+      "security_certified": false,
+      "source_urls": [
+        "https://api.github.com/repos/modelcontextprotocol/servers/git/ref/heads/main"
+      ],
+      "canonical_registry_sha256": null,
+      "registry_status": null,
+      "read_today": [
+        "Official repository main ref; unchanged commit confirms same baseline snapshot"
+      ],
+      "not_read_today": [
+        "Fixed-commit license and declaration texts reused from 2026-09-05 baseline; not newly read today",
+        "Complete source, scripts, dependencies and runtime behavior remain unchecked"
+      ]
+    },
+    {
+      "id": "anthropic-pdf-skill",
+      "version": null,
+      "version_basis": "本次未获得独立版本号；使用来源仓库精确提交作为快照，不把仓库提交当作发行版本",
+      "repository_commit": "41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f",
+      "checked_at": "2026-09-05T23:41:41Z",
+      "baseline_observed_at": "2026-09-05T02:44:18.813981+00:00",
+      "change_status": "no_change_in_checked_scope",
+      "baseline_evidence_reused": true,
+      "evidence_level": "元数据/声明初查",
+      "runtime_tested": false,
+      "security_certified": false,
+      "source_urls": [
+        "https://api.github.com/repos/anthropics/skills/git/ref/heads/main"
+      ],
+      "canonical_registry_sha256": null,
+      "registry_status": null,
+      "read_today": [
+        "Official repository main ref; unchanged commit confirms same baseline snapshot"
+      ],
+      "not_read_today": [
+        "Fixed-commit license and declaration texts reused from 2026-09-05 baseline; not newly read today",
+        "Complete source, scripts, dependencies and runtime behavior remain unchecked"
+      ]
+    }
+  ]
+}

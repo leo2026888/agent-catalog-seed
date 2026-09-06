@@ -4,9 +4,9 @@
 
 网站帮助使用者按任务发现插件；GitHub 公开目录、核查记录、评测方法和后续实际评测结果，并保存许可允许再分发的 Skill。第三方按各自许可处理，受限材料只保留原创介绍与来源。只有实际评测完成后，才给出适用于相应任务、版本和平台的推荐依据。
 
-当前可用：**1 个公开 Skill、3 条第三方资料初查**。任务入口为口播视频审阅、GitHub 仓库操作、文件处理、PDF 处理。完整运行评测、自动安装与团队持续服务仍在验证，目标是逐步建设可信插件市场。
+当前可用：**1 个公开 Skill、4 条第三方资料初查**。任务入口为口播视频审阅、GitHub 仓库操作、文件处理、PDF 处理和浏览器自动化。完整运行评测、自动安装与团队持续服务仍在验证，目标是逐步建设可信插件市场。
 
-**当前版本：v0.1.2-seed 按任务发现插件与来源说明。** 公开仓库：[leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed)。 本次新写的代码、Schema、合成示例与公开适配版 Skill 指令已声明 MIT 许可；文章与方法文档采用 CC BY 4.0，署名为 Leo and contributors，披露 AI 辅助创作与整理，具体范围见 [许可与署名](LICENSING.md)。GitHub 仓库已创建并核验为 public。私密漏洞报告已启用，入口及尚未完成的报告/通知测试见 [安全政策](SECURITY.md)。没有交易结算或自动评测平台，没有经过独立安全认证，没有确认的平台接入伙伴，也没有真实用户评分。当前 `entries/` 条目是本项目新写的合成示例，真实工作流 Skill 单列于成果区。第三方公开来源观察单独记录在 `evidence/`，不改写为已运行或已通过独立评测的条目。
+**当前版本：v0.2.0-seed 只读查询与每日证据目录。** 公开仓库：[leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed)。 本次新写的代码、Schema、合成示例与公开适配版 Skill 指令已声明 MIT 许可；文章与方法文档采用 CC BY 4.0，署名为 Leo and contributors，披露 AI 辅助创作与整理，具体范围见 [许可与署名](LICENSING.md)。GitHub 仓库已创建并核验为 public。私密漏洞报告已启用，入口及尚未完成的报告/通知测试见 [安全政策](SECURITY.md)。没有交易结算或自动评测平台，没有经过独立安全认证，没有确认的平台接入伙伴，也没有真实用户评分。当前 `entries/` 条目是本项目新写的合成示例，真实工作流 Skill 单列于成果区。第三方公开来源观察单独记录在 `evidence/`，不改写为已运行或已通过独立评测的条目。
 
 **[查看现有插件](https://agent-catalog.sxbliuyi.chatgpt.site/#directory)** · **[提交插件需求](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=plugin-request.yml)** · **[申请付费试点 · 按范围报价](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=paid-pilot.yml)** · [试点交付与流程](docs/PILOT.md) · [提交纠错](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=correction.yml) · [贡献证据](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=evidence.yml)
 
@@ -20,6 +20,7 @@
 | --- | --- |
 | 团队需要监测、回归或允许清单 | [付费试点说明](docs/PILOT.md)、[按范围申请报价](https://github.com/leo2026888/agent-catalog-seed/issues/new?template=paid-pilot.yml) |
 | 查看第三方公开来源观察 | [来源观察与边界](evidence/README.md) |
+| 在智能体任务里查询本地目录 | [只读查询与 MCP stdio 最小版](docs/READONLY_CATALOG.md)；本地协议已验证，实际客户端接入待验证 |
 | 目录如何表达来源和边界 | [版本化条目 Schema](schema/entry.v0.1.0.schema.json)、[字段说明](docs/ENTRY_FORMAT.md) |
 | 一个完整但尚未评测的条目 | [发布说明转检查清单：示例条目](entries/release-note-checklist-demo.json)、[合成材料](examples/release-note-checklist/README.md) |
 | 安全与效果如何分别评测 | [评测方法](docs/EVALUATION.md)、[评测报告模板](templates/evaluation-report.md) |
@@ -41,7 +42,7 @@
 
 ## 先建立目录，再验证互通
 
-“一次接入，多平台发现”是设计方向。目前只提供交换信息的约定，没有自动安装、平台适配器或代执行服务。平台是否可安装、是否可运行、是否在具体任务有效，分别留下证据；一个平台的结果不能直接推给另一个平台。
+“一次接入，多平台发现”是设计方向。2026-09-06 发布本地只读查询模块及 MCP stdio 最小适配器：提供任务检索、证据详情、安装指引三个操作，已用自有本地测试客户端验证初始化与调用。WorkBuddy、豆包、千问、Codex 的实际接入均待验证。没有自动安装或代执行候选服务。运行方式和边界见 [只读目录查询](docs/READONLY_CATALOG.md)。平台是否可安装、是否可运行、是否在具体任务有效，分别留下证据；一个平台的结果不能直接推给另一个平台。
 
 不把星数、付费推荐或作者自述作为安全结论。权限范围、运行风险、任务效果和社区体验分别呈现。没有证据时显示“未评测”，保留失败、时间和版本边界。
 
@@ -70,9 +71,9 @@ python3 -m unittest discover -s tests -v
 
 ## English summary
 
-Agent Catalog Seed helps people discover and compare Skills and MCP plugins by the task they want to complete. The website shows uses, versions, permissions and review records; GitHub hosts the catalog, review methods and results, and Skills whose licenses permit redistribution. Current scope: one public Skill and three preliminary third-party source reviews. Full runtime evaluation, automatic installation and ongoing team service remain under validation. It separates provenance, requested permissions, host compatibility, task evidence and community feedback. The seed includes a versioned entry schema, a synthetic example, an original AI-assisted article, and contribution, evaluation and governance proposals. It also includes narrated-video-review v0.1.0, a newly written MIT-licensed public adaptation of Leo's custom editing workflow; no private voice models, customer material or original personal files are distributed. This public skill has not been independently tested in an actual edit or verified across hosts.
+Agent Catalog Seed helps people discover and compare Skills and MCP plugins by the task they want to complete. The website shows uses, versions, permissions and review records; GitHub hosts the catalog, review methods and results, and Skills whose licenses permit redistribution. Current scope: one public Skill and four preliminary third-party source reviews, including Playwright MCP v0.0.80. Full runtime evaluation, automatic installation and ongoing team service remain under validation. It separates provenance, requested permissions, host compatibility, task evidence and community feedback. The seed includes a versioned entry schema, a synthetic example, an original AI-assisted article, and contribution, evaluation and governance proposals. It also includes narrated-video-review v0.1.0, a newly written MIT-licensed public adaptation of Leo's custom editing workflow; no private voice models, customer material or original personal files are distributed. This public skill has not been independently tested in an actual edit or verified across hosts.
 
-There is no transaction platform, automated evaluation platform, verified integration, independent certification or real user rating. New code, schemas and synthetic examples are licensed under MIT; documentation and articles are under CC BY 4.0, attributed to Leo and contributors with AI assistance disclosed. Exact scope is defined in LICENSING.md. The public repository is [leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed). Repository creation and public visibility are verified. Private vulnerability reporting is enabled and the maintainer opened its draft form; external report submission, notification delivery and response times have not been tested. Existing private work and third-party plugin copies are excluded.
+There is no transaction platform, automated evaluation platform, verified client integration, independent certification or real user rating. A local read-only query module and MCP stdio adapter added on 2026-09-06 have passed local initialization and tool-call checks; the source is published in v0.2.0-seed, but client integration remains unverified in WorkBuddy, Doubao, Qianwen and Codex. See the [local query guide](docs/READONLY_CATALOG.md). New code, schemas and synthetic examples are licensed under MIT; documentation and articles are under CC BY 4.0, attributed to Leo and contributors with AI assistance disclosed. Exact scope is defined in LICENSING.md. The public repository is [leo2026888/agent-catalog-seed](https://github.com/leo2026888/agent-catalog-seed). Repository creation and public visibility are verified. Private vulnerability reporting is enabled and the maintainer opened its draft form; external report submission, notification delivery and response times have not been tested. Existing private work and third-party plugin copies are excluded.
 
 The maintainer's active Codex workspace schedule records business priorities and a plan at 07:00 Asia/Shanghai, then advances authorized product, content and evidence work at 07:30 and records budget use and outcomes. Checked content may be published to authorized, owner-controlled GitHub and public-platform destinations with target-side readback. Unknown plugins are not run and internal material is not published. The new schedule has not yet passed its first complete-run acceptance; activation is not proof of execution.
 

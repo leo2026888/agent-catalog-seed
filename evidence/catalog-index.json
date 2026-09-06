@@ -1,0 +1,43 @@
+{
+  "schema_version": "catalog-index/0.1",
+  "catalog_version": "0.2.0-seed",
+  "updated_at": "2026-09-06T00:51:00Z",
+  "record_count": 5,
+  "records": [
+    {
+      "id": "narrated-video-review",
+      "source_record": "public-directory-2026-09-05.json",
+      "status": "listed",
+      "evaluation_level": "关联作者公开Skill与静态结构校验；未独立运行"
+    },
+    {
+      "id": "github-mcp-server",
+      "source_record": "public-directory-2026-09-05.json",
+      "latest_recheck": "daily-catalog-batch-2026-09-06.json",
+      "status": "listed",
+      "evaluation_level": "官方元数据及声明复核；未运行"
+    },
+    {
+      "id": "filesystem-mcp-server",
+      "source_record": "public-directory-2026-09-05.json",
+      "latest_recheck": "daily-catalog-batch-2026-09-06.json",
+      "status": "listed_with_license_scope_review",
+      "evaluation_level": "官方共仓库元数据、固定清单及README声明复核；未运行"
+    },
+    {
+      "id": "anthropic-pdf-skill",
+      "source_record": "public-directory-2026-09-05.json",
+      "status": "listed_as_source_reference_only",
+      "evaluation_level": "作者来源与专有许可边界初查；未运行"
+    },
+    {
+      "id": "playwright-mcp",
+      "source_record": "daily-catalog-batch-2026-09-06.json",
+      "status": "listed",
+      "evaluation_level": "官方元数据与文档节选初查；未运行"
+    }
+  ],
+  "synthetic_entry_excluded": "entries/release-note-checklist-demo.json",
+  "runtime_evaluated_count": 0,
+  "independently_security_certified_count": 0
+}

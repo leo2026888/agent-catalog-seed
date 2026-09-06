@@ -1,8 +1,8 @@
 # 首期公开证据目录
 
-核验日期：**2026-09-05（北京时间）**。这里保存公开首页使用的四条证据记录，与 `entries/` 的合成示例 Schema 分开管理。
+首轮核验日期：**2026-09-05（北京时间）**；增量批次：**2026-09-06**。这里保存公开首页使用的五条证据记录，与 `entries/` 的合成示例 Schema 分开管理。
 
-[完整 JSON](public-directory-2026-09-05.json) · [公开 Skill](../skills/narrated-video-review/SKILL.md) · [评测方法](../docs/EVALUATION.md)
+[当前索引](catalog-index.json) · [首轮基线 JSON](public-directory-2026-09-05.json) · [今日增量](daily-catalog-batch-2026-09-06.json) · [公开 Skill](../skills/narrated-video-review/SKILL.md) · [评测方法](../docs/EVALUATION.md)
 
 | 对象 | 已完成范围 | 版本依据 | 许可与分发边界 |
 | --- | --- | --- | --- |
@@ -10,8 +10,9 @@
 | GitHub MCP Server | Registry、Release 与固定提交、根许可和认证声明核对 | 1.12.0；Registry 与发布标签一致 | 固定提交根 LICENSE 为 MIT；未核验全部依赖或远程服务条款 |
 | Filesystem MCP Server | 固定源码清单、README、根许可声明阅读 | 0.6.3 为源码清单声明；不是已核验的 npm 最新发行版 | README 与根许可过渡声明差异待复核；不制作分发包 |
 | Anthropic PDF Skill（作者：Anthropic） | 作者仓库、前言、部分正文及独立许可证查看 | 独立发行版本未知，固定提交仅作来源快照 | Proprietary；未取得再分发授权，只提供原创摘要与来源链接，不提供 Skill 副本 |
+| Playwright MCP（作者：Microsoft） | 官方仓库元数据、v0.0.80 Release及README权限节选 | v0.0.80；Release发布时间2026-09-01 | GitHub仓库元数据声明Apache-2.0；只发布原创简介与链接，未运行候选 |
 
-四条记录都没有独立任务通过结论、安全认证或跨平台兼容性保证。三条第三方对象均未下载执行、未扫描完整代码或依赖，也未连接 MCP。来源、精确提交、日期对应的对象、已查与未查项均保留在 JSON 中。
+五条记录都没有独立任务通过结论、安全认证或跨平台兼容性保证。四条第三方对象均未下载执行、未扫描完整代码或依赖，也未连接 MCP。来源、精确提交、日期对应的对象、已查与未查项均保留在 JSON 中。
 
 这是首轮基线，不能称为“今天新增的三个插件”。文件路径最近提交日期不等于软件包发布日期；公开可读不等于自由分发。JSON 中的摘要是本项目重新撰写的说明，来源链接内容仍由各自作者及其许可约束。本项目的许可不会为第三方材料补充授权。
 
@@ -20,3 +21,11 @@
 ## PDF 来源与授权说明
 
 Anthropic PDF Skill 是 Anthropic 的作品，不是 Leo 的作品。这里的“Proprietary / 专有许可”是作者的许可类别，不代表本项目获得了专项授权。**未取得再分发授权，本项目不提供该 Skill 副本；查看与使用请遵循作者条款。** 原创简介和官方来源链接继续保留；本项目不对整体法律合规作保证。
+
+## 2026-09-06 必要元数据增量
+
+[source-checks-2026-09-06.json](source-checks-2026-09-06.json) 记录三条既有候选的5次必要官方元数据读取：GitHub Registry及发布标签解引用3次，Filesystem与Anthropic PDF各1次仓库分支提交读取。所查范围新增0、变化0；全局增量水位仍未知。相同固定提交的许可与声明复用9月5日基线，未重新读取、安装或运行候选；两项许可限制继续保留。
+
+[daily-catalog-batch-2026-09-06.json](daily-catalog-batch-2026-09-06.json) 保存今天的新收录、两条高星老条目复核及四渠道只读反馈。高星是发现信号，不是质量或安全评分；Filesystem的90100星属于共仓库，不是单组件星数。
+
+[本地只读查询模块](../docs/READONLY_CATALOG.md) 将9月5日基线与今天增量分别保留，不改写历史基线，也不将合成示例并入真实目录。v0.2.0-seed已发布该模块；实际宿主接入仍未验证。
