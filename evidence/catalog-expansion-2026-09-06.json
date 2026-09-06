@@ -1313,5 +1313,47 @@
       }
     }
   ],
-  "excluded_scope": "The top-50 discovery pool also contained clients, SDKs, lists, broad platforms and high-risk security or trading tools; they were not automatically relabeled as catalog plugins."
+  "excluded_scope": "The top-50 discovery pool also contained clients, SDKs, lists, broad platforms and high-risk security or trading tools; they were not automatically relabeled as catalog plugins.",
+  "publication": {
+    "catalog_commit": "d9e07e85b53d11bd903c84185ca51d9ebb6b013a",
+    "catalog_remote_matched": true,
+    "release_tag": "v0.3.0-seed",
+    "release_url": "https://github.com/leo2026888/agent-catalog-seed/releases/tag/v0.3.0-seed",
+    "release_public_readback": {
+      "status": "passed",
+      "method": "signed-out Chrome target-side readback",
+      "observed_fields": [
+        "latest release label",
+        "5-to-21 catalog expansion",
+        "16 new candidates",
+        "public-evidence score boundary",
+        "community rating count remains 0"
+      ]
+    },
+    "website": {
+      "source_commit": "aca3cb393f5ae3e835183b0693814b8b3948b970",
+      "version_number": 5,
+      "url": "https://agent-catalog.sxbliuyi.chatgpt.site",
+      "deployment_status": "succeeded",
+      "public_readback": {
+        "status": "passed",
+        "method": "production Chrome target-side readback",
+        "observed_fields": [
+          "21 public catalog records",
+          "14 task categories",
+          "5 deep samples",
+          "16 public-metadata shortlists",
+          "0 runtime evaluations",
+          "16 expanded cards from context7 through mcp-use",
+          "community rating submission links"
+        ]
+      }
+    },
+    "source_read_accounting": {
+      "business_source_reads_today": 38,
+      "daily_cap": 40,
+      "remaining": 2,
+      "note": "Includes failed safe attempts and target-side readbacks; excludes local-file reads."
+    }
+  }
 }
