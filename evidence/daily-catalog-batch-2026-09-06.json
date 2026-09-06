@@ -4,8 +4,8 @@
   "timezone": "Asia/Shanghai",
   "batch_status": "accepted_for_publication",
   "evaluation_level": "official source metadata and bounded documentation excerpts; no runtime test",
-  "business_reads_this_supplement": 14,
-  "product_source_reads": 10,
+  "business_reads_this_supplement": 18,
+  "product_source_reads": 14,
   "feedback_page_reads": 4,
   "underlying_http_requests": null,
   "new_listing_count": 1,
@@ -172,6 +172,51 @@
       "action_taken": "read_only"
     }
   ],
+  "publication": {
+    "completed_at": "2026-09-06T01:08:00Z",
+    "github": {
+      "repository": "https://github.com/leo2026888/agent-catalog-seed",
+      "catalog_commit": "6b383b8bb7d33c83d7c28a508f1dff5661645bcc",
+      "push_verified": true,
+      "release": "https://github.com/leo2026888/agent-catalog-seed/releases/tag/v0.2.0-seed",
+      "release_published_at": "2026-09-06T00:59:58Z",
+      "public_readback": "Release page showed the public repository, v0.2.0-seed, commit 6b383b8, Playwright MCP listing, two established-entry rechecks, read-only query tools and the no-runtime/no-third-party-package boundary."
+    },
+    "site": {
+      "url": "https://agent-catalog.sxbliuyi.chatgpt.site",
+      "catalog_source_commit": "48d4e9356998127744bc84348ab94412654b7dad",
+      "deployment_fix_commit": "b58c25cfb457cff614d98513e3080de61c26cbfa",
+      "saved_version": 4,
+      "deployment_id": "appgdep_6a9cbcbbd2788191a32ff4375b40c7ac",
+      "deployment_status": "succeeded",
+      "public_readback": "Chrome target-side readback showed five records, Playwright MCP as record 05, v0.0.80, 36,834 stars, Apache-2.0 repository metadata declaration, permission scope and no-runtime-test boundary."
+    },
+    "state_boundaries": {
+      "catalog_commit": "completed",
+      "github_push": "completed_and_remote_sha_matched",
+      "github_release": "completed_and_publicly_read_back",
+      "site_source_push": "completed",
+      "site_deployment": "completed_after_one_corrected_retry",
+      "site_target_readback": "completed",
+      "recipient_acceptance": "not_applicable_no_direct_recipient"
+    }
+  },
+  "publication_attempts": [
+    {
+      "saved_site_version": 3,
+      "site_source_commit": "48d4e9356998127744bc84348ab94412654b7dad",
+      "deployment_id": "appgdep_6a9cbb50fa9c8191b731285c56c15a01",
+      "result": "failed",
+      "failure": "Hosting rejected dependencies whose lockfile resolved URLs used an unsupported registry mirror."
+    },
+    {
+      "saved_site_version": 4,
+      "site_source_commit": "b58c25cfb457cff614d98513e3080de61c26cbfa",
+      "deployment_id": "appgdep_6a9cbcbbd2788191a32ff4375b40c7ac",
+      "result": "succeeded",
+      "correction": "Changed only 698 resolved-host URLs from registry.npmmirror.com to registry.npmjs.org; package names, versions, integrity hashes and dependency structure were unchanged; local production build passed."
+    }
+  ],
   "read_failures": [
     {
       "source": "GitHub API latest release for microsoft/playwright-mcp",
@@ -190,6 +235,18 @@
       "attempt": 1,
       "result": "unsupported visibility option; no target page read occurred",
       "bounded_retry": "created the same tab without unsupported option; all four pages became readable"
+    },
+    {
+      "source": "Sites production URL through web reader",
+      "attempt": 1,
+      "result": "reader rejected a cache-busting query URL before target access",
+      "bounded_retry": "exact root URL was attempted once"
+    },
+    {
+      "source": "Sites production root through web reader",
+      "attempt": 2,
+      "result": "reader rejected the exact root URL before target access",
+      "bounded_retry": "Chrome Computer Use opened the existing production tab and returned the full accessibility tree"
     }
   ]
 }
