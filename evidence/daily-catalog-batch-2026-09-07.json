@@ -1,0 +1,393 @@
+{
+  "schema_version": "daily-catalog-batch/0.2",
+  "observed_at": "2026-09-06T23:35:38Z",
+  "timezone": "Asia/Shanghai",
+  "batch_status": "accepted_for_publication",
+  "evaluation_level": "official source metadata, official service documentation and fixed-commit README/LICENSE review; no runtime test",
+  "business_reads_so_far": 4,
+  "business_read_limit": 20,
+  "root_reserved_reads": 8,
+  "underlying_http_requests": null,
+  "new_listing_count": 1,
+  "established_recheck_count": 2,
+  "third_party_code_executed": false,
+  "third_party_packages_copied": false,
+  "records": [
+    {
+      "id": "notion-mcp",
+      "listing_action": "new_accepted_listing",
+      "name": "Notion MCP",
+      "author": "Notion Labs, Inc.",
+      "repository": "makenotion/notion-mcp-server",
+      "type": "REMOTE MCP SERVER",
+      "relationship": "Notion官方托管服务；GitHub仓库为本地参考实现",
+      "task": "Notion知识库操作",
+      "summary": "由Notion托管的远程MCP服务，让获得授权的MCP客户端搜索、读取、创建和更新用户可访问的Notion内容。",
+      "task_tags": [
+        "Notion",
+        "知识库",
+        "页面",
+        "数据库",
+        "文档",
+        "workspace"
+      ],
+      "evidence_label": "Notion官方托管服务文档 + 固定提交README与LICENSE复核 · 未运行",
+      "stable_source": "notion:hosted-mcp",
+      "version": {
+        "value": null,
+        "kind": "hosted_service_no_public_version",
+        "basis": "Notion官方托管服务概览未公开独立语义版本",
+        "repository_commit": "1d38420769c8a1fe2d583ff1e7d2d108d4eb0b30",
+        "repository_commit_kind": "local_reference_implementation_snapshot",
+        "local_reference_release": "v2.1.0",
+        "local_reference_release_published_at": "2026-01-31T18:27:31Z",
+        "version_boundary": "v2.1.0属于GitHub本地参考实现，不能当作Notion托管远程服务版本"
+      },
+      "dates": {
+        "observed_at": "2026-09-06T23:35:38Z",
+        "repository_pushed_at": "2026-07-25T16:20:03Z",
+        "repository_commit_at": "2026-07-25T16:19:29Z",
+        "local_reference_release_published_at": "2026-01-31T18:27:31Z"
+      },
+      "popularity": {
+        "github_repository": "makenotion/notion-mcp-server",
+        "stargazers_count": 4623,
+        "fork_count": 625,
+        "watchers_count": 24,
+        "observed_at": "2026-09-06T23:35:38Z",
+        "meaning": "本地参考实现仓库的发现与社区活动信号；不是远程服务使用量、安全或效果评分"
+      },
+      "community_signals": {
+        "open_issues": 154,
+        "merged_pull_requests": 42,
+        "interpretation": "只说明公开参考仓库协作规模；未阅读问题内容，不能据此判断用户满意度"
+      },
+      "maintenance": {
+        "archived": false,
+        "repository_pushed_at": "2026-07-25T16:20:03Z",
+        "latest_reference_release_published_at": "2026-01-31T18:27:31Z",
+        "status": "official_remote_supported; local_reference_repository_may_be_sunset"
+      },
+      "license": {
+        "label": "MIT（GitHub本地参考实现）",
+        "status": "fixed_commit_license_read",
+        "source_blob_sha": "876cb96584af9e5c90ffcd43d736b3cf97bcf2c9",
+        "remote_service_terms_status": "not_read_in_this_batch",
+        "redistribution_note": "本站只发布原创简介、证据和官方链接；MIT许可对应本地参考实现代码，不自动扩展到Notion托管服务、内容或第三方数据。"
+      },
+      "permissions_note": "Notion官方文档声明，OAuth授权后，MCP客户端可搜索Notion与已连接来源，并读取、创建、更新用户能够访问的内容，可创建页面和数据库。工作区或组织管理员可管理、列出和撤销连接。应按最小权限授权，避免把不需要的工作区内容暴露给模型。",
+      "authentication": "官方托管服务使用OAuth；本地参考实现README另有内部Integration Token方式。本站没有连接账号、获取令牌或验证授权流程。",
+      "network_access": "远程MCP由Notion托管，并通过Notion API访问获授权的工作区内容；具体数据保留、区域与服务条款未在本批次复核。",
+      "file_access": "官方概览未声明读取用户Mac任意文件；Notion页面中的文件或媒体工具范围未在本批次逐项读取，保持未知。",
+      "dependencies": "官方远程服务由Notion托管；GitHub本地参考实现的依赖和安装脚本未审计，也未下载或运行。",
+      "compatibility": "官方概览举例Claude Code、Cursor与Codex等MCP客户端；本站未在任何宿主完成OAuth连接或实际调用。",
+      "checks_completed": [
+        "读取Notion官方托管MCP概览，核对OAuth、可读写能力与管理员控制。",
+        "读取官方GitHub仓库当前元数据、最新参考实现Release与固定提交。",
+        "读取固定提交README和MIT LICENSE，并区分本地参考实现与托管远程服务。"
+      ],
+      "checks_not_completed": [
+        "未读取Notion托管服务完整条款、隐私、数据保留与全部工具清单。",
+        "未下载、安装或运行GitHub本地参考实现；未执行OAuth、搜索、读取或写入任务。",
+        "未做独立安全审计、真实任务效果或跨宿主兼容验证。"
+      ],
+      "public_evidence_score": {
+        "value": 84,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 20,
+          "popularity_signal": 14,
+          "release_signal": 10,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、参考实现许可、维护、热度、发布与社区字段完整度；不包含任务效果、安全、远程服务条款完整性或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "official_docs_and_fixed_commit_reference_review",
+        "source_metadata_checked": true,
+        "bounded_documentation_checked": true,
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "official_docs": "https://developers.notion.com/guides/mcp/overview",
+        "repository": "https://github.com/makenotion/notion-mcp-server",
+        "local_reference_release": "https://github.com/makenotion/notion-mcp-server/releases/tag/v2.1.0",
+        "readme": "https://github.com/makenotion/notion-mcp-server/blob/1d38420769c8a1fe2d583ff1e7d2d108d4eb0b30/README.md",
+        "license": "https://github.com/makenotion/notion-mcp-server/blob/1d38420769c8a1fe2d583ff1e7d2d108d4eb0b30/LICENSE"
+      },
+      "action": {
+        "label": "查看Notion官方MCP文档",
+        "kind": "upstream_source",
+        "url": "https://developers.notion.com/guides/mcp/overview"
+      },
+      "metadata_fingerprint_sha256": "a7e29db5d507b1c939f85740f6056eb4c1854f2552515ad553d0b862be87dca1"
+    },
+    {
+      "id": "context7-mcp",
+      "name": "context7",
+      "author": "upstash",
+      "repository": "upstash/context7",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "代码文档检索",
+      "summary": "为编码智能体提供与当前版本匹配的库文档上下文，适合在生成代码前查阅API资料。",
+      "task_tags": [
+        "代码",
+        "文档",
+        "API",
+        "context7",
+        "library documentation"
+      ],
+      "evidence_label": "固定提交README与MIT许可深化复核 · 未运行",
+      "version": {
+        "value": "@upstash/context7-mcp@4.0.5",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": "6836bb4720a44fbce87f71548576c3145892d75f",
+        "repository_commit_kind": "documentation_snapshot_not_release_tag_commit"
+      },
+      "dates": {
+        "observed_at": "2026-09-06T23:35:38Z",
+        "repository_pushed_at": "2026-09-04T19:06:10Z",
+        "release_published_at": "2026-09-04T10:12:47Z"
+      },
+      "popularity": {
+        "stargazers_count": 61708,
+        "fork_count": 2973,
+        "watchers_count": 162,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分",
+        "observed_at": "2026-09-06T23:35:38Z"
+      },
+      "community_signals": {
+        "open_issues": 34,
+        "merged_pull_requests": 508,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "fixed_commit_license_read",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。",
+        "source_blob_sha": "17900de42d69131467aaa7a53fa88b92d238dc63"
+      },
+      "permissions_note": "README声明远程MCP通过OAuth设置或Authorization Bearer API Key认证，并把库名、库标识和用户查询发送给Context7服务；MCP提供resolve-library-id与query-docs两个文档检索工具。后端、解析和抓取组件并未全部公开，社区文档的准确性、完整性与安全性由作者明确提示不能保证。",
+      "compatibility": "README列出Cursor、Claude、OpenCode等设置方式，并链接30多个客户端的手动配置；均为作者声明，本站未实测。",
+      "public_evidence_score": {
+        "value": 100,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 20,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "fixed_commit_documentation_recheck",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/upstash/context7",
+        "release": "https://github.com/upstash/context7/releases/tag/%40upstash/context7-mcp%404.0.5",
+        "readme": "https://github.com/upstash/context7/blob/6836bb4720a44fbce87f71548576c3145892d75f/README.md",
+        "license": "https://github.com/upstash/context7/blob/6836bb4720a44fbce87f71548576c3145892d75f/LICENSE"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/upstash/context7"
+      },
+      "listing_action": "established_entry_recheck",
+      "authentication": "OAuth设置流程会生成API Key；手动远程接入使用Bearer API Key。本站未获取密钥、登录或连接服务。",
+      "network_access": "远程MCP访问mcp.context7.com及其私有API／解析／抓取后端；具体请求日志、保留与服务条款未在本批次复核。",
+      "file_access": "已读README未声明MCP工具读取或写入用户任意本地文件；CLI安装会配置目标客户端，但本站没有执行。",
+      "dependencies": "README声明ctx7 CLI需要Node.js 18或以上；完整npm依赖、安装脚本与私有后端未审计。",
+      "maintenance": {
+        "archived": false,
+        "repository_pushed_at": "2026-09-04T19:06:10Z",
+        "latest_release_published_at": "2026-09-04T10:12:47Z",
+        "status": "active_in_observed_metadata"
+      },
+      "checks_completed": [
+        "读取当前GitHub元数据、最新Release和固定默认分支提交。",
+        "读取固定提交README中的认证、两项MCP工具、远程数据流、客户端声明和私有后端边界。",
+        "读取固定提交MIT LICENSE。"
+      ],
+      "checks_not_completed": [
+        "未读取完整服务条款、隐私、API配额和私有后端实现。",
+        "未下载、安装、认证或执行任何Context7查询。",
+        "未验证返回文档准确性、任务效果、安全或宿主兼容。"
+      ],
+      "change_status": "release_unchanged; documentation_scope_deepened",
+      "metadata_fingerprint_sha256": "091528abe4c57e0517cca1a5c9a8dce8eac6227481a8cb4d0c23620490e6b4eb"
+    },
+    {
+      "id": "chrome-devtools-mcp",
+      "name": "chrome-devtools-mcp",
+      "author": "ChromeDevTools",
+      "repository": "ChromeDevTools/chrome-devtools-mcp",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "浏览器调试",
+      "summary": "把Chrome DevTools能力接入编码智能体，用于检查网页、控制浏览器并分析调试信息。",
+      "task_tags": [
+        "浏览器",
+        "调试",
+        "Chrome",
+        "DevTools",
+        "网页性能"
+      ],
+      "evidence_label": "固定提交README与Apache-2.0许可深化复核 · 未运行",
+      "version": {
+        "value": "chrome-devtools-mcp-v1.8.0",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": "086299a69e6d322df43d7e54417fce25b3a2fc08",
+        "repository_commit_kind": "documentation_snapshot_not_release_tag_commit"
+      },
+      "dates": {
+        "observed_at": "2026-09-06T23:35:38Z",
+        "repository_pushed_at": "2026-09-06T21:06:28Z",
+        "release_published_at": "2026-08-25T11:35:48Z"
+      },
+      "popularity": {
+        "stargazers_count": 51156,
+        "fork_count": 3589,
+        "watchers_count": 258,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分",
+        "observed_at": "2026-09-06T23:35:38Z"
+      },
+      "community_signals": {
+        "open_issues": 71,
+        "merged_pull_requests": 1183,
+        "interpretation": "数量仅说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "Apache-2.0",
+        "status": "fixed_commit_license_read",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码或软件包。",
+        "source_blob_sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835"
+      },
+      "permissions_note": "README明确该MCP会把浏览器实例内容暴露给MCP客户端，并允许检查、调试和修改浏览器或DevTools中的数据。性能工具可能向Google CrUX API发送trace URL；使用统计默认开启，可用参数或环境变量关闭；更新检查默认访问npm Registry。",
+      "compatibility": "官方支持Google Chrome和Chrome for Testing；其他Chromium浏览器可能可用但不保证。README列出Antigravity、Claude、Cursor、Copilot、VS Code等客户端配置入口，本站未实测。",
+      "public_evidence_score": {
+        "value": 100,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 20,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可声明、维护、热度、发布与社区字段完整度；不包含任务效果、安全或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "fixed_commit_documentation_recheck",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "release": "https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.8.0",
+        "readme": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/086299a69e6d322df43d7e54417fce25b3a2fc08/README.md",
+        "license": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/086299a69e6d322df43d7e54417fce25b3a2fc08/LICENSE"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+      },
+      "listing_action": "established_entry_recheck",
+      "authentication": "基础本地stdio配置未声明第三方账号认证；连接已有Chrome、远程调试或访问目标网站时，仍继承浏览器会话和目标站点权限。本站未连接浏览器或网站账号。",
+      "network_access": "可访问用户指定网页；性能分析可能访问CrUX API；默认使用统计和更新检查会产生外部请求，均有作者提供的关闭方式。",
+      "file_access": "README说明可使用持久用户数据目录和连接既有Chrome；未声明任意本地文件系统权限，具体配置文档未在本批次展开。",
+      "dependencies": "README要求Node.js LTS、当前稳定版或更高的Google Chrome／Chrome for Testing及npm；完整依赖和安装脚本未审计。",
+      "maintenance": {
+        "archived": false,
+        "repository_pushed_at": "2026-09-06T21:06:28Z",
+        "latest_release_published_at": "2026-08-25T11:35:48Z",
+        "status": "active_in_observed_metadata"
+      },
+      "checks_completed": [
+        "读取当前GitHub元数据、最新Release和固定默认分支提交。",
+        "读取固定提交README中的浏览器数据暴露、CrUX、默认使用统计、更新检查、依赖和兼容声明。",
+        "读取固定提交Apache-2.0 LICENSE。"
+      ],
+      "checks_not_completed": [
+        "未读取全部工具、配置和高级使用文档，未审计源码与依赖。",
+        "未下载、安装、启动Chrome或连接任何浏览器会话。",
+        "未验证权限隔离、数据外发、任务效果、安全或宿主兼容。"
+      ],
+      "change_status": "release_unchanged; documentation_scope_deepened",
+      "metadata_fingerprint_sha256": "28b89bc6c85d31adc2cb0d8fe95ddef65078fbf95e9c32036db618622dd104d1"
+    }
+  ],
+  "community_feedback": {
+    "github_issue_count": 0,
+    "verified_rating_submissions": 0,
+    "verified_new_requirements": 0,
+    "verified_customers": 0,
+    "verified_revenue_rmb": 0,
+    "observation": "Repository issue list returned no public issues; this bounded observation is not proof of market-wide demand."
+  },
+  "publication": {
+    "status": "pending",
+    "github": null,
+    "site": null
+  },
+  "read_accounting": [
+    {
+      "read": 1,
+      "source": "GitHub GraphQL metadata for Notion, context7 and Chrome DevTools MCP",
+      "status": "read"
+    },
+    {
+      "read": 2,
+      "source": "GitHub GraphQL fixed-commit README and LICENSE blobs for all three records",
+      "status": "read"
+    },
+    {
+      "read": 3,
+      "source": "Notion official MCP overview",
+      "status": "read"
+    },
+    {
+      "read": 4,
+      "source": "Agent Catalog public GitHub issue list",
+      "status": "read; zero issues"
+    }
+  ],
+  "read_failures": []
+}

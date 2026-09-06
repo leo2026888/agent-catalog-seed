@@ -43,12 +43,31 @@ class CatalogTests(unittest.TestCase):
     def test_expanded_catalog_exposes_public_score_without_claiming_effect(self):
         result = self.catalog.search("查最新的代码文档和 API", limit=10)
         record = next(item for item in result["results"] if item["id"] == "context7-mcp")
-        self.assertEqual(result["catalog_size"], 21)
+        self.assertEqual(result["catalog_size"], 22)
         self.assertEqual(record["public_evidence_score"]["value"], 100)
         self.assertEqual(record["community_rating"]["count"], 0)
         self.assertIsNone(record["evaluation"]["task_effect_score"])
         self.assertFalse(record["evaluation"]["runtime_tested"])
-        self.assertIn("没有读取完整权限文档", record["source_check_note"])
+        self.assertIn("固定提交README与许可证", record["source_check_note"])
+
+    def test_notion_remote_service_keeps_version_and_rights_boundaries(self):
+        record = self.catalog.search("Notion 知识库", limit=10)["results"][0]
+        self.assertEqual(record["id"], "notion-mcp")
+        self.assertIsNone(record["version"]["value"])
+        self.assertEqual(record["version"]["local_reference_release"], "v2.1.0")
+        self.assertIn("本地参考实现", record["license"]["label"])
+        self.assertEqual(record["license"]["remote_service_terms_status"], "not_read_in_this_batch")
+        self.assertFalse(record["evaluation"]["runtime_tested"])
+        self.assertIn("OAuth", record["permissions_note"])
+
+    def test_daily_rechecks_expose_deepened_permission_evidence(self):
+        context7 = self.catalog.evidence_detail("context7-mcp")
+        chrome = self.catalog.evidence_detail("chrome-devtools-mcp")
+        self.assertIn("Bearer API Key", context7["authentication"])
+        self.assertIn("私有API", context7["network_access"])
+        self.assertIn("默认开启", chrome["permissions_note"])
+        self.assertIn("Chrome for Testing", chrome["compatibility"])
+        self.assertFalse(chrome["evaluation"]["runtime_tested"])
 
     def test_expanded_entry_guidance_remains_manual_and_package_free(self):
         guide = self.catalog.installation_guide("aws-mcp-servers")

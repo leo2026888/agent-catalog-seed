@@ -1,8 +1,8 @@
 # 首期公开证据目录
 
-首轮核验日期：**2026-09-05（北京时间）**；增量批次：**2026-09-06**。这里保存公开首页使用的21条证据记录，与 `entries/` 的合成示例 Schema 分开管理。
+首轮核验日期：**2026-09-05（北京时间）**；最近增量批次：**2026-09-07**。这里保存公开首页使用的22条证据记录，与 `entries/` 的合成示例 Schema 分开管理。
 
-[当前索引](catalog-index.json) · [首轮基线 JSON](public-directory-2026-09-05.json) · [今日深度增量](daily-catalog-batch-2026-09-06.json) · [16条批量扩充](catalog-expansion-2026-09-06.json) · [公开 Skill](../skills/narrated-video-review/SKILL.md) · [评测方法](../docs/EVALUATION.md)
+[当前索引](catalog-index.json) · [首轮基线 JSON](public-directory-2026-09-05.json) · [9月6日深度增量](daily-catalog-batch-2026-09-06.json) · [16条批量扩充](catalog-expansion-2026-09-06.json) · [9月7日每日批次](daily-catalog-batch-2026-09-07.json) · [公开 Skill](../skills/narrated-video-review/SKILL.md) · [评测方法](../docs/EVALUATION.md)
 
 | 对象 | 已完成范围 | 版本依据 | 许可与分发边界 |
 | --- | --- | --- | --- |
@@ -11,8 +11,9 @@
 | Filesystem MCP Server | 固定源码清单、README、根许可声明阅读 | 0.6.3 为源码清单声明；不是已核验的 npm 最新发行版 | README 与根许可过渡声明差异待复核；不制作分发包 |
 | Anthropic PDF Skill（作者：Anthropic） | 作者仓库、前言、部分正文及独立许可证查看 | 独立发行版本未知，固定提交仅作来源快照 | Proprietary；未取得再分发授权，只提供原创摘要与来源链接，不提供 Skill 副本 |
 | Playwright MCP（作者：Microsoft） | 官方仓库元数据、v0.0.80 Release及README权限节选 | v0.0.80；Release发布时间2026-09-01 | GitHub仓库元数据声明Apache-2.0；只发布原创简介与链接，未运行候选 |
+| Notion MCP（作者：Notion） | 官方托管服务概览、GitHub固定README与MIT LICENSE | 托管服务未公开独立版本；v2.1.0仅为本地参考实现 | MIT只对应本地参考实现；远程服务条款未在本批次完整复核，不复制或运行代码 |
 
-21条记录都没有独立任务通过结论、安全认证或跨平台兼容性保证。20条第三方对象均未由本项目下载执行，也未连接MCP。来源、版本、日期对应的对象、已查与未查项均保留在JSON中；16条批量候选只达到公开元数据初筛层级。
+22条记录都没有独立任务通过结论、安全认证或跨平台兼容性保证。21条第三方对象均未由本项目下载执行，也未连接MCP。来源、版本、日期对应的对象、已查与未查项均保留在JSON中；9月7日已深化context7与Chrome DevTools MCP，剩余14条批量候选仍只达到公开元数据初筛层级。
 
 这是首轮基线，不能称为“今天新增的三个插件”。文件路径最近提交日期不等于软件包发布日期；公开可读不等于自由分发。JSON 中的摘要是本项目重新撰写的说明，来源链接内容仍由各自作者及其许可约束。本项目的许可不会为第三方材料补充授权。
 
@@ -35,3 +36,7 @@ Anthropic PDF Skill 是 Anthropic 的作品，不是 Leo 的作品。这里的�
 [catalog-expansion-2026-09-06.json](catalog-expansion-2026-09-06.json) 从GitHub的`mcp-server`主题高星结果中筛出16个具体MCP Server、MCP工具包或Agent Skill工具。入选条件包括至少5,000星、公开仓库、明确许可元数据、未归档、近期维护信号和可理解的任务用途。SDK、榜单、泛平台及高风险安全／交易工具没有自动混入插件目录。
 
 每条显示0至100的“公开资料评分”，只衡量公开来源、许可声明、维护时效、热度、发布记录和社区字段完整度。任务效果分、独立安全结论和社区用户平均分仍为空。公开评分入口接受带版本、任务、环境和关系披露的使用观察，人工核验后才可聚合；赞数、星数或作者自述不直接换算成用户评分。
+
+## 2026-09-07 每日证据深化
+
+[daily-catalog-batch-2026-09-07.json](daily-catalog-batch-2026-09-07.json) 新收录Notion官方托管MCP服务，并深化context7与Chrome DevTools MCP。Notion托管服务未公开独立版本，GitHub v2.1.0只作为本地参考实现记录；context7补充OAuth／API Key、私有后端和文档准确性边界；Chrome补充浏览器数据暴露、CrUX、默认使用统计、更新检查和官方浏览器兼容范围。三者均未下载或运行。

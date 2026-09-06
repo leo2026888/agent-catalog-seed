@@ -14,6 +14,7 @@ BASELINE = "evidence/public-directory-2026-09-05.json"
 CHECKPOINT = "evidence/source-checks-2026-09-06.json"
 BATCH = "evidence/daily-catalog-batch-2026-09-06.json"
 EXPANSION = "evidence/catalog-expansion-2026-09-06.json"
+DAILY = "evidence/daily-catalog-batch-2026-09-07.json"
 BASE_ALIASES = {
     "narrated-video-review": ("口播", "视频", "剪辑", "字幕", "镜头", "声音", "video", "narration", "caption"),
     "github-mcp-server": ("github", "仓库", "代码审查", "议题", "拉取请求", "工作流", "issue", "issues", "pr", "pull request", "repository"),
@@ -47,16 +48,21 @@ class Catalog:
         checkpoint = json.loads((ROOT / CHECKPOINT).read_text(encoding="utf-8"))
         batch = json.loads((ROOT / BATCH).read_text(encoding="utf-8"))
         expansion = json.loads((ROOT / EXPANSION).read_text(encoding="utf-8"))
+        daily = json.loads((ROOT / DAILY).read_text(encoding="utf-8"))
         new_records = [record for record in batch["records"] if record["listing_action"] == "new_accepted_listing"]
-        expanded_records = expansion["records"]
-        records = baseline["records"] + new_records + expanded_records
+        daily_by_id = {record["id"]: record for record in daily["records"]}
+        expanded_records = [daily_by_id.get(record["id"], record) for record in expansion["records"]]
+        daily_new_records = [record for record in daily["records"] if record["listing_action"] == "new_accepted_listing"]
+        records = baseline["records"] + new_records + expanded_records + daily_new_records
         checks = checkpoint["records"]
         self.records = {record["id"]: record for record in records}
         self.checks = {record["id"]: record for record in checks}
         self.batch_checks = {record["id"]: record for record in batch["records"]}
+        self.daily_checks = daily_by_id
+        self.daily_ids = set(daily_by_id)
         self.expansion_ids = {record["id"] for record in expanded_records}
         self.aliases = dict(BASE_ALIASES)
-        for record in expanded_records:
+        for record in expanded_records + daily_new_records:
             terms = [record["task"], record["name"], record["author"], *record["task_tags"]]
             terms.extend(record["repository"].replace("/", " ").split())
             self.aliases[record["id"]] = tuple(dict.fromkeys(normalize(term) for term in terms))
@@ -64,6 +70,7 @@ class Catalog:
             **{record["id"]: BASELINE for record in baseline["records"]},
             **{record["id"]: BATCH for record in new_records},
             **{record["id"]: EXPANSION for record in expanded_records},
+            **{record["id"]: DAILY for record in daily["records"]},
         }
         if len(self.records) != len(records) or set(self.records) != set(self.aliases):
             raise ValueError("Unexpected public catalog membership")
@@ -81,9 +88,11 @@ class Catalog:
             raise QueryError("unknown_entry", "未找到该目录标识；请先检索并使用返回的 id。")
         record = deepcopy(self.records[entry_id])
         record["record_origin"] = self.record_origins[entry_id]
-        record["source_check"] = deepcopy(self.checks.get(entry_id) or self.batch_checks.get(entry_id))
-        record["daily_recheck"] = deepcopy(self.batch_checks.get(entry_id))
-        if entry_id in self.expansion_ids:
+        record["source_check"] = deepcopy(self.daily_checks.get(entry_id) or self.checks.get(entry_id) or self.batch_checks.get(entry_id))
+        record["daily_recheck"] = deepcopy(self.daily_checks.get(entry_id) or self.batch_checks.get(entry_id))
+        if entry_id in self.daily_ids:
+            record["source_check_note"] = "9月7日官方来源、固定提交README与许可证有界复核；没有下载或运行候选。"
+        elif entry_id in self.expansion_ids:
             record["source_check_note"] = "9月6日GitHub公开元数据与社区字段初筛；没有读取完整权限文档或运行候选。"
         elif entry_id in self.batch_checks:
             record["source_check_note"] = "9月6日新增或复核所列官方元数据与文档节选；没有运行候选。"
@@ -164,6 +173,11 @@ class Catalog:
                 "打开Microsoft官方仓库、v0.0.80发布页及Apache-2.0许可，确认作者当前要求。",
                 "按目标宿主说明自行配置，并先限定网页来源、workspace roots、文件访问和可选浏览器权限；本目录不收集认证信息。",
                 "本站未安装或运行该组件；Node、依赖、浏览器二进制、宿主兼容和任务效果均需另行验证。",
+            ],
+            "notion-mcp": [
+                "打开Notion官方MCP文档，确认托管远程服务、OAuth授权和当前支持的工具；不要把本地参考实现v2.1.0当作远程服务版本。",
+                "只授权需要的页面、数据库和内容范围，并由工作区或组织管理员管理、列出或撤销连接；本目录不收取凭证。",
+                "本站未连接或运行Notion MCP；完整服务条款、数据保留、任务效果和宿主兼容仍需另行验证。",
             ],
         }
         if entry_id not in steps:

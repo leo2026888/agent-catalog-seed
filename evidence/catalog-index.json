@@ -1,8 +1,8 @@
 {
   "schema_version": "catalog-index/0.1",
-  "catalog_version": "0.3.0-seed",
-  "updated_at": "2026-09-06T01:16:00Z",
-  "record_count": 21,
+  "catalog_version": "0.4.0-seed",
+  "updated_at": "2026-09-06T23:35:38Z",
+  "record_count": 22,
   "records": [
     {
       "id": "narrated-video-review",
@@ -39,20 +39,22 @@
     {
       "id": "context7-mcp",
       "source_record": "catalog-expansion-2026-09-06.json",
-      "status": "listed_metadata_shortlist",
-      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "status": "listed_documentation_rechecked",
+      "evaluation_level": "官方元数据、固定提交README与许可证深化复核；未运行",
       "public_evidence_score": 100,
       "task_effect_score": null,
-      "community_rating_count": 0
+      "community_rating_count": 0,
+      "latest_recheck": "daily-catalog-batch-2026-09-07.json"
     },
     {
       "id": "chrome-devtools-mcp",
       "source_record": "catalog-expansion-2026-09-06.json",
-      "status": "listed_metadata_shortlist",
-      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "status": "listed_documentation_rechecked",
+      "evaluation_level": "官方元数据、固定提交README与许可证深化复核；未运行",
       "public_evidence_score": 100,
       "task_effect_score": null,
-      "community_rating_count": 0
+      "community_rating_count": 0,
+      "latest_recheck": "daily-catalog-batch-2026-09-07.json"
     },
     {
       "id": "codebase-memory-mcp",
@@ -177,6 +179,15 @@
       "status": "listed_metadata_shortlist",
       "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
       "public_evidence_score": 96,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "notion-mcp",
+      "source_record": "daily-catalog-batch-2026-09-07.json",
+      "status": "listed_official_remote_service",
+      "evaluation_level": "Notion官方托管服务文档及本地参考实现固定README／MIT许可复核；远程服务未公开独立版本，未运行",
+      "public_evidence_score": 84,
       "task_effect_score": null,
       "community_rating_count": 0
     }
