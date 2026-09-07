@@ -1,8 +1,8 @@
 # 首期公开证据目录
 
-首轮核验日期：**2026-09-05（北京时间）**；最近增量批次：**2026-09-07**。这里保存公开首页使用的22条证据记录，与 `entries/` 的合成示例 Schema 分开管理。
+首轮核验日期：**2026-09-05（北京时间）**；最近增量批次：**2026-09-08**。这里保存公开首页使用的23条证据记录，与 `entries/` 的合成示例 Schema 分开管理。
 
-[当前索引](catalog-index.json) · [首轮基线 JSON](public-directory-2026-09-05.json) · [9月6日深度增量](daily-catalog-batch-2026-09-06.json) · [16条批量扩充](catalog-expansion-2026-09-06.json) · [9月7日每日批次](daily-catalog-batch-2026-09-07.json) · [公开 Skill](../skills/narrated-video-review/SKILL.md) · [评测方法](../docs/EVALUATION.md)
+[当前索引](catalog-index.json) · [首轮基线 JSON](public-directory-2026-09-05.json) · [9月6日深度增量](daily-catalog-batch-2026-09-06.json) · [16条批量扩充](catalog-expansion-2026-09-06.json) · [9月7日每日批次](daily-catalog-batch-2026-09-07.json) · [9月8日每日批次](daily-catalog-batch-2026-09-08.json) · [公开 Skill](../skills/narrated-video-review/SKILL.md) · [评测方法](../docs/EVALUATION.md)
 
 | 对象 | 已完成范围 | 版本依据 | 许可与分发边界 |
 | --- | --- | --- | --- |
@@ -12,8 +12,9 @@
 | Anthropic PDF Skill（作者：Anthropic） | 作者仓库、前言、部分正文及独立许可证查看 | 独立发行版本未知，固定提交仅作来源快照 | Proprietary；未取得再分发授权，只提供原创摘要与来源链接，不提供 Skill 副本 |
 | Playwright MCP（作者：Microsoft） | 官方仓库元数据、v0.0.80 Release及README权限节选 | v0.0.80；Release发布时间2026-09-01 | GitHub仓库元数据声明Apache-2.0；只发布原创简介与链接，未运行候选 |
 | Notion MCP（作者：Notion） | 官方托管服务概览、GitHub固定README与MIT LICENSE | 托管服务未公开独立版本；v2.1.0仅为本地参考实现 | MIT只对应本地参考实现；远程服务条款未在本批次完整复核，不复制或运行代码 |
+| Figma MCP（作者：Figma） | 官方托管服务介绍、完整工具清单及现行Terms of Service | 托管服务未公开独立版本；远程与桌面是不同接入形态 | 服务受Figma条款约束；本站只发原创摘要和官方链接，不复制、转售或分发服务及内容 |
 
-22条记录都没有独立任务通过结论、安全认证或跨平台兼容性保证。21条第三方对象均未由本项目下载执行，也未连接MCP。来源、版本、日期对应的对象、已查与未查项均保留在JSON中；9月7日已深化context7与Chrome DevTools MCP，剩余14条批量候选仍只达到公开元数据初筛层级。
+23条记录都没有独立任务通过结论、安全认证或跨平台兼容性保证。22条第三方对象均未由本项目下载执行，也未连接MCP。来源、版本、日期对应的对象、已查与未查项均保留在JSON中；9月7日深化context7与Chrome DevTools MCP，9月8日深化gpt-researcher与Serena，剩余12条批量候选仍只达到公开元数据初筛层级。
 
 这是首轮基线，不能称为“今天新增的三个插件”。文件路径最近提交日期不等于软件包发布日期；公开可读不等于自由分发。JSON 中的摘要是本项目重新撰写的说明，来源链接内容仍由各自作者及其许可约束。本项目的许可不会为第三方材料补充授权。
 
@@ -40,3 +41,7 @@ Anthropic PDF Skill 是 Anthropic 的作品，不是 Leo 的作品。这里的�
 ## 2026-09-07 每日证据深化
 
 [daily-catalog-batch-2026-09-07.json](daily-catalog-batch-2026-09-07.json) 新收录Notion官方托管MCP服务，并深化context7与Chrome DevTools MCP。Notion托管服务未公开独立版本，GitHub v2.1.0只作为本地参考实现记录；context7补充OAuth／API Key、私有后端和文档准确性边界；Chrome补充浏览器数据暴露、CrUX、默认使用统计、更新检查和官方浏览器兼容范围。三者均未下载或运行。
+
+## 2026-09-08 每日证据深化
+
+[daily-catalog-batch-2026-09-08.json](daily-catalog-batch-2026-09-08.json) 新收录Figma官方托管MCP服务，并深化gpt-researcher与Serena。Figma记录官方托管端点、读写工具、账号/席位/文件权限和使用条款，服务版本保持未知；gpt-researcher补充API Key、网页与本地文档、报告写入、MCP数据源和可选追踪边界；Serena补充项目/依赖读取、代码和文件编辑删除、shell命令、uv/language server与市场安装警告。三者均未下载或运行。

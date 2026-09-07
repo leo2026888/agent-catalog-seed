@@ -1,0 +1,414 @@
+{
+  "schema_version": "daily-catalog-batch/0.3",
+  "observed_at": "2026-09-07T23:39:26Z",
+  "timezone": "Asia/Shanghai",
+  "batch_status": "accepted_for_publication",
+  "evaluation_level": "Official hosted service docs/terms plus fixed-commit README/LICENSE reviews; no runtime tests",
+  "business_reads_so_far": 9,
+  "business_read_limit": 20,
+  "root_reserved_reads": 8,
+  "underlying_http_requests": null,
+  "new_listing_count": 1,
+  "established_recheck_count": 2,
+  "third_party_code_executed": false,
+  "third_party_packages_copied": false,
+  "records": [
+    {
+      "id": "figma-mcp",
+      "listing_action": "new_accepted_listing",
+      "name": "Figma MCP",
+      "author": "Figma, Inc.",
+      "type": "REMOTE MCP SERVER",
+      "relationship": "Figma官方托管远程MCP服务；桌面MCP为单独接入形态",
+      "task": "设计稿读写与代码上下文",
+      "summary": "Figma官方MCP把设计文件中的组件、变量、布局、截图和素材提供给智能体，也可在授权范围内创建或修改Figma原生内容。",
+      "task_tags": [
+        "Figma",
+        "设计稿",
+        "设计系统",
+        "组件",
+        "变量",
+        "代码生成",
+        "FigJam",
+        "Slides"
+      ],
+      "evidence_label": "Figma官方服务文档、工具清单与现行使用条款复核 · 未运行",
+      "stable_source": "figma:hosted-mcp",
+      "service_endpoint": "https://mcp.figma.com/mcp",
+      "version": {
+        "value": null,
+        "kind": "hosted_service_no_public_semantic_version",
+        "basis": "三份已读官方文本未公开独立语义版本或不可变部署标识",
+        "desktop_variant": "Figma desktop MCP server",
+        "version_boundary": "远程与桌面服务是两种接入形态；观察到的文档日期不能当作服务版本"
+      },
+      "dates": {
+        "observed_at": "2026-09-07T23:39:26Z",
+        "terms_effective_date": "2026-03-11"
+      },
+      "popularity": {
+        "public_repository": null,
+        "stargazers_count": null,
+        "meaning": "官方托管服务没有在本批次提供可比GitHub星数或公开使用量；不以搜索排名替代"
+      },
+      "community_signals": {
+        "open_issues": null,
+        "merged_pull_requests": null,
+        "interpretation": "未发现可对应服务版本的官方公开Issue统计；社区满意度未知"
+      },
+      "maintenance": {
+        "archived": null,
+        "official_documentation_observed_at": "2026-09-07T23:39:26Z",
+        "status": "active_official_documentation; release chronology not checked"
+      },
+      "license": {
+        "label": "Figma Terms of Service（托管服务）",
+        "status": "official_terms_read",
+        "effective_date": "2026-03-11",
+        "redistribution_authorization": "not_applicable_to_service_listing; no service copy",
+        "redistribution_note": "本站只发布原创简介、证据与官方链接，不复制、转售、再许可或分发Figma服务、文档、设计文件或素材。",
+        "terms_scope_note": "Starter与Professional适用Terms of Service；Organization与Enterprise另见Software Services Agreement，产品专项条款可能另行适用。"
+      },
+      "permissions_note": "官方工具清单包括读取设计上下文、元数据、变量、截图和源素材，下载或上传素材，创建新文件、图表和设计层，并通过use_figma创建、编辑、删除或检查Figma Design、FigJam与Slides对象；whoami可返回已认证用户邮箱、计划和席位类型。写入既有文件需要相应编辑权限。",
+      "authentication": "远程服务连接到Figma托管端点并要求Figma账号认证；官方设置流程会在外部窗口完成认证。已读文本未列出可核验的OAuth scope清单，本站没有连接账号或取得令牌。",
+      "network_access": "MCP客户端连接https://mcp.figma.com/mcp；读取设计上下文和素材时数据在客户端与Figma托管服务之间传输，download_assets会返回临时URL。具体传输日志、保留和子处理者未在本批次展开。",
+      "file_access": "已读工具文档没有声明远程MCP可任意读取用户Mac文件；它可读取获授权Figma文件中的设计内容和原始上传素材，并可生成下载链接。客户端后续把代码写入本地的权限属于客户端与Skill边界，未测试。",
+      "dependencies": "远程服务由Figma托管，无需Figma桌面应用；桌面变体需本地Figma应用。写入功能当前为beta，Full席位可写，Dev席位在drafts之外只读；部分Weave工具另有账户和信用额度要求。",
+      "compatibility": "官方文档要求客户端位于Figma MCP Catalog；官方材料列出Codex、Claude Code、Cursor、VS Code等示例。本站未在任一客户端完成连接或工具调用。",
+      "checks_completed": [
+        "读取Figma MCP官方Introduction，确认远程托管服务、桌面变体和客户端目录限制。",
+        "读取官方Tools and prompts，记录读设计、素材下载上传、文件创建、use_figma写入、whoami及席位边界。",
+        "读取2026-03-11生效的Figma Terms of Service，记录服务使用权、内容、使用数据和禁止复制转售等边界。"
+      ],
+      "checks_not_completed": [
+        "未读取Organization或Enterprise Software Services Agreement、全部产品专项条款、隐私/DPA、子处理者和精确认证scope。",
+        "未连接Figma账号、设计文件、远程或桌面MCP；未执行读取、生成、上传、下载或写入任务。",
+        "未做独立安全审计、任务效果、费用、速率限制或跨宿主兼容验证。"
+      ],
+      "public_evidence_score": {
+        "value": 55,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "usage_terms": 20,
+          "maintenance_recency": 20,
+          "popularity_signal": 0,
+          "release_signal": 0,
+          "community_activity_fields": 0
+        },
+        "meaning": "衡量公开来源、许可或使用条款、维护、热度、发布与社区字段完整度；不包含任务效果、安全、宿主兼容或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "official_hosted_service_docs_and_terms_review",
+        "source_metadata_checked": true,
+        "bounded_documentation_checked": true,
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "official_docs": "https://developers.figma.com/docs/figma-mcp-server/",
+        "tools": "https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/",
+        "terms": "https://www.figma.com/legal/tos/",
+        "service_endpoint": "https://mcp.figma.com/mcp"
+      },
+      "action": {
+        "label": "查看Figma官方MCP文档",
+        "kind": "upstream_source",
+        "url": "https://developers.figma.com/docs/figma-mcp-server/"
+      },
+      "metadata_fingerprint_sha256": "fe4c9ab0baaf9a87f4e4e1267f59a5d0499e94aae533e9620c58b324904698e7"
+    },
+    {
+      "id": "gpt-researcher",
+      "listing_action": "established_entry_recheck",
+      "name": "gpt-researcher",
+      "author": "assafelovic",
+      "repository": "assafelovic/gpt-researcher",
+      "type": "MCP-ENABLED TOOL",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "自动研究",
+      "summary": "面向资料搜集和报告生成的研究工具，可从网页、本地文档及可选MCP数据源收集资料并生成报告。",
+      "task_tags": [
+        "研究",
+        "检索",
+        "报告",
+        "网页抓取",
+        "本地文档",
+        "MCP"
+      ],
+      "evidence_label": "固定提交README与Apache-2.0许可证深化复核 · 未运行",
+      "version": {
+        "value": "v3.6.1",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": "6f998577d547b1e54ec662dac63583aa11e3b84b",
+        "repository_commit_kind": "documentation_snapshot_not_release_tag_commit"
+      },
+      "dates": {
+        "observed_at": "2026-09-07T23:39:26Z",
+        "repository_pushed_at": "2026-08-27T19:34:56Z",
+        "release_published_at": "2026-08-24T06:58:47Z"
+      },
+      "popularity": {
+        "stargazers_count": 29336,
+        "fork_count": 3983,
+        "watchers_count": 178,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分",
+        "observed_at": "2026-09-07T23:39:26Z"
+      },
+      "community_signals": {
+        "open_issues": 34,
+        "merged_pull_requests": 576,
+        "interpretation": "数量只说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "Apache-2.0",
+        "status": "fixed_commit_license_read",
+        "source_text_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码、容器或软件包。"
+      },
+      "permissions_note": "README声明可进行JavaScript网页抓取、图像抓取、从PDF／文本／CSV／Excel／Markdown／PowerPoint／Word等本地文档研究并生成报告；可作为MCP客户端连接GitHub、数据库和自定义API等数据源。具体文件选择、输出目录、抓取域名、MCP工具权限与写入边界未在本批次逐项验证。",
+      "authentication": "README要求按提供者配置OpenAI、Tavily、Google等API Key，可保存在环境变量或.env；可选LangSmith与Monocle/Okahu等追踪也有各自配置。本站没有取得、写入或调用任何密钥。",
+      "network_access": "核心用途包含网页搜索、JavaScript抓取、图片抓取、外部LLM与搜索服务；启用MCP检索时还会连接所配置的GitHub、数据库或自定义API。请求日志、数据保留和各提供者条款未逐项复核。",
+      "file_access": "可读取多种本地文档并写出研究报告；Monocle开启后可在.monocle目录写trace，也可配置Okahu、S3、Blob或GCS导出。默认文件选择与路径隔离未测试。",
+      "dependencies": "README要求Python 3.11或以上及提供者API Key；可用pip或Docker运行，前端/服务使用本地8000与3000端口。完整依赖树、安装脚本、镜像和容器隔离未审计。",
+      "compatibility": "README描述Python包、Web应用、Docker及MCP检索集成；这不是对Codex、WorkBuddy、豆包或千问的已验证接入。本站未在任何宿主运行。",
+      "maintenance": {
+        "archived": false,
+        "repository_pushed_at": "2026-08-27T19:34:56Z",
+        "latest_release_published_at": "2026-08-24T06:58:47Z",
+        "status": "active_in_observed_metadata"
+      },
+      "checks_completed": [
+        "读取GitHub当前元数据、latest release与固定默认分支提交。",
+        "完整读取17,797字节固定提交README，记录密钥、网页与本地文档、报告写入、MCP连接、Docker和可选追踪边界。",
+        "完整读取11,357字节固定提交Apache-2.0 LICENSE。"
+      ],
+      "checks_not_completed": [
+        "未读取完整站点文档、所有provider配置、MCP集成子页面、依赖锁、镜像或服务条款。",
+        "未下载、安装、配置密钥、抓取网页、读取本地文档或生成报告。",
+        "未验证引用准确性、偏差、权限隔离、费用、任务效果或宿主兼容。"
+      ],
+      "public_evidence_score": {
+        "value": 93,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 23,
+          "popularity_signal": 20,
+          "release_signal": 10,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可或使用条款、维护、热度、发布与社区字段完整度；不包含任务效果、安全、宿主兼容或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "fixed_commit_documentation_recheck",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/assafelovic/gpt-researcher",
+        "release": "https://github.com/assafelovic/gpt-researcher/releases/tag/v3.6.1",
+        "readme": "https://github.com/assafelovic/gpt-researcher/blob/6f998577d547b1e54ec662dac63583aa11e3b84b/README.md",
+        "license": "https://github.com/assafelovic/gpt-researcher/blob/6f998577d547b1e54ec662dac63583aa11e3b84b/LICENSE"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/assafelovic/gpt-researcher"
+      },
+      "change_status": "release_unchanged; documentation_scope_deepened",
+      "metadata_fingerprint_sha256": "d54b30118e3b4a0656d71b6069a6e04e14866c4023969c27dcaee8218383e43f"
+    },
+    {
+      "id": "serena-mcp",
+      "listing_action": "established_entry_recheck",
+      "name": "serena",
+      "author": "oraios",
+      "repository": "oraios/serena",
+      "type": "MCP TOOLKIT",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "语义代码编辑",
+      "summary": "为编码智能体提供语义代码检索、编辑、重构、调试以及基础文件和命令工具，面向大型代码库。",
+      "task_tags": [
+        "代码",
+        "语义检索",
+        "编辑",
+        "重构",
+        "调试",
+        "IDE",
+        "Serena"
+      ],
+      "evidence_label": "固定提交README与MIT许可证深化复核 · 未运行",
+      "version": {
+        "value": "v1.7.0",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": "9f9db76622340930d66aba9f72a2349b30bb1e29",
+        "repository_commit_kind": "documentation_snapshot_not_release_tag_commit"
+      },
+      "dates": {
+        "observed_at": "2026-09-07T23:39:26Z",
+        "repository_pushed_at": "2026-09-06T11:51:53Z",
+        "release_published_at": "2026-08-09T18:38:06Z"
+      },
+      "popularity": {
+        "stargazers_count": 28984,
+        "fork_count": 1966,
+        "watchers_count": 92,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分",
+        "observed_at": "2026-09-07T23:39:26Z"
+      },
+      "community_signals": {
+        "open_issues": 82,
+        "merged_pull_requests": 608,
+        "interpretation": "数量只说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "fixed_commit_license_read",
+        "source_text_sha256": "16017e50562bb112006f6f32d17ca989e0e573b011bd6790b642018b1c195b0c",
+        "redistribution_note": "本站只发布原创简介、公开元数据和官方仓库链接，不复制或分发第三方源码、插件或软件包。"
+      },
+      "permissions_note": "README明确提供跨项目语义检索、符号和文件编辑、重命名、移动、安全删除、调试，以及list_dir、find_file、read_file和execute_shell_command等基础工具。它可以读取项目、依赖和外部项目，并可能修改或删除代码、文件与目录、运行构建测试和命令；应在隔离工程和最小权限下使用。",
+      "authentication": "本地launch command或自行启动HTTP模式是主要接入方式；已读README未声明第三方账号认证。JetBrains后端需要单独付费插件或试用。HTTP认证、TLS和多用户隔离未在本批次读取。",
+      "network_access": "可自行启动HTTP模式；安装和语言服务器后端可能需要访问包源或语言工具，且工具支持查询外部项目。默认网络出口、远程HTTP暴露和遥测未在已读README中明确，保持未知。",
+      "file_access": "面向代码库、依赖与外部项目的读取、搜索、编辑、重构、移动和删除；还提供shell命令执行，并保存项目配置/记忆。允许目录、符号链接、命令策略和回滚未测试。",
+      "dependencies": "README要求uv，并给出Python 3.13的uv tool安装方式；不同语言可能需要额外language server。JetBrains后端依赖单独插件。完整依赖锁、安装脚本和语言服务器供应链未审计。",
+      "compatibility": "作者列出Claude Code、Codex、OpenCode、Gemini CLI、VS Code/Cursor/JetBrains、Claude Desktop、Codex App和OpenWebUI等；属于作者声明，本站未在任何宿主连接。README明确警告不要使用MCP或插件市场中的过时安装命令。",
+      "maintenance": {
+        "archived": false,
+        "repository_pushed_at": "2026-09-06T11:51:53Z",
+        "latest_release_published_at": "2026-08-09T18:38:06Z",
+        "status": "active_in_observed_metadata"
+      },
+      "checks_completed": [
+        "读取GitHub当前元数据、latest release与固定默认分支提交。",
+        "完整读取14,511字节固定提交README，记录语义编辑、文件/目录操作、shell命令、后端、客户端、uv与市场安装警告。",
+        "完整读取1,066字节固定提交MIT LICENSE。"
+      ],
+      "checks_not_completed": [
+        "未读取完整站点文档、工具schema、项目配置、HTTP安全、语言服务器清单与JetBrains插件条款。",
+        "未下载、安装、启动MCP、索引项目、读写代码或执行命令。",
+        "未验证允许目录、回滚、提示注入、任务效果、安全或宿主兼容。"
+      ],
+      "public_evidence_score": {
+        "value": 98,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 20,
+          "release_signal": 13,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可或使用条款、维护、热度、发布与社区字段完整度；不包含任务效果、安全、宿主兼容或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "fixed_commit_documentation_recheck",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/oraios/serena",
+        "release": "https://github.com/oraios/serena/releases/tag/v1.7.0",
+        "readme": "https://github.com/oraios/serena/blob/9f9db76622340930d66aba9f72a2349b30bb1e29/README.md",
+        "license": "https://github.com/oraios/serena/blob/9f9db76622340930d66aba9f72a2349b30bb1e29/LICENSE"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/oraios/serena"
+      },
+      "change_status": "release_unchanged; documentation_scope_deepened",
+      "metadata_fingerprint_sha256": "b0c1bcd19e0649dfa05efe2011f87632f9f20f0a06e768353f3138c02d851d5a"
+    }
+  ],
+  "community_feedback": {
+    "github_issue_count": null,
+    "verified_rating_submissions": null,
+    "verified_new_requirements": null,
+    "verified_customers": null,
+    "verified_revenue_rmb": null,
+    "observation": "Pending one bounded public Issue/rating-entry read after minimum publication."
+  },
+  "publication": {
+    "status": "pending",
+    "github": null,
+    "site": null
+  },
+  "read_accounting": [
+    {
+      "read": 1,
+      "source": "One batched official-domain search for current Figma MCP documentation",
+      "status": "read; discovery only"
+    },
+    {
+      "read": 2,
+      "source": "Figma official MCP Introduction",
+      "status": "read"
+    },
+    {
+      "read": 3,
+      "source": "Figma official MCP Tools and prompts",
+      "status": "read"
+    },
+    {
+      "read": 4,
+      "source": "Figma Terms of Service effective 2026-03-11",
+      "status": "read"
+    },
+    {
+      "read": 5,
+      "source": "GitHub GraphQL metadata batch for gpt-researcher and Serena",
+      "status": "read"
+    },
+    {
+      "read": 6,
+      "source": "gpt-researcher fixed-commit README (17,797 bytes)",
+      "status": "fully read"
+    },
+    {
+      "read": 7,
+      "source": "gpt-researcher fixed-commit LICENSE (11,357 bytes)",
+      "status": "fully read"
+    },
+    {
+      "read": 8,
+      "source": "Serena fixed-commit README (14,511 bytes)",
+      "status": "fully read"
+    },
+    {
+      "read": 9,
+      "source": "Serena fixed-commit LICENSE (1,066 bytes)",
+      "status": "fully read"
+    }
+  ],
+  "read_failures": []
+}

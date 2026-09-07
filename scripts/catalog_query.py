@@ -15,6 +15,7 @@ CHECKPOINT = "evidence/source-checks-2026-09-06.json"
 BATCH = "evidence/daily-catalog-batch-2026-09-06.json"
 EXPANSION = "evidence/catalog-expansion-2026-09-06.json"
 DAILY = "evidence/daily-catalog-batch-2026-09-07.json"
+DAILY_LATEST = "evidence/daily-catalog-batch-2026-09-08.json"
 BASE_ALIASES = {
     "narrated-video-review": ("口播", "视频", "剪辑", "字幕", "镜头", "声音", "video", "narration", "caption"),
     "github-mcp-server": ("github", "仓库", "代码审查", "议题", "拉取请求", "工作流", "issue", "issues", "pr", "pull request", "repository"),
@@ -49,28 +50,36 @@ class Catalog:
         batch = json.loads((ROOT / BATCH).read_text(encoding="utf-8"))
         expansion = json.loads((ROOT / EXPANSION).read_text(encoding="utf-8"))
         daily = json.loads((ROOT / DAILY).read_text(encoding="utf-8"))
+        daily_latest = json.loads((ROOT / DAILY_LATEST).read_text(encoding="utf-8"))
         new_records = [record for record in batch["records"] if record["listing_action"] == "new_accepted_listing"]
-        daily_by_id = {record["id"]: record for record in daily["records"]}
+        daily_by_id = {
+            **{record["id"]: record for record in daily["records"]},
+            **{record["id"]: record for record in daily_latest["records"]},
+        }
         expanded_records = [daily_by_id.get(record["id"], record) for record in expansion["records"]]
         daily_new_records = [record for record in daily["records"] if record["listing_action"] == "new_accepted_listing"]
-        records = baseline["records"] + new_records + expanded_records + daily_new_records
+        latest_new_records = [record for record in daily_latest["records"] if record["listing_action"] == "new_accepted_listing"]
+        records = baseline["records"] + new_records + expanded_records + daily_new_records + latest_new_records
         checks = checkpoint["records"]
         self.records = {record["id"]: record for record in records}
         self.checks = {record["id"]: record for record in checks}
         self.batch_checks = {record["id"]: record for record in batch["records"]}
         self.daily_checks = daily_by_id
         self.daily_ids = set(daily_by_id)
+        self.latest_daily_ids = {record["id"] for record in daily_latest["records"]}
         self.expansion_ids = {record["id"] for record in expanded_records}
         self.aliases = dict(BASE_ALIASES)
-        for record in expanded_records + daily_new_records:
+        for record in expanded_records + daily_new_records + latest_new_records:
             terms = [record["task"], record["name"], record["author"], *record["task_tags"]]
-            terms.extend(record["repository"].replace("/", " ").split())
+            locator = record.get("repository") or record.get("service_endpoint", "")
+            terms.extend(locator.replace("/", " ").split())
             self.aliases[record["id"]] = tuple(dict.fromkeys(normalize(term) for term in terms))
         self.record_origins = {
             **{record["id"]: BASELINE for record in baseline["records"]},
             **{record["id"]: BATCH for record in new_records},
             **{record["id"]: EXPANSION for record in expanded_records},
             **{record["id"]: DAILY for record in daily["records"]},
+            **{record["id"]: DAILY_LATEST for record in daily_latest["records"]},
         }
         if len(self.records) != len(records) or set(self.records) != set(self.aliases):
             raise ValueError("Unexpected public catalog membership")
@@ -90,7 +99,9 @@ class Catalog:
         record["record_origin"] = self.record_origins[entry_id]
         record["source_check"] = deepcopy(self.daily_checks.get(entry_id) or self.checks.get(entry_id) or self.batch_checks.get(entry_id))
         record["daily_recheck"] = deepcopy(self.daily_checks.get(entry_id) or self.batch_checks.get(entry_id))
-        if entry_id in self.daily_ids:
+        if entry_id in self.latest_daily_ids:
+            record["source_check_note"] = "9月8日官方来源、使用条款或固定提交README与许可证有界复核；没有下载或运行候选。"
+        elif entry_id in self.daily_ids:
             record["source_check_note"] = "9月7日官方来源、固定提交README与许可证有界复核；没有下载或运行候选。"
         elif entry_id in self.expansion_ids:
             record["source_check_note"] = "9月6日GitHub公开元数据与社区字段初筛；没有读取完整权限文档或运行候选。"
@@ -178,6 +189,11 @@ class Catalog:
                 "打开Notion官方MCP文档，确认托管远程服务、OAuth授权和当前支持的工具；不要把本地参考实现v2.1.0当作远程服务版本。",
                 "只授权需要的页面、数据库和内容范围，并由工作区或组织管理员管理、列出或撤销连接；本目录不收取凭证。",
                 "本站未连接或运行Notion MCP；完整服务条款、数据保留、任务效果和宿主兼容仍需另行验证。",
+            ],
+            "figma-mcp": [
+                "打开Figma官方MCP文档、工具清单和适用于账号计划的服务条款，确认远程服务当前能力；托管服务未公开独立版本。",
+                "连接前核对账号、席位、文件编辑权限、素材下载上传、设计写入和可能的信用额度；本目录不收取Figma凭证。",
+                "本站未连接或运行Figma MCP；精确认证scope、数据保留、费用、任务效果和宿主兼容仍需另行验证。",
             ],
         }
         if entry_id not in steps:

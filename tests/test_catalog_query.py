@@ -43,7 +43,7 @@ class CatalogTests(unittest.TestCase):
     def test_expanded_catalog_exposes_public_score_without_claiming_effect(self):
         result = self.catalog.search("查最新的代码文档和 API", limit=10)
         record = next(item for item in result["results"] if item["id"] == "context7-mcp")
-        self.assertEqual(result["catalog_size"], 22)
+        self.assertEqual(result["catalog_size"], 23)
         self.assertEqual(record["public_evidence_score"]["value"], 100)
         self.assertEqual(record["community_rating"]["count"], 0)
         self.assertIsNone(record["evaluation"]["task_effect_score"])
@@ -68,6 +68,23 @@ class CatalogTests(unittest.TestCase):
         self.assertIn("默认开启", chrome["permissions_note"])
         self.assertIn("Chrome for Testing", chrome["compatibility"])
         self.assertFalse(chrome["evaluation"]["runtime_tested"])
+
+    def test_figma_hosted_service_preserves_terms_and_version_boundary(self):
+        record = self.catalog.search("Figma 设计稿", limit=10)["results"][0]
+        self.assertEqual(record["id"], "figma-mcp")
+        self.assertIsNone(record["version"]["value"])
+        self.assertEqual(record["license"]["status"], "official_terms_read")
+        self.assertIn("use_figma", record["permissions_note"])
+        self.assertFalse(record["evaluation"]["runtime_tested"])
+
+    def test_latest_rechecks_expose_files_network_and_command_boundaries(self):
+        gpt = self.catalog.evidence_detail("gpt-researcher")
+        serena = self.catalog.evidence_detail("serena-mcp")
+        self.assertIn(".env", gpt["authentication"])
+        self.assertIn("本地文档", gpt["file_access"])
+        self.assertIn("execute_shell_command", serena["permissions_note"])
+        self.assertIn("市场", serena["compatibility"])
+        self.assertFalse(serena["evaluation"]["runtime_tested"])
 
     def test_expanded_entry_guidance_remains_manual_and_package_free(self):
         guide = self.catalog.installation_guide("aws-mcp-servers")

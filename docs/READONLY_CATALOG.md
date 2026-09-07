@@ -2,7 +2,7 @@
 
 2026-09-06 本地最小版，作者 Leo and contributors，AI 辅助实现与整理。代码采用 MIT，本文采用 CC BY 4.0；第三方名称及材料仍按各自权利处理。
 
-此模块让智能体用三个操作查询本项目的22条公开记录。已用本地测试客户端完成 MCP stdio 初始化握手、工具发现及三种工具调用。**WorkBuddy、豆包、千问、Codex 的实际导入与调用均未验证。** 本地协议检查不等于候选插件运行评测，也不等于完整 MCP 一致性认证。v0.4.0-seed加入Notion官方MCP及两条深化复核，发布不代表客户端接入完成。
+此模块让智能体用三个操作查询本项目的23条公开记录。已用本地测试客户端完成 MCP stdio 初始化握手、工具发现及三种工具调用。**WorkBuddy、豆包、千问、Codex 的实际导入与调用均未验证。** 本地协议检查不等于候选插件运行评测，也不等于完整 MCP 一致性认证。v0.5.0-seed加入Figma官方MCP及gpt-researcher、Serena两条深化复核，发布不代表客户端接入完成。
 
 ## 可用操作
 
@@ -37,7 +37,7 @@ python3 -B scripts/catalog_mcp.py
 
 ## 证据与结果
 
-固定基线来自 [`public-directory-2026-09-05.json`](../evidence/public-directory-2026-09-05.json)，9月6日收录及复核来自 [`daily-catalog-batch-2026-09-06.json`](../evidence/daily-catalog-batch-2026-09-06.json)，9月7日Notion收录及两条深化复核来自 [`daily-catalog-batch-2026-09-07.json`](../evidence/daily-catalog-batch-2026-09-07.json)。查询时不重新读取上游；自有 Skill 保留9月5日静态校验日期，不虚构今天的来源重查。
+固定基线来自 [`public-directory-2026-09-05.json`](../evidence/public-directory-2026-09-05.json)，9月6日收录及复核来自 [`daily-catalog-batch-2026-09-06.json`](../evidence/daily-catalog-batch-2026-09-06.json)，9月7日Notion收录及两条深化复核来自 [`daily-catalog-batch-2026-09-07.json`](../evidence/daily-catalog-batch-2026-09-07.json)，9月8日Figma收录及两条深化复核来自 [`daily-catalog-batch-2026-09-08.json`](../evidence/daily-catalog-batch-2026-09-08.json)。查询时不重新读取上游；自有 Skill 保留9月5日静态校验日期，不虚构今天的来源重查。
 
 | 标识 | 当前记录 | 保留的限制 |
 | --- | --- | --- |
@@ -48,9 +48,9 @@ python3 -B scripts/catalog_mcp.py
 | `playwright-mcp` | Microsoft Playwright MCP v0.0.80 | Apache-2.0元数据声明；浏览器、网络、文件及可选权限需限定；未安装或运行 |
 | `notion-mcp` | Notion官方托管远程MCP；独立版本 `null` | OAuth读写用户可访问内容；v2.1.0仅为MIT本地参考实现；远程服务条款与运行均待验证 |
 
-`null` 表示未知，不等于零分或已通过。22条记录的候选实际运行、独立效果复核与安全认证均没有完成。公开资料评分只衡量来源与可见证据完整度，不是任务效果分。根仓库 `entries/` 的合成示例不参与此真实目录检索。
+`null` 表示未知，不等于零分或已通过。23条记录的候选实际运行、独立效果复核与安全认证均没有完成。公开资料评分只衡量来源与可见证据完整度，不是任务效果分。根仓库 `entries/` 的合成示例不参与此真实目录检索。
 
-检索采用有限的中文／英文关键词匹配，并按匹配词数量排序；它没有语义模型、向量检索或任务效果排名。重叠任务可能返回多个候选，通用词也可能产生误匹配。无匹配仅描述这22条记录的覆盖范围。搜索词最多512字符，工具单条输入消息最多64 KiB。
+检索采用有限的中文／英文关键词匹配，并按匹配词数量排序；它没有语义模型、向量检索或任务效果排名。重叠任务可能返回多个候选，通用词也可能产生误匹配。无匹配仅描述这23条记录的覆盖范围。搜索词最多512字符，工具单条输入消息最多64 KiB。
 
 本地已验证的示例：
 
