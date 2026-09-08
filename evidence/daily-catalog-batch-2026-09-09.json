@@ -1,0 +1,451 @@
+{
+  "schema_version": "daily-catalog-batch/0.4",
+  "observed_at": "2026-09-08T23:39:16Z",
+  "timezone": "Asia/Shanghai",
+  "batch_status": "prepared_for_publication",
+  "new_listing_count": 1,
+  "established_recheck_count": 2,
+  "evaluation_level": "One official service plus fixed-commit source review and two established fixed-commit documentation rechecks; no third-party runtime test",
+  "business_read_limit": 18,
+  "business_reads_so_far": 10,
+  "root_reserved_reads": 8,
+  "underlying_http_requests": null,
+  "third_party_code_executed": false,
+  "third_party_packages_copied": false,
+  "records": [
+    {
+      "id": "cloudflare-api-mcp",
+      "listing_action": "new_accepted_listing",
+      "name": "Cloudflare API MCP",
+      "author": "Cloudflare, Inc.",
+      "repository": "cloudflare/mcp",
+      "type": "REMOTE MCP SERVER",
+      "relationship": "Cloudflare官方托管远程MCP服务及官方公开实现仓库",
+      "task": "Cloudflare账号与边缘服务管理",
+      "summary": "Cloudflare官方MCP以搜索和执行方式覆盖Cloudflare API，可查询或变更DNS、Workers、R2、Zero Trust等账号资源；实际范围由OAuth授权或API Token权限决定。",
+      "task_tags": [
+        "Cloudflare",
+        "DNS",
+        "Workers",
+        "R2",
+        "Zero Trust",
+        "API",
+        "Code Mode"
+      ],
+      "evidence_label": "官方服务文档、固定提交README与Apache-2.0许可证复核 · 未连接账号、未运行",
+      "stable_source": "cloudflare:api-mcp",
+      "service_endpoint": "https://mcp.cloudflare.com/mcp",
+      "version": {
+        "value": null,
+        "kind": "hosted_service_no_public_semantic_version",
+        "basis": "已读官方服务文档与README未公开托管服务独立语义版本；官方仓库当前没有GitHub Release",
+        "repository_commit": "46641b2f8514b208a7ce808e986554219f286542",
+        "repository_commit_kind": "documentation_and_implementation_snapshot_not_hosted_service_version",
+        "version_boundary": "固定提交只用于证据快照，不能代表托管端点部署版本"
+      },
+      "dates": {
+        "observed_at": "2026-09-08T23:39:16Z",
+        "repository_pushed_at": "2026-09-04T13:37:03Z",
+        "repository_commit_at": "2026-09-04T13:37:02Z",
+        "official_docs_updated_at": "2026-07-28"
+      },
+      "popularity": {
+        "stargazers_count": 819,
+        "fork_count": 115,
+        "watchers_count": 8,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分",
+        "observed_at": "2026-09-08T23:39:16Z"
+      },
+      "community_signals": {
+        "open_issues": 10,
+        "merged_pull_requests": 100,
+        "interpretation": "数量只说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "Apache-2.0",
+        "status": "fixed_commit_license_read",
+        "source_text_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "scope": "cloudflare/mcp公开仓库固定提交",
+        "hosted_service_terms": "本批次未展开Cloudflare完整服务条款、DPA与数据保留",
+        "redistribution_note": "本站只发布原创简介、公开证据和官方链接，不复制或分发第三方源码、服务或软件包。"
+      },
+      "permissions_note": "官方服务通过docs、search和execute工具检索文档与OpenAPI定义，并按授权调用Cloudflare API。覆盖2,500多个端点，可读取配置，也可创建或修改DNS、Workers、KV、R2、Zero Trust等资源；账号影响取决于OAuth批准的权限或API Token。Code Mode会在Cloudflare隔离的Dynamic Worker中执行模型生成的JavaScript，但本站未独立验证该隔离。",
+      "authentication": "交互式接入使用Cloudflare OAuth并由用户选择权限；CI/CD可使用用户级或账号级API Token。账号级Token自动发现账号时还需Account Resources:Read；带客户端IP过滤的Token在已读文档中标为不支持。本站没有连接账号、批准权限或取得令牌。",
+      "network_access": "MCP客户端连接https://mcp.cloudflare.com/mcp，服务再访问Cloudflare文档、OpenAPI定义与账号API。执行端点可对Cloudflare账号资源产生外部读写；其他外网访问是否允许只采用作者的API限制声明，未独立验证。",
+      "file_access": "已读官方资料未声明远程服务可任意读取用户Mac文件；主要数据边界是授权的Cloudflare账号和API响应。客户端保存结果或本地写文件属于客户端权限，本站未测试。",
+      "dependencies": "托管服务由Cloudflare运行，目录使用者无需在本机安装第三方包。官方仓库固定README说明Code Mode使用隔离Dynamic Worker；仓库完整依赖树、部署构建和服务端供应链未审计。",
+      "compatibility": "官方文档称可接入支持远程MCP的客户端，并列出Codex等客户端相关指引；README说明任何MCP SDK或客户端可接入。本站未在任一宿主连接或调用。",
+      "maintenance": {
+        "archived": false,
+        "repository_pushed_at": "2026-09-04T13:37:03Z",
+        "latest_release_published_at": null,
+        "status": "active_official_repository_and_documentation; no_github_release"
+      },
+      "checks_completed": [
+        "读取Cloudflare官方MCP服务文档，确认托管端点、Streamable HTTP、Code Mode、OAuth/API Token及API覆盖范围。",
+        "读取GitHub当前元数据、默认分支固定提交和发行状态，确认仓库未归档且没有GitHub Release。",
+        "完整读取7,850字节固定提交README和11,357字节Apache-2.0 LICENSE。"
+      ],
+      "checks_not_completed": [
+        "未读取完整服务条款、隐私/DPA、数据保留、全部API权限映射、部署配置或依赖树。",
+        "未连接Cloudflare账号、未批准OAuth、未配置Token、未调用托管MCP或Cloudflare API。",
+        "未独立验证Dynamic Worker隔离、任务效果、费用、速率限制、安全或宿主兼容。"
+      ],
+      "public_evidence_score": {
+        "value": 75,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 10,
+          "release_signal": 0,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可或使用条款、维护、热度、发布与社区字段完整度；不包含任务效果、安全、宿主兼容或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "official_docs_plus_fixed_commit_readme_license_review",
+        "source_metadata_checked": true,
+        "bounded_documentation_checked": true,
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "official_docs": "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/",
+        "repository": "https://github.com/cloudflare/mcp",
+        "readme": "https://github.com/cloudflare/mcp/blob/46641b2f8514b208a7ce808e986554219f286542/README.md",
+        "license": "https://github.com/cloudflare/mcp/blob/46641b2f8514b208a7ce808e986554219f286542/LICENSE",
+        "service_endpoint": "https://mcp.cloudflare.com/mcp"
+      },
+      "action": {
+        "label": "查看Cloudflare官方MCP文档",
+        "kind": "upstream_source",
+        "url": "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/"
+      },
+      "change_status": "new_accepted_listing",
+      "metadata_fingerprint_sha256": "7c8b22cbfa86d387d09baeb2950758558c21fdecd20c362981e018c314cb9e8e"
+    },
+    {
+      "id": "n8n-mcp",
+      "listing_action": "established_entry_recheck",
+      "name": "n8n-mcp",
+      "author": "czlonkowski",
+      "repository": "czlonkowski/n8n-mcp",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "工作流配置",
+      "summary": "为智能体提供n8n节点、属性、模板和工作流校验资料；配置n8n API后还可创建、修改、删除、执行工作流并管理凭据等实例资源。",
+      "task_tags": [
+        "工作流",
+        "自动化",
+        "n8n",
+        "节点",
+        "模板",
+        "校验"
+      ],
+      "evidence_label": "固定提交README与MIT许可证深化复核 · 未安装、未连接n8n、未运行",
+      "version": {
+        "value": "v2.82.1",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": "c4a2f69be25b6a16e5fa6439b33bf764c6cdc1c3",
+        "repository_commit_kind": "documentation_snapshot_aligned_with_latest_release_time"
+      },
+      "dates": {
+        "observed_at": "2026-09-08T23:39:16Z",
+        "repository_pushed_at": "2026-09-07T10:04:14Z",
+        "release_published_at": "2026-09-03T17:15:11Z"
+      },
+      "popularity": {
+        "stargazers_count": 22846,
+        "fork_count": 3639,
+        "watchers_count": 161,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分",
+        "observed_at": "2026-09-08T23:39:16Z"
+      },
+      "community_signals": {
+        "open_issues": 27,
+        "merged_pull_requests": 391,
+        "interpretation": "数量只说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "fixed_commit_license_read",
+        "source_text_sha256": "8292ff05257b8f1ceae44382f0585abb0df9dc007d2ee2254c5a835c01920b35",
+        "redistribution_note": "本站只发布原创简介、公开元数据和作者链接，不复制或分发第三方源码、容器、节点数据或软件包。"
+      },
+      "permissions_note": "核心7个工具用于检索节点、模板与校验配置；配置N8N_API_URL和N8N_API_KEY后，21个管理工具可创建、替换、修改、删除、运行工作流，管理执行、文件夹、数据表、凭据和Agents。README提供DISABLED_TOOLS、DISABLED_TOOL_OPERATIONS与只读API Key的防御性配置，但本站未验证其完整性。",
+      "authentication": "实例管理需要N8N_API_URL与N8N_API_KEY；实例级MCP能力另需N8N_MCP_ACCESS_TOKEN；Cloudflare Access后的实例还可配置客户端ID与Secret。托管快速入口另有独立API Key。本站没有取得、保存或调用任何凭据。",
+      "network_access": "自托管进程可连接所配置的n8n API、实例级MCP、Webhook及Cloudflare Access保护端点；工作流本身可能调用邮件、表格、HTTP等外部连接器。README称Cloudflare Access令牌仅发送至N8N_API_URL同源，未独立验证。",
+      "file_access": "已读README未声明面向用户代码库的任意文件工具；自托管会读取环境配置并使用本地或容器运行时，n8n工作流节点本身可能访问文件和外部系统。SQLite、配置目录、备份和路径隔离需在部署时另行核验。",
+      "dependencies": "README列出npx、Docker、Railway和托管服务等形态，徽章标示n8n 2.37.2数据来源；完整package锁、镜像、安装脚本、SQLite适配与传递依赖未审计。",
+      "compatibility": "作者提供Claude Code、VS Code、Cursor、Windsurf、Codex与Antigravity接入指南；属于作者声明，本站未在任何宿主连接。",
+      "maintenance": {
+        "archived": false,
+        "repository_pushed_at": "2026-09-07T10:04:14Z",
+        "latest_release_published_at": "2026-09-03T17:15:11Z",
+        "status": "active_in_observed_metadata"
+      },
+      "checks_completed": [
+        "读取GitHub当前元数据、latest release与固定默认分支提交。",
+        "完整读取24,560字节固定提交README，记录核心检索/校验工具、21个实例管理工具、只读限制配置、认证、部署和客户端边界。",
+        "完整读取1,098字节固定提交MIT LICENSE。"
+      ],
+      "checks_not_completed": [
+        "未读取全部安全、隐私、部署、数据库、HTTP和工具schema子文档，也未审计依赖锁、镜像或节点数据来源。",
+        "未下载、安装、连接n8n实例、配置凭据、读取或修改工作流、运行执行或管理凭据。",
+        "未验证只读限制是否可绕过、提示注入、任务效果、费用、安全或宿主兼容。"
+      ],
+      "public_evidence_score": {
+        "value": 98,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 20,
+          "release_signal": 13,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可或使用条款、维护、热度、发布与社区字段完整度；不包含任务效果、安全、宿主兼容或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "fixed_commit_documentation_recheck",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/czlonkowski/n8n-mcp",
+        "release": "https://github.com/czlonkowski/n8n-mcp/releases/tag/v2.82.1",
+        "readme": "https://github.com/czlonkowski/n8n-mcp/blob/c4a2f69be25b6a16e5fa6439b33bf764c6cdc1c3/README.md",
+        "license": "https://github.com/czlonkowski/n8n-mcp/blob/c4a2f69be25b6a16e5fa6439b33bf764c6cdc1c3/LICENSE"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/czlonkowski/n8n-mcp"
+      },
+      "change_status": "release_unchanged; stars_plus_4; forks_plus_1; documentation_scope_deepened",
+      "metadata_fingerprint_sha256": "1fc384d050b1e2c515c2efcfe5bf661befeef93e69953353f7ec3d978d2323c0"
+    },
+    {
+      "id": "firecrawl-mcp",
+      "listing_action": "established_entry_recheck",
+      "name": "firecrawl-mcp-server",
+      "author": "firecrawl",
+      "repository": "firecrawl/firecrawl-mcp-server",
+      "type": "MCP SERVER",
+      "relationship": "第三方GitHub公开仓库候选",
+      "task": "网页抓取与搜索",
+      "summary": "为MCP客户端提供网页搜索、抓取、站点映射、爬取、解析、交互、监控和研究能力；托管端点、OAuth/API Key和本地自托管均有作者说明。",
+      "task_tags": [
+        "网页",
+        "抓取",
+        "搜索",
+        "爬取",
+        "浏览器交互",
+        "研究",
+        "Firecrawl"
+      ],
+      "evidence_label": "固定提交README有界部分读取与MIT许可证复核 · 未安装、未调用网络、未运行",
+      "version": {
+        "value": "v3.2.1",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": "4db752ee00910e17ec73f28b40796f0830fe86da",
+        "repository_commit_kind": "current_default_branch_snapshot_newer_than_latest_release"
+      },
+      "dates": {
+        "observed_at": "2026-09-08T23:39:16Z",
+        "repository_pushed_at": "2026-09-08T06:44:14Z",
+        "release_published_at": "2025-09-26T07:31:17Z"
+      },
+      "popularity": {
+        "stargazers_count": 7420,
+        "fork_count": 882,
+        "watchers_count": 43,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分",
+        "observed_at": "2026-09-08T23:39:16Z"
+      },
+      "community_signals": {
+        "open_issues": 82,
+        "merged_pull_requests": 132,
+        "interpretation": "数量只说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "fixed_commit_license_read",
+        "source_text_sha256": "9c12811442b47e27f690be7cf0252f6bf93ddee18476f13e0fc6b4badb09c22c",
+        "redistribution_note": "本站只发布原创简介、公开元数据和作者链接，不复制或分发第三方源码、容器或软件包。"
+      },
+      "permissions_note": "完整工具档案包含search、scrape、map、crawl、parse、interact、monitor、agent与研究等能力；interact可点击、输入和导航网页，monitor会创建持续检查，feedback工具会向Firecrawl提交反馈。专用search-only端点声明只暴露6个只读搜索/研究工具且不抓取页面内容。网站操作仍可能触发目标站点副作用，需限域与人工检查。",
+      "authentication": "托管端点可使用OAuth或Authorization Bearer API Key；无Key免费端点只暴露3个受限工具且限流。自托管可通过FIRECRAWL_API_KEY、FIRECRAWL_OAUTH_TOKEN和FIRECRAWL_API_URL配置。本站没有取得、保存或调用凭据。",
+      "network_access": "核心用途需要访问Firecrawl托管服务、用户指定网页及搜索/研究数据源；crawl、interact、monitor和agent可能进行多次或持续网络活动。抓取范围、robots/站点条款、请求保留、第三方来源和费用需按任务核验。",
+      "file_access": "parse工具可处理文件与托管上传引用；已读README前24,576字节未证明服务可任意读取本机文件。客户端需要主动上传或传入引用的边界、临时文件、缓存和输出保存路径未测试。",
+      "dependencies": "README列出托管、npx、全局npm、本地Streamable HTTP和自托管等形态；本轮未读取package锁或完整README后半段，Node版本、安装脚本、容器和传递依赖保持未知。",
+      "compatibility": "作者提供Cursor、Windsurf、VS Code、Claude Desktop及通用MCP接入示例；属于作者声明，本站未在任何宿主连接。",
+      "maintenance": {
+        "archived": false,
+        "repository_pushed_at": "2026-09-08T06:44:14Z",
+        "latest_release_published_at": "2025-09-26T07:31:17Z",
+        "status": "active_repository; latest_release_older_than_default_branch"
+      },
+      "checks_completed": [
+        "读取GitHub当前元数据、latest release与固定默认分支提交。",
+        "按单文件24KiB上限读取固定提交README前24,576/39,038字节，记录工具、托管端点、search-only档案、认证、自托管、网络与文件边界。",
+        "完整读取1,065字节固定提交MIT LICENSE。"
+      ],
+      "checks_not_completed": [
+        "README后14,462字节未读；未读取完整工具schema、隐私、服务条款、依赖锁、安装脚本、镜像或计费规则。",
+        "未下载、安装、配置凭据、连接托管端点、搜索、抓取、交互、监控、上传或解析文件。",
+        "未验证站点副作用、限域、提示注入、费用、任务效果、安全或宿主兼容。"
+      ],
+      "public_evidence_score": {
+        "value": 94,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 14,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可或使用条款、维护、热度、发布与社区字段完整度；不包含任务效果、安全、宿主兼容或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "fixed_commit_bounded_documentation_recheck",
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/firecrawl/firecrawl-mcp-server",
+        "release": "https://github.com/firecrawl/firecrawl-mcp-server/releases/tag/v3.2.1",
+        "readme": "https://github.com/firecrawl/firecrawl-mcp-server/blob/4db752ee00910e17ec73f28b40796f0830fe86da/README.md",
+        "license": "https://github.com/firecrawl/firecrawl-mcp-server/blob/4db752ee00910e17ec73f28b40796f0830fe86da/LICENSE"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/firecrawl/firecrawl-mcp-server"
+      },
+      "change_status": "release_unchanged; stars_plus_14; forks_plus_9; merged_prs_plus_2; open_issues_plus_1; default_branch_advanced; bounded_documentation_scope_deepened",
+      "metadata_fingerprint_sha256": "21e8b0b5cca782b1f370044d850d6646f43f03c5be2738165d310f5ad344dd01"
+    }
+  ],
+  "publication": {
+    "status": "pending_commit_release_deploy_and_target_readback",
+    "github": {
+      "release_tag": "v0.6.0-seed",
+      "url": null,
+      "push": "pending",
+      "target_readback": "pending"
+    },
+    "site": {
+      "url": "https://agent-catalog.sxbliuyi.chatgpt.site",
+      "deployment_status": "pending",
+      "target_readback": "pending"
+    }
+  },
+  "community_feedback": {
+    "read": 10,
+    "issues_returned": 0,
+    "verified_rating_submissions": 0,
+    "new_requirements": 0,
+    "boundary": "Only the public GitHub Issue list was read once; this does not prove absence of wider market demand."
+  },
+  "read_accounting": [
+    {
+      "read": 1,
+      "source": "One batched web search for Cloudflare official MCP service and repository",
+      "status": "read; discovery only"
+    },
+    {
+      "read": 2,
+      "source": "Cloudflare official MCP service documentation",
+      "status": "read"
+    },
+    {
+      "read": 3,
+      "source": "GitHub GraphQL metadata batch for Cloudflare MCP, n8n-mcp and Firecrawl MCP",
+      "status": "read"
+    },
+    {
+      "read": 4,
+      "source": "Cloudflare MCP fixed-commit README (7,850 bytes)",
+      "status": "fully read"
+    },
+    {
+      "read": 5,
+      "source": "Cloudflare MCP fixed-commit LICENSE (11,357 bytes)",
+      "status": "fully read"
+    },
+    {
+      "read": 6,
+      "source": "n8n-mcp fixed-commit README (24,560 bytes)",
+      "status": "fully read"
+    },
+    {
+      "read": 7,
+      "source": "n8n-mcp fixed-commit LICENSE (1,098 bytes)",
+      "status": "fully read"
+    },
+    {
+      "read": 8,
+      "source": "Firecrawl MCP fixed-commit README (first 24,576 of 39,038 bytes)",
+      "status": "bounded partial read at per-file cap"
+    },
+    {
+      "read": 9,
+      "source": "Firecrawl MCP fixed-commit LICENSE (1,065 bytes)",
+      "status": "fully read"
+    },
+    {
+      "read": 10,
+      "source": "Public GitHub Issue and rating-entry list",
+      "status": "read; empty list"
+    }
+  ],
+  "read_failures": [],
+  "read_summary": {
+    "product_business_reads": 10,
+    "planned_product_limit": 18,
+    "daily_hard_cap": 40,
+    "remaining_daily": 30,
+    "root_reserved_minimum": 8
+  },
+  "sandbox_readiness": {
+    "status": "pending_after_p0",
+    "fixture": "self_authored_benign_only",
+    "third_party_execution": false
+  },
+  "costs": {
+    "new_paid_spend_cny": 0,
+    "new_paid_commitments_cny": 0
+  }
+}
