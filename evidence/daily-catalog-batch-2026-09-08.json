@@ -351,17 +351,32 @@
     }
   ],
   "community_feedback": {
-    "github_issue_count": null,
-    "verified_rating_submissions": null,
-    "verified_new_requirements": null,
-    "verified_customers": null,
-    "verified_revenue_rmb": null,
-    "observation": "Pending one bounded public Issue/rating-entry read after minimum publication."
+    "github_issue_count": 0,
+    "verified_rating_submissions": 0,
+    "verified_new_requirements": 0,
+    "verified_customers": 0,
+    "verified_revenue_rmb": 0,
+    "observed_at": "2026-09-08T07:59:30+08:00",
+    "observation": "One bounded public GitHub Issue/rating-entry read returned an empty list; this does not prove market-wide demand is zero."
   },
   "publication": {
-    "status": "pending",
-    "github": null,
-    "site": null
+    "status": "completed_and_target_read_back",
+    "github": {
+      "release_commit": "66ab6b849406605b6f9445b19f4a4238d5aa2451",
+      "release_tag": "v0.5.0-seed",
+      "url": "https://github.com/leo2026888/agent-catalog-seed/releases/tag/v0.5.0-seed",
+      "push": "succeeded",
+      "target_readback": "verified"
+    },
+    "site": {
+      "source_commit": "05b1f75d597953f080124646a64672479d35738f",
+      "version": 7,
+      "version_id": "appgprj_6a9b952023448191a4d698aa6afc3ff7~appgver_369c512974a88191aba4c0afc1bdb020",
+      "deployment_id": "appgdep_6a9f4e03bd0c8191afa3ab108e874495",
+      "deployment_status": "succeeded",
+      "url": "https://agent-catalog.sxbliuyi.chatgpt.site",
+      "target_readback": "verified_23_records_figma_and_two_rechecks"
+    }
   },
   "read_accounting": [
     {
@@ -408,7 +423,69 @@
       "read": 9,
       "source": "Serena fixed-commit LICENSE (1,066 bytes)",
       "status": "fully read"
+    },
+    {
+      "read": 10,
+      "source": "GitHub release target-side readback for v0.5.0-seed",
+      "status": "read; title, tag, target commit and public URL verified"
+    },
+    {
+      "read": 11,
+      "source": "Published Agent Catalog site version 7 target-side readback",
+      "status": "read; 23 records, Figma, both established rechecks and zero runtime evaluations verified"
+    },
+    {
+      "read": 12,
+      "source": "Public GitHub Issue and rating-entry list",
+      "status": "read; empty list"
+    },
+    {
+      "read": 13,
+      "source": "npm audit against configured npmmirror endpoint",
+      "status": "failed; 404 audit endpoint not implemented; counted"
+    },
+    {
+      "read": 14,
+      "source": "npm audit against official npm registry for the unchanged lock file",
+      "status": "read; exact JSON saved"
     }
   ],
-  "read_failures": []
+  "read_failures": [
+    {
+      "read": 13,
+      "source": "https://registry.npmmirror.com/-/npm/v1/security/advisories/bulk",
+      "error": "404 Not Found; audit endpoint not implemented",
+      "retry": "One permitted retry used against official npm registry"
+    }
+  ],
+  "dependency_audit": {
+    "status": "exact_json_saved_and_triaged",
+    "lockfile_sha256": "2edb5f3707bffad283de5ace8b7a90a4874b7225636e33ddc9150e2ada7abc1",
+    "audit_json_sha256": "11e2f741c4ee0001b1947739668b832b994e65e9732136c11947bb1abedda7e5",
+    "affected_package_nodes": 11,
+    "advisories": 21,
+    "severity_by_affected_node": {
+      "critical": 0,
+      "high": 8,
+      "moderate": 2,
+      "low": 1
+    },
+    "direct_affected_packages": 5,
+    "transitive_affected_packages": 6,
+    "raw_path": "saved in private operations workspace; not published in this repository",
+    "triage_path": "saved in private operations workspace; not published in this repository",
+    "actions_not_taken": [
+      "npm audit fix",
+      "dependency upgrade",
+      "lockfile edit"
+    ]
+  },
+  "read_summary": {
+    "product_business_reads": 14,
+    "planned_product_limit": 20,
+    "daily_limit": 40,
+    "remaining_daily_limit": 26,
+    "root_reserve_minimum": 8,
+    "underlying_http_requests": null
+  }
 }
