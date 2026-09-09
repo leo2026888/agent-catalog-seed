@@ -2,12 +2,12 @@
   "schema_version": "daily-catalog-batch/0.4",
   "observed_at": "2026-09-09T23:37:10Z",
   "timezone": "Asia/Shanghai",
-  "batch_status": "prepared_for_publication",
+  "batch_status": "completed_and_target_read_back",
   "new_listing_count": 1,
   "established_recheck_count": 2,
   "evaluation_level": "One official hosted service with official documentation and fixed repository metadata review, plus two established fixed-commit bounded documentation rechecks; no third-party runtime test",
   "business_read_limit": 18,
-  "business_reads_so_far": 10,
+  "business_reads_so_far": 13,
   "root_reserved_reads": 8,
   "underlying_http_requests": null,
   "third_party_code_executed": false,
@@ -361,23 +361,30 @@
     }
   ],
   "publication": {
-    "status": "prepared_not_yet_target_read_back",
+    "status": "completed_and_target_read_back",
     "github": {
+      "release_commit": "e8ad369acb33abf39246bdbe466468bf42adf91c",
       "release_tag": "v0.7.0-seed",
-      "status": "pending"
+      "url": "https://github.com/leo2026888/agent-catalog-seed/releases/tag/v0.7.0-seed",
+      "push": "succeeded",
+      "target_readback": "verified_title_tag_target_commit_public_url_and_three_release_note_records"
     },
     "site": {
       "source_commit": "e4b51694e62a4db0856595acaf098981d3e6b1ec",
-      "status": "pending",
-      "url": "https://agent-catalog.sxbliuyi.chatgpt.site"
+      "version": 10,
+      "version_id": "appgprj_6a9b952023448191a4d698aa6afc3ff7~appgver_d80b60ddf3048191a908691d6a4394b9",
+      "deployment_id": "appgdep_6aa1f00f34bc8191a62fd03aca9e3123",
+      "deployment_status": "succeeded",
+      "url": "https://agent-catalog.sxbliuyi.chatgpt.site",
+      "target_readback": "verified_http_200_25_records_24_third_party_17_bounded_8_metadata_microsoft_aws_apify_and_zero_runtime_boundary"
     }
   },
   "community_feedback": {
-    "status": "conditional_after_p0_not_yet_read",
-    "read_cap": 1,
-    "issues_returned": null,
-    "verified_rating_submissions": null,
-    "new_requirements": null
+    "read": 13,
+    "issues_returned": 0,
+    "verified_rating_submissions": 0,
+    "new_requirements": 0,
+    "boundary": "Only the public GitHub Issue list was read once after P0; this does not prove absence of wider market demand."
   },
   "read_accounting": [
     {
@@ -429,6 +436,21 @@
       "read": 10,
       "source": "GitHub GraphQL watcher and merged-pull-request metadata batch for all three selected records",
       "status": "read"
+    },
+    {
+      "read": 11,
+      "source": "GitHub release target-side readback for v0.7.0-seed",
+      "status": "read; title, tag, exact target commit, public URL and all three record names verified"
+    },
+    {
+      "read": 12,
+      "source": "Published Agent Catalog site version 10 target-side readback",
+      "status": "read; HTTP 200, 25 records, 24 third-party records, 17 bounded evidence, 8 metadata shortlists, Microsoft/AWS/Apify and zero-runtime boundary verified"
+    },
+    {
+      "read": 13,
+      "source": "Public GitHub Issue and rating-entry list",
+      "status": "read once after P0; empty list"
     }
   ],
   "read_failures": [
@@ -440,17 +462,32 @@
     }
   ],
   "read_summary": {
-    "product_business_reads": 10,
+    "product_business_reads": 13,
     "planned_product_limit": 18,
     "daily_hard_cap": 40,
-    "remaining_daily": 30,
+    "remaining_daily": 27,
     "root_reserved_minimum": 8
   },
   "sandbox_readiness": {
-    "status": "pending_post_p0_repair_check",
+    "status": "ready_for_later_bounded_dynamic_trial",
     "fixture": "self_authored_benign_only",
+    "suite_run_count": 1,
+    "sandboxed_probe_count": 3,
     "third_party_execution": false,
-    "claim": "No third-party dynamic evaluation is ready or performed."
+    "gates_verified": [
+      "profile_serialization",
+      "network_denial",
+      "user_home_read_write_isolation",
+      "environment_scrubbing",
+      "child_process_denial",
+      "file_size_limit",
+      "cpu_time_limit",
+      "logging",
+      "cleanup"
+    ],
+    "evidence": "private operations ledger; not included in the public seed package",
+    "claim": "Self-authored control probes passed. No third-party plugin was installed or executed, and this is not a security certification.",
+    "next_step": "Choose one fixed, pre-reviewed low-risk candidate for a later bounded disposable trial with synthetic data and an explicit network allowlist."
   },
   "costs": {
     "new_paid_spend_cny": 0,
