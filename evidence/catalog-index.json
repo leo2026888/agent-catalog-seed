@@ -1,8 +1,8 @@
 {
   "schema_version": "catalog-index/0.1",
-  "catalog_version": "0.6.0-seed",
-  "updated_at": "2026-09-08T23:39:16Z",
-  "record_count": 24,
+  "catalog_version": "0.7.0-seed",
+  "updated_at": "2026-09-09T23:37:10Z",
+  "record_count": 25,
   "records": [
     {
       "id": "narrated-video-review",
@@ -125,11 +125,12 @@
     {
       "id": "aws-mcp-servers",
       "source_record": "catalog-expansion-2026-09-06.json",
-      "status": "listed_metadata_shortlist",
-      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "status": "listed_documentation_rechecked",
+      "evaluation_level": "当前元数据、固定提交README与许可证有界深化复核；未运行",
       "public_evidence_score": 94,
       "task_effect_score": null,
-      "community_rating_count": 0
+      "community_rating_count": 0,
+      "latest_recheck": "daily-catalog-batch-2026-09-10.json"
     },
     {
       "id": "drawio-skill",
@@ -171,11 +172,12 @@
     {
       "id": "apify-mcp",
       "source_record": "catalog-expansion-2026-09-06.json",
-      "status": "listed_metadata_shortlist",
-      "evaluation_level": "GitHub公开元数据、维护与社区活跃度初筛；未读取完整权限文档，未运行",
+      "status": "listed_documentation_rechecked",
+      "evaluation_level": "当前元数据、固定提交README与许可证有界深化复核；未运行",
       "public_evidence_score": 94,
       "task_effect_score": null,
-      "community_rating_count": 0
+      "community_rating_count": 0,
+      "latest_recheck": "daily-catalog-batch-2026-09-10.json"
     },
     {
       "id": "mcp-use-toolkit",
@@ -209,6 +211,15 @@
       "source_record": "daily-catalog-batch-2026-09-09.json",
       "status": "listed_official_remote_service",
       "evaluation_level": "Cloudflare官方托管服务文档、固定提交README与Apache-2.0许可证复核；托管服务版本未公开，未运行",
+      "public_evidence_score": 75,
+      "task_effect_score": null,
+      "community_rating_count": 0
+    },
+    {
+      "id": "microsoft-learn-mcp",
+      "source_record": "daily-catalog-batch-2026-09-10.json",
+      "status": "listed_official_remote_service",
+      "evaluation_level": "Microsoft Learn官方产品文档、开发参考、官方仓库与固定提交元数据复核；托管服务版本未公开，未运行",
       "public_evidence_score": 75,
       "task_effect_score": null,
       "community_rating_count": 0

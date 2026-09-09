@@ -1,0 +1,459 @@
+{
+  "schema_version": "daily-catalog-batch/0.4",
+  "observed_at": "2026-09-09T23:37:10Z",
+  "timezone": "Asia/Shanghai",
+  "batch_status": "prepared_for_publication",
+  "new_listing_count": 1,
+  "established_recheck_count": 2,
+  "evaluation_level": "One official hosted service with official documentation and fixed repository metadata review, plus two established fixed-commit bounded documentation rechecks; no third-party runtime test",
+  "business_read_limit": 18,
+  "business_reads_so_far": 10,
+  "root_reserved_reads": 8,
+  "underlying_http_requests": null,
+  "third_party_code_executed": false,
+  "third_party_packages_copied": false,
+  "records": [
+    {
+      "id": "microsoft-learn-mcp",
+      "listing_action": "new_accepted_listing",
+      "name": "Microsoft Learn MCP Server",
+      "author": "Microsoft",
+      "repository": "MicrosoftDocs/mcp",
+      "type": "REMOTE MCP SERVER",
+      "relationship": "Microsoft官方托管远程MCP服务及官方公开仓库",
+      "task": "Microsoft技术文档与代码样例检索",
+      "summary": "Microsoft Learn官方远程MCP让智能体检索Microsoft技术文档、获取完整文章并搜索官方代码样例；公开端点无需认证且当前免费。",
+      "task_tags": [
+        "Microsoft Learn",
+        "技术文档",
+        "代码样例",
+        "检索",
+        "远程MCP"
+      ],
+      "evidence_label": "官方产品文档、开发参考、官方仓库与固定提交元数据复核 · 未连接、未运行",
+      "stable_source": "microsoft:microsoft-learn-mcp",
+      "service_endpoint": "https://learn.microsoft.com/api/mcp",
+      "version": {
+        "value": null,
+        "kind": "hosted_service_no_public_semantic_version",
+        "basis": "已读官方概览、开发参考与官方仓库没有给托管端点公开独立语义版本；工具与schema可能动态变化，官方仓库没有GitHub Release",
+        "repository_commit": "bb124f19c9304a33e507d0017f0613f8bda3a16c",
+        "repository_commit_kind": "documentation_and_client_assets_snapshot_not_hosted_service_version",
+        "version_boundary": "固定提交只用于证据快照，不能代表托管端点部署版本"
+      },
+      "dates": {
+        "observed_at": "2026-09-09T23:37:10Z",
+        "repository_pushed_at": "2026-09-04T06:09:16Z",
+        "repository_commit_at": "2026-09-04T06:09:14Z",
+        "official_overview_updated_at": "2026-05-22",
+        "developer_reference_updated_at": "2025-12-03"
+      },
+      "popularity": {
+        "stargazers_count": 1880,
+        "fork_count": 244,
+        "watchers_count": 20,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分",
+        "observed_at": "2026-09-09T23:37:10Z"
+      },
+      "community_signals": {
+        "open_issues": 10,
+        "merged_pull_requests": 77,
+        "interpretation": "数量只说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "Microsoft Learn Terms of Use；官方仓库标示CC BY 4.0与MIT",
+        "status": "official_terms_link_and_repository_license_metadata_checked",
+        "scope": "托管服务适用Microsoft Learn使用条款；仓库文档与代码许可证范围须分别依固定文件判断",
+        "redistribution_note": "本站只发布原创简介、公开证据和官方链接，不复制或分发Microsoft服务、文档、代码或软件包。"
+      },
+      "permissions_note": "开发参考列出文档搜索、完整文章获取和代码样例搜索三类工具；服务返回公开Microsoft资料。工具和schema会动态变化，客户端应在初始化时重新列取工具。本站未调用端点，无法独立确认响应内容、提示注入处理或服务端数据边界。",
+      "authentication": "官方概览明确说明公开端点无需认证；本站没有创建连接、登录、提供密钥或提交任何账号数据。",
+      "network_access": "兼容客户端会通过Streamable HTTP连接https://learn.microsoft.com/api/mcp，服务访问Microsoft Learn知识服务并返回官方文档或代码样例。本站未测试客户端是否产生其他出站连接。",
+      "file_access": "已读官方资料没有声明服务可任意读取用户Mac文件；本地客户端如何保存上下文、日志或结果取决于宿主权限，本站未测试。",
+      "dependencies": "托管服务由Microsoft运行，不要求目录使用者在Mac安装第三方包；官方仓库还包含CLI、Skill和插件资产，但其依赖树、安装脚本与供应链未审计或运行。",
+      "compatibility": "官方仓库列出VS Code、Visual Studio、Claude、Cursor、Codex、ChatGPT等接入方式；属于作者声明，本站未在任何宿主连接或调用。",
+      "maintenance": {
+        "archived": false,
+        "repository_pushed_at": "2026-09-04T06:09:16Z",
+        "latest_release_published_at": null,
+        "status": "active_official_repository_and_documentation; no_github_release"
+      },
+      "checks_completed": [
+        "读取Microsoft Learn官方产品概览，确认官方远程端点、Streamable HTTP、无需认证、当前免费、适用Microsoft Learn使用条款和数据范围声明。",
+        "读取官方开发参考，确认稳定配置标识microsoft.docs.mcp、三个当前工具及工具与schema可能动态变化的版本边界。",
+        "读取官方仓库页面及GitHub当前元数据，固定默认分支提交，确认仓库未归档、没有GitHub Release并标示CC BY 4.0与MIT许可证。"
+      ],
+      "checks_not_completed": [
+        "未逐条展开Microsoft Learn完整使用条款、隐私、遥测、数据保留、服务端实现、依赖树或全部仓库许可证文件。",
+        "未连接端点、调用tools/list或任何工具，也未检验返回准确性、时延、配额、限流、提示注入或可用性。",
+        "未验证任何宿主兼容、任务效果、安全或服务级别承诺。"
+      ],
+      "public_evidence_score": {
+        "value": 75,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 10,
+          "release_signal": 0,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可或使用条款、维护、热度、发布与社区字段完整度；不包含任务效果、安全、宿主兼容或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "official_docs_repository_metadata_fixed_commit_review",
+        "source_metadata_checked": true,
+        "bounded_documentation_checked": true,
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "official_overview": "https://learn.microsoft.com/en-us/training/support/mcp",
+        "developer_reference": "https://learn.microsoft.com/en-us/training/support/mcp-developer-reference",
+        "terms": "https://learn.microsoft.com/en-us/legal/termsofuse",
+        "repository": "https://github.com/MicrosoftDocs/mcp",
+        "repository_snapshot": "https://github.com/MicrosoftDocs/mcp/tree/bb124f19c9304a33e507d0017f0613f8bda3a16c",
+        "service_endpoint": "https://learn.microsoft.com/api/mcp"
+      },
+      "action": {
+        "label": "查看Microsoft Learn官方MCP文档",
+        "kind": "upstream_source",
+        "url": "https://learn.microsoft.com/en-us/training/support/mcp"
+      },
+      "change_status": "new_accepted_listing",
+      "metadata_fingerprint_sha256": "7f2ac73120db4bee9ba8b0856c18248df0a73c77edaf1b693499cb3c104d392a"
+    },
+    {
+      "id": "aws-mcp-servers",
+      "name": "mcp",
+      "author": "awslabs",
+      "repository": "awslabs/mcp",
+      "type": "MCP SERVER COLLECTION",
+      "relationship": "AWS Labs官方GitHub公开仓库集合",
+      "task": "AWS云服务",
+      "summary": "AWS Labs维护的一组AWS专用MCP服务器，覆盖文档、基础设施、数据、成本和运维等任务；仓库同时说明Agent Toolkit for AWS是后继方向，现有服务器仍继续工作并接受贡献。",
+      "task_tags": [
+        "AWS",
+        "云服务",
+        "基础设施",
+        "开发"
+      ],
+      "evidence_label": "固定提交有界README与Apache-2.0许可证深化复核 · 未安装、未连接AWS、未运行",
+      "version": {
+        "value": "2026.09.20260908143235",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": "18e6a6cf6842f7dc2eb1c0aa0797ff6666b91f05",
+        "repository_commit_kind": "bounded_documentation_snapshot_after_latest_release"
+      },
+      "dates": {
+        "observed_at": "2026-09-09T23:37:10Z",
+        "repository_pushed_at": "2026-09-09T21:17:21Z",
+        "repository_commit_at": "2026-09-09T20:52:19Z",
+        "release_published_at": "2026-09-08T15:44:45Z"
+      },
+      "popularity": {
+        "stargazers_count": 9677,
+        "fork_count": 1749,
+        "watchers_count": 82,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分",
+        "observed_at": "2026-09-09T23:37:10Z"
+      },
+      "community_signals": {
+        "open_issues": 168,
+        "merged_pull_requests": 1736,
+        "interpretation": "数量只说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "Apache-2.0",
+        "status": "fixed_commit_license_read",
+        "source_text_sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+        "redistribution_note": "本站只发布原创简介、公开元数据和作者链接，不复制或分发AWS第三方源码、容器或软件包。"
+      },
+      "permissions_note": "这是多服务器集合，权限随具体服务器不同。README明确列出只读文档检索，也列出可管理AWS基础设施、部署和数据的服务器；部分示例需要AWS凭据并可开启写入或敏感数据访问。进入运行评测前必须按单个服务器重新核对IAM、写入开关和费用影响。",
+      "compatibility": "顶层README列出Kiro、Cursor、VS Code、Claude Code、Cline与Windsurf等接入说明，并说明仓库服务器当前设计为stdio；属于作者声明，本站未在任何宿主运行。",
+      "public_evidence_score": {
+        "value": 94,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 14,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可或使用条款、维护、热度、发布与社区字段完整度；不包含任务效果、安全、宿主兼容或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "fixed_commit_bounded_documentation_recheck",
+        "source_metadata_checked": true,
+        "bounded_documentation_checked": true,
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/awslabs/mcp",
+        "release": "https://github.com/awslabs/mcp/releases/tag/2026.09.20260908143235",
+        "readme": "https://github.com/awslabs/mcp/blob/18e6a6cf6842f7dc2eb1c0aa0797ff6666b91f05/README.md",
+        "license": "https://github.com/awslabs/mcp/blob/18e6a6cf6842f7dc2eb1c0aa0797ff6666b91f05/LICENSE"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/awslabs/mcp"
+      },
+      "listing_action": "established_entry_recheck",
+      "authentication": "托管AWS服务与本地AWS Labs服务器的认证方式不同；本地服务器示例通常依赖AWS配置文件或环境凭据，官方托管AWS MCP使用OAuth 2.1与IAM控制。本站没有连接AWS账号、读取凭据或授权任何角色。",
+      "network_access": "本地stdio服务器可能访问AWS文档、API和所配置服务；官方托管服务器通过AWS端点与代理接入。具体出站目标取决于所选服务器，未逐项审计。",
+      "file_access": "安装和配置可能读取本机MCP配置、AWS配置文件或挂载的凭据目录；部分开发、基础设施和数据工具还可能处理项目文件。24KiB有界README不足以证明所有子服务器的文件边界。",
+      "dependencies": "仓库是大型Python monorepo，README列出uvx、pip、容器和多个独立包。未审计各子目录的锁文件、安装钩子、镜像、传递依赖或发布制品摘要。",
+      "maintenance": {
+        "archived": false,
+        "repository_pushed_at": "2026-09-09T21:17:21Z",
+        "latest_release_published_at": "2026-09-08T15:44:45Z",
+        "status": "active_in_observed_metadata; repository_continues_while_agent_toolkit_is_successor_direction"
+      },
+      "checks_completed": [
+        "读取GitHub当前元数据、latest release、默认分支固定提交及协作字段。",
+        "读取固定提交README前24,576/202,894字节，记录仓库定位、后继产品方向、传输、只读与可写服务器差异、认证和客户端声明。",
+        "完整读取10,142字节固定提交Apache-2.0 LICENSE。"
+      ],
+      "checks_not_completed": [
+        "README只读到每文件上限；未读取剩余178,318字节、全部子服务器文档、服务条款、安全文档、锁文件、镜像或依赖。",
+        "未下载、安装、配置AWS凭据、连接账号、调用MCP或AWS API、创建或修改任何资源。",
+        "未验证IAM最小权限、费用、提示注入、任务效果、安全或宿主兼容。"
+      ],
+      "change_status": "release_advanced; stars_plus_12; forks_plus_6; open_issues_minus_2; documentation_scope_deepened",
+      "metadata_fingerprint_sha256": "9c5b2fad1ec1748de34b0a2b4c4106c9a51996f6cc7bf53f4d5dd20c55289caf"
+    },
+    {
+      "id": "apify-mcp",
+      "name": "apify-mcp-server",
+      "author": "apify",
+      "repository": "apify/apify-mcp-server",
+      "type": "MCP SERVER",
+      "relationship": "Apify官方GitHub公开仓库及官方托管服务",
+      "task": "网页与数据提取",
+      "summary": "Apify MCP把Apify Store中的Actors和平台工具提供给智能体，可搜索和运行抓取或自动化任务、读取结果与存储，并可创建、更新或发布Actor任务。",
+      "task_tags": [
+        "网页",
+        "数据提取",
+        "自动化",
+        "Apify"
+      ],
+      "evidence_label": "固定提交有界README与MIT许可证深化复核 · 未安装、未连接Apify、未运行",
+      "version": {
+        "value": "v0.15.5",
+        "kind": "github_latest_release_metadata",
+        "basis": "GitHub latest release field",
+        "repository_commit": "f9b4c7764587483780d8788097d2ab97c8d263a1",
+        "repository_commit_kind": "bounded_documentation_snapshot_after_latest_release",
+        "hosted_service_boundary": "托管端点使用内部实现并依赖公开包；仓库Release不能证明托管端点部署版本"
+      },
+      "dates": {
+        "observed_at": "2026-09-09T23:37:10Z",
+        "repository_pushed_at": "2026-09-09T13:34:46Z",
+        "repository_commit_at": "2026-09-09T10:01:05Z",
+        "release_published_at": "2026-09-09T07:39:13Z"
+      },
+      "popularity": {
+        "stargazers_count": 6549,
+        "fork_count": 256,
+        "watchers_count": 26,
+        "meaning": "发现与社区活跃度信号；不是安全或效果评分",
+        "observed_at": "2026-09-09T23:37:10Z"
+      },
+      "community_signals": {
+        "open_issues": 136,
+        "merged_pull_requests": 687,
+        "interpretation": "数量只说明公开协作规模；未阅读问题内容，不能据此判断满意度"
+      },
+      "license": {
+        "label": "MIT",
+        "status": "fixed_commit_license_read",
+        "source_text_sha256": "c48af2a6ca733572f123a4c70dab68c2ae754acf4a4a3d4c85c389b4d1af231b",
+        "scope": "apify/apify-mcp-server公开仓库；托管服务、Actors和付费功能另受Apify服务条款约束",
+        "redistribution_note": "本站只发布原创简介、公开元数据和作者链接，不复制或分发Apify源码、Actors、数据或软件包。"
+      },
+      "permissions_note": "默认工具可搜索Actors和文档、调用Actors、读取运行状态与数据集；可选工具还能读日志和存储、终止运行、创建或更新Actor任务并发布或取消公开页面。Actors可访问外部网站，具体写入、抓取范围和数据处理取决于所选Actor与工具配置。",
+      "compatibility": "README列出Claude、ChatGPT、VS Code、Cursor、OpenCode、Kiro和Apify Tester等客户端，支持Streamable HTTP与stdio；属于作者声明，本站未实测。",
+      "public_evidence_score": {
+        "value": 94,
+        "out_of": 100,
+        "label": "公开资料评分",
+        "breakdown": {
+          "public_source": 15,
+          "declared_license": 20,
+          "maintenance_recency": 25,
+          "popularity_signal": 14,
+          "release_signal": 15,
+          "community_activity_fields": 5
+        },
+        "meaning": "衡量公开来源、许可或使用条款、维护、热度、发布与社区字段完整度；不包含任务效果、安全、宿主兼容或真实用户满意度"
+      },
+      "community_rating": {
+        "average": null,
+        "count": 0,
+        "status": "awaiting_verified_submissions"
+      },
+      "evaluation": {
+        "level": "fixed_commit_bounded_documentation_recheck",
+        "source_metadata_checked": true,
+        "bounded_documentation_checked": true,
+        "runtime_tested": false,
+        "independent_runtime_review": false,
+        "security_certified": false,
+        "task_effect_score": null
+      },
+      "source_urls": {
+        "repository": "https://github.com/apify/apify-mcp-server",
+        "release": "https://github.com/apify/apify-mcp-server/releases/tag/v0.15.5",
+        "readme": "https://github.com/apify/apify-mcp-server/blob/f9b4c7764587483780d8788097d2ab97c8d263a1/README.md",
+        "license": "https://github.com/apify/apify-mcp-server/blob/f9b4c7764587483780d8788097d2ab97c8d263a1/LICENSE.md",
+        "hosted_service": "https://mcp.apify.com"
+      },
+      "action": {
+        "label": "查看作者仓库",
+        "kind": "upstream_source",
+        "url": "https://github.com/apify/apify-mcp-server"
+      },
+      "listing_action": "established_entry_recheck",
+      "authentication": "托管https://mcp.apify.com支持OAuth或Bearer APIFY_TOKEN；本地stdio示例使用APIFY_TOKEN。README还列出AGI预付令牌、x402 USDC和Skyfire支付路径。本站没有登录、取得令牌、创建钱包或发起付款。",
+      "network_access": "托管或本地服务器会连接Apify平台、API、Actors及其访问的目标网站；默认Actors包括网页搜索与抓取工具。外部目标由任务和Actor决定，无法从顶层README形成固定允许清单。",
+      "file_access": "已读README未声明任意本地文件工具；stdio启动会读取环境配置，Actors的远程存储与结果可能包含网页数据。客户端保存结果或本地文件权限未测试。",
+      "dependencies": "本地模式通过npx运行@apify/actors-mcp-server，托管服务使用Apify运营的端点。未审计package锁、安装脚本、MCPB制品、传递依赖、Actor实现或托管服务供应链。",
+      "maintenance": {
+        "archived": false,
+        "repository_pushed_at": "2026-09-09T13:34:46Z",
+        "latest_release_published_at": "2026-09-09T07:39:13Z",
+        "status": "active_in_observed_metadata"
+      },
+      "checks_completed": [
+        "读取GitHub当前元数据、latest release、默认分支固定提交及协作字段。",
+        "读取固定提交README前24,576/33,362字节，记录托管与stdio接入、OAuth/Token/支付路径、默认与可选工具、Actors外网访问和客户端声明。",
+        "完整读取1,062字节固定提交MIT LICENSE。"
+      ],
+      "checks_not_completed": [
+        "README只读到每文件上限；未读取剩余8,786字节、完整隐私/服务条款、Actor逐项文档、依赖锁、安装脚本、MCPB或托管实现。",
+        "未下载、安装、连接Apify、配置Token、调用Actor、抓取网站、读取存储、发布任务或进行任何支付。",
+        "未验证抓取合规性、数据保留、费用、提示注入、任务效果、安全或宿主兼容。"
+      ],
+      "change_status": "release_advanced; stars_plus_450; forks_plus_5; open_issues_plus_9; documentation_scope_deepened",
+      "metadata_fingerprint_sha256": "7c68d4fba3d1029c27b3be1e1d067c28e416558d30afdae0982551f3a695bd1f"
+    }
+  ],
+  "publication": {
+    "status": "prepared_not_yet_target_read_back",
+    "github": {
+      "release_tag": "v0.7.0-seed",
+      "status": "pending"
+    },
+    "site": {
+      "source_commit": "e4b51694e62a4db0856595acaf098981d3e6b1ec",
+      "status": "pending",
+      "url": "https://agent-catalog.sxbliuyi.chatgpt.site"
+    }
+  },
+  "community_feedback": {
+    "status": "conditional_after_p0_not_yet_read",
+    "read_cap": 1,
+    "issues_returned": null,
+    "verified_rating_submissions": null,
+    "new_requirements": null
+  },
+  "read_accounting": [
+    {
+      "read": 1,
+      "source": "One batched web search for Microsoft Learn MCP, AWS MCP and Apify MCP official sources",
+      "status": "read; discovery only"
+    },
+    {
+      "read": 2,
+      "source": "Microsoft Learn MCP official overview and developer reference batch",
+      "status": "read"
+    },
+    {
+      "read": 3,
+      "source": "Microsoft Learn official repository page via official documentation link",
+      "status": "read"
+    },
+    {
+      "read": 4,
+      "source": "GitHub GraphQL metadata batch for MicrosoftDocs/mcp, awslabs/mcp and apify/apify-mcp-server",
+      "status": "read"
+    },
+    {
+      "read": 5,
+      "source": "AWS MCP fixed-commit README (first 24,576 of 202,894 bytes)",
+      "status": "bounded partial read at per-file cap"
+    },
+    {
+      "read": 6,
+      "source": "AWS MCP fixed-commit LICENSE (10,142 bytes)",
+      "status": "fully read"
+    },
+    {
+      "read": 7,
+      "source": "Apify MCP fixed-commit README (first 24,576 of 33,362 bytes)",
+      "status": "bounded partial read at per-file cap"
+    },
+    {
+      "read": 8,
+      "source": "Apify MCP fixed-commit LICENSE first-path attempt",
+      "status": "failed with 404; retried once using GitHub license endpoint"
+    },
+    {
+      "read": 9,
+      "source": "Apify MCP fixed-commit LICENSE via GitHub license endpoint (1,062 bytes)",
+      "status": "fully read; only retry"
+    },
+    {
+      "read": 10,
+      "source": "GitHub GraphQL watcher and merged-pull-request metadata batch for all three selected records",
+      "status": "read"
+    }
+  ],
+  "read_failures": [
+    {
+      "read": 8,
+      "source": "Apify raw LICENSE path",
+      "status": "404",
+      "retry": "one successful retry via repository license endpoint; no further retry"
+    }
+  ],
+  "read_summary": {
+    "product_business_reads": 10,
+    "planned_product_limit": 18,
+    "daily_hard_cap": 40,
+    "remaining_daily": 30,
+    "root_reserved_minimum": 8
+  },
+  "sandbox_readiness": {
+    "status": "pending_post_p0_repair_check",
+    "fixture": "self_authored_benign_only",
+    "third_party_execution": false,
+    "claim": "No third-party dynamic evaluation is ready or performed."
+  },
+  "costs": {
+    "new_paid_spend_cny": 0,
+    "new_paid_commitments_cny": 0
+  }
+}
