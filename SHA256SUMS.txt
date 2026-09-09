@@ -36,7 +36,7 @@ ed39956357832576dfe14cd8eab2db75f7a87935747797a1e3a5939134d55f11  docs/ROADMAP.m
 4ed912f75909248d0e71466ba0ee989a8d2feaa3ad6e41fee6d437e04a5b4570  evidence/daily-catalog-batch-2026-09-06.json
 184830780baa716adb2d0e3a54b326ed5581ad4de5d62d2a3bd20bae4c06c484  evidence/daily-catalog-batch-2026-09-07.json
 9e2eb6ddc5a20b5a211d14749be853ee1fc19ec1c8073addec012952fe9f3ae8  evidence/daily-catalog-batch-2026-09-08.json
-9775350b6807c66192500a3a9edb228fe26bfce7673ae01ac129cf6c0918090d  evidence/daily-catalog-batch-2026-09-09.json
+b06d8383535558535af50a21337309fbb414c3491e15ab5f58eec6bdfde149e7  evidence/daily-catalog-batch-2026-09-09.json
 ce1fd9308628acfb5c53810dd109b2028ed2c15b1d4d87360fdd8d0f57adb9d5  evidence/public-directory-2026-09-05.json
 addfeb2d9fe4cb555ad1c1cc6dee188c52f7af46df191943bf3ec92d1a537ca0  evidence/source-checks-2026-09-06.json
 faf3fa8e1f79f54d78e0295ad8a2a53f405e24ac46e71bde75164226f70591be  examples/release-note-checklist/README.md

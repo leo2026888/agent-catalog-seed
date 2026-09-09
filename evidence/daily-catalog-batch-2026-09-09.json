@@ -2,12 +2,12 @@
   "schema_version": "daily-catalog-batch/0.4",
   "observed_at": "2026-09-08T23:39:16Z",
   "timezone": "Asia/Shanghai",
-  "batch_status": "prepared_for_publication",
+  "batch_status": "completed_and_target_read_back",
   "new_listing_count": 1,
   "established_recheck_count": 2,
   "evaluation_level": "One official service plus fixed-commit source review and two established fixed-commit documentation rechecks; no third-party runtime test",
   "business_read_limit": 18,
-  "business_reads_so_far": 10,
+  "business_reads_so_far": 12,
   "root_reserved_reads": 8,
   "underlying_http_requests": null,
   "third_party_code_executed": false,
@@ -359,17 +359,22 @@
     }
   ],
   "publication": {
-    "status": "pending_commit_release_deploy_and_target_readback",
+    "status": "completed_and_target_read_back",
     "github": {
+      "release_commit": "9edcfdfcbd479c3afdc4e114c36594e09168792b",
       "release_tag": "v0.6.0-seed",
-      "url": null,
-      "push": "pending",
-      "target_readback": "pending"
+      "url": "https://github.com/leo2026888/agent-catalog-seed/releases/tag/v0.6.0-seed",
+      "push": "succeeded",
+      "target_readback": "verified_title_tag_target_commit_public_url"
     },
     "site": {
+      "source_commit": "0f5b5088163ae9406cbc794cff52bdd656b54ab8",
+      "version": 9,
+      "version_id": "appgprj_6a9b952023448191a4d698aa6afc3ff7~appgver_86e86816c71c8191a4498c87931046ea",
+      "deployment_id": "appgdep_6aa0a1c2f7b48191ba99b7b18937ff24",
+      "deployment_status": "succeeded",
       "url": "https://agent-catalog.sxbliuyi.chatgpt.site",
-      "deployment_status": "pending",
-      "target_readback": "pending"
+      "target_readback": "verified_24_records_17_tasks_cloudflare_n8n_firecrawl_zero_runtime"
     }
   },
   "community_feedback": {
@@ -429,20 +434,35 @@
       "read": 10,
       "source": "Public GitHub Issue and rating-entry list",
       "status": "read; empty list"
+    },
+    {
+      "read": 11,
+      "source": "GitHub release target-side readback for v0.6.0-seed",
+      "status": "read; title, tag, target commit and public URL verified"
+    },
+    {
+      "read": 12,
+      "source": "Published Agent Catalog site version 9 target-side readback",
+      "status": "read; 24 records, 17 tasks, Cloudflare, n8n, Firecrawl and zero runtime evaluations verified"
     }
   ],
   "read_failures": [],
   "read_summary": {
-    "product_business_reads": 10,
+    "product_business_reads": 12,
     "planned_product_limit": 18,
     "daily_hard_cap": 40,
-    "remaining_daily": 30,
+    "remaining_daily": 28,
     "root_reserved_minimum": 8
   },
   "sandbox_readiness": {
-    "status": "pending_after_p0",
+    "status": "insufficient_isolation_blocked",
     "fixture": "self_authored_benign_only",
-    "third_party_execution": false
+    "run_count": 1,
+    "third_party_execution": false,
+    "evidence": "private operations ledger; not included in the public seed package",
+    "failure": "Generated sandbox profile contained literal newline escapes, so macOS sandbox-exec rejected the profile before the fixture started.",
+    "claim": "No third-party dynamic evaluation is ready or performed.",
+    "next_step": "Repair profile serialization and repeat only the benign fixture in a later bounded check before any third-party trial."
   },
   "costs": {
     "new_paid_spend_cny": 0,
